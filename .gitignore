@@ -1,0 +1,15 @@
+# Markdown files (Documentation, Skills, Plans)
+*.md
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+
+# Zip files
+*.zip
+*.tar.gz
