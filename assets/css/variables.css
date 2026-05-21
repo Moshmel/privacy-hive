@@ -1,0 +1,49 @@
+:root {
+  /* Brand Colors from Logo */
+  --color-primary: #20283F; /* Deep Navy */
+  --color-primary-dark: #141926;
+  --color-secondary: #34789A; /* Blue Gradient Midpoint */
+  --color-accent: #3FA898; /* Teal / Turquoise */
+  --color-accent-dark: #2D7B6E;
+  
+  /* Backgrounds & Surfaces */
+  --color-bg: #FFFFFF;
+  --color-bg-soft: #F8FAFC; /* Very soft blue-grey */
+  --color-bg-card: #FFFFFF;
+  --color-bg-dark: #1E293B; /* Slate 800 */
+  
+  /* Text Colors */
+  --color-text: #334155; /* Slate 700 */
+  --color-heading: #0F172A; /* Slate 900 */
+  --color-muted: #64748B; /* Slate 500 */
+  --color-border: #E2E8F0; /* Slate 200 */
+  
+  /* Typography */
+  --font-base: 'Noto Sans Hebrew', sans-serif;
+  --font-size-base: 16px;
+  
+  /* Shadows (Premium High-End UX) */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-floating: 0 25px 50px -12px rgba(32, 40, 63, 0.15); /* Soft, large spread shadow */
+  --shadow-accent: 0 10px 20px -5px rgba(63, 168, 152, 0.4);
+  
+  /* Radii */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-pill: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+}

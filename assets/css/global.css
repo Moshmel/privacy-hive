@@ -1,0 +1,106 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-base);
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-heading);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 800; /* Extra bold for headings to match premium look */
+    letter-spacing: -0.02em; /* Tighter tracking for large text */
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: var(--color-muted);
+    font-size: 1.125rem; /* Slightly larger, more readable text */
+}
+
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: var(--space-xl) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-light {
+    background-color: var(--color-bg-soft);
+}
+
+.section-dark {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.section-dark h2, .section-dark h3 {
+    color: white;
+}
+
+.section-dark p {
+    color: #CBD5E1;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Helper for pill/badges above sections */
+.badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    background-color: rgba(63, 168, 152, 0.1);
+    color: var(--color-accent);
+    border-radius: var(--radius-pill);
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
