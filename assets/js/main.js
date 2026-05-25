@@ -17,15 +17,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Simple Form Validation & DataLayer Event
-    const leadForm = document.getElementById('contact-form');
-    if (leadForm) {
-        leadForm.addEventListener('submit', function(e) {
+    // Form Submission Logic (AJAX)
+    const leadForms = document.querySelectorAll('.lead-form');
+    
+    leadForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Basic validation
             let isValid = true;
-            const requiredFields = leadForm.querySelectorAll('[required]');
+            const requiredFields = form.querySelectorAll('[required]');
             
             requiredFields.forEach(field => {
                 if (!field.value.trim()) {
@@ -37,22 +38,50 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             if (isValid) {
-                // In a real scenario, you'd send this data via fetch/AJAX
-                // e.g. to a webhook or CRM
-                
-                // Fire GTM Event (Assuming dataLayer exists)
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    'event': 'lead_form_submit',
-                    'formLocation': window.location.pathname
+                // Change button text to indicate loading
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> שולח...';
+                submitBtn.disabled = true;
+
+                // Gather data
+                const formData = new FormData(form);
+                formData.append('source_page', window.location.pathname);
+
+                // Send to PHP processing file
+                // Using an absolute path or relative depending on host. Assuming process.php is at root.
+                // We determine root by checking if we are in a subdirectory
+                const processUrl = window.location.pathname.includes('/') && window.location.pathname.split('/').length > 2 
+                                   ? '../process.php' 
+                                   : 'process.php';
+
+                fetch(processUrl, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    // Fire GTM Event
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'lead_form_submit',
+                        'formLocation': window.location.pathname
+                    });
+                    
+                    // Redirect to Thank You Page
+                    const thankYouUrl = window.location.pathname.includes('/') && window.location.pathname.split('/').length > 2 
+                                       ? '../thank-you.html' 
+                                       : 'thank-you.html';
+                    window.location.href = thankYouUrl;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    submitBtn.innerHTML = 'שגיאה בשליחה, נסה שוב';
+                    submitBtn.disabled = false;
                 });
-                
-                // Show success message (simple implementation)
-                const container = leadForm.parentElement;
-                container.innerHTML = '<div class="text-center"><h3>תודה רבה!</h3><p>פנייתך התקבלה בהצלחה, ניצור קשר בהקדם.</p></div>';
             }
         });
-    }
+    });
 
     // Track CTA Clicks
     const ctaButtons = document.querySelectorAll('.btn-primary');

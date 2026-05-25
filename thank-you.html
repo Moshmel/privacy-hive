@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תודה רבה | Privacy Hive</title>
+    <meta name="description" content="פנייתך התקבלה בהצלחה. צוות Privacy Hive יחזור אליך בהקדם.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    
+    <style>
+        .thank-you-section {
+            min-height: calc(100vh - 200px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5rem 1rem;
+            background: linear-gradient(135deg, var(--color-bg) 0%, #F1F5F9 100%);
+        }
+        .thank-you-box {
+            background: white;
+            padding: 4rem 3rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-floating);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            border-top: 5px solid var(--color-accent);
+        }
+        .success-icon {
+            font-size: 5rem;
+            color: var(--color-accent);
+            margin-bottom: 2rem;
+            animation: scaleIn 0.5s ease-out;
+        }
+        @keyframes scaleIn {
+            0% { transform: scale(0); opacity: 0; }
+            80% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .thank-you-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+        .thank-you-text {
+            font-size: 1.2rem;
+            color: var(--color-muted);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            background-color: var(--color-primary);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(15, 23, 42, 0.2);
+        }
+        .home-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.3);
+            background-color: var(--color-primary-dark);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html"><img src="assets/LOGO_FINAL.svg" alt="Privacy Hive Logo"></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="tikun-13/index.html">תיקון 13</a></li>
+                    <li><a href="information-security-for-businesses/index.html">אבטחת מידע לעסקים</a></li>
+                    <li><a href="information-security-for-organizations/index.html">אבטחת מידע לארגונים</a></li>
+                    <li><a href="dpo/index.html">שירותי DPO</a></li>
+                </ul>
+            </nav>
+            <a href="index.html#contact" class="btn btn-primary nav-btn">שיחת התאמה (ללא עלות)</a>
+        </div>
+    </header>
+
+    <!-- Thank You Content -->
+    <section class="thank-you-section">
+        <div class="thank-you-box">
+            <div class="success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h1 class="thank-you-title">תודה רבה! פנייתך התקבלה</h1>
+            <p class="thank-you-text">
+                הפרטים שלך הועברו אלינו בצורה מאובטחת. <br>
+                אחד המומחים שלנו ייצור איתך קשר בהקדם כדי לענות על כל השאלות שלך.
+            </p>
+            <a href="index.html" class="home-btn">
+                <i class="fa-solid fa-house"></i> חזרה לעמוד הבית
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <img src="assets/LOGO_FINAL.svg" alt="Privacy Hive" style="height: 48px; margin-bottom: 1.5rem; filter: brightness(0) invert(1);">
+                    <p>ב-Privacy Hive אנו מספקים מעטפת הגנה מלאה מותאמת אישית, כדי שאתם תוכלו להמשיך להוביל בראש שקט.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>שירותים מרכזיים</h4>
+                    <ul class="footer-links">
+                        <li><a href="tikun-13/index.html">היערכות לתיקון 13</a></li>
+                        <li><a href="information-security-for-businesses/index.html">אבטחת מידע לעסקים</a></li>
+                        <li><a href="information-security-for-organizations/index.html">אבטחת מידע לארגונים</a></li>
+                        <li><a href="dpo/index.html">שירותי DPO (ממונה פרטיות)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" id="contact">
+                    <h4>יצירת קשר</h4>
+                    <ul class="footer-links">
+                        <li><strong>מאיה ויסמן:</strong> 050-613-6596 | maya@privacy-hive.com</li>
+                        <li><strong>עו"ד מוטי כהן:</strong> 054-544-5429 | moti@privacy-hive.com</li>
+                        <li><strong>עו"ד מריאנה דן:</strong> mariana@privacy-hive.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Privacy Hive. כל הזכויות שמורות. נבנה על ידי Antigravity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Track Conversion
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'form_submission_success',
+            'pagePath': window.location.pathname
+        });
+    </script>
+</body>
+</html>
