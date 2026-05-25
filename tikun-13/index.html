@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -19,6 +19,23 @@
     <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/components.css">
     <style>
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 56.25vw;
+            min-height: 100vh;
+            min-width: 177.77vh;
+        }
+        @media (max-width: 768px) {
+            .hero-video {
+                width: 700vw;
+                height: 393.75vw;
+            }
+        }
+
         /* Specific overrides for Tikun 13 landing page */
         @media (min-width: 993px) {
             .hero-inner {
@@ -117,6 +134,9 @@
             .marquee-title { font-size: 0.85rem !important; }
             .marquee-content { gap: 2rem !important; }
             .marquee-content img { height: 25px !important; }
+            .clock-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+            .clock-box { padding: 2rem !important; border-right: none !important; border-top: 8px solid var(--color-primary) !important; }
+            .numerical-section { padding: 4rem 0 !important; }
         }
         
         @keyframes pulsePhoneHeader {
@@ -138,17 +158,17 @@
     <header class="site-header">
         <div class="container header-inner">
             <div class="logo">
-                <a href="../index.html"><img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive Logo"></a>
+                <a href="../"><img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive Logo"></a>
             </div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="../tikun-13/index.html" style="color: var(--color-accent); font-weight: 700;">תיקון 13</a></li>
-                    <li><a href="../information-security-for-businesses/index.html">אבטחת מידע לעסקים</a></li>
-                    <li><a href="../information-security-for-organizations/index.html">אבטחת מידע לארגונים</a></li>
-                    <li><a href="../dpo/index.html">שירותי DPO</a></li>
+                    <li><a href="../tikun-13/" style="color: var(--color-accent); font-weight: 700;">תיקון 13</a></li>
+                    <li><a href="../information-security-for-businesses/">אבטחת מידע לעסקים</a></li>
+                    <li><a href="../information-security-for-organizations/">אבטחת מידע לארגונים</a></li>
+                    <li><a href="../dpo/">שירותי DPO</a></li>
                 </ul>
             </nav>
-            <a href="tel:0501234567" class="btn btn-primary nav-btn header-phone-btn" style="direction: ltr;"><i class="fa-solid fa-phone" style="margin-right: 0.5rem;"></i> 050-1234567</a>
+            <a href="tel:0545445429" class="btn btn-primary nav-btn header-phone-btn" style="direction: ltr;"><i class="fa-solid fa-phone" style="margin-right: 0.5rem;"></i> 054-544-5429</a>
         </div>
     </header>
 
@@ -159,7 +179,7 @@
             <iframe src="https://www.youtube.com/embed/TBC3J_djvRw?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=TBC3J_djvRw&playsinline=1" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.77vh;"
+                    class="hero-video"
                     title="Hero Video">
             </iframe>
             <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.5) 100%); z-index: 1;"></div>
@@ -176,24 +196,24 @@
                     </div>
                 </div>
 
-                <h1 style="color: white; font-size: clamp(2.5rem, 4vw, 4rem); line-height: 1.1; margin-bottom: 1.5rem; font-weight: 900; letter-spacing: -1px;">
+                <h1 style="color: white; font-size: clamp(2rem, 3.5vw, 3.5rem); line-height: 1.1; margin-bottom: 1.5rem; font-weight: 900; letter-spacing: -1px;">
                     תיקון 13 לחוק הגנת הפרטיות<br>
-                    <span class="gradient-glow-text">האם הארגון שלכם מוכן?</span>
+                    <span class="gradient-glow-text">האם אתם מוגנים מתביעות וקנסות?</span>
                 </h1>
                 
                 <p style="color: #CBD5E1; font-size: 1.25rem; margin-bottom: 0.5rem; line-height: 1.5;">
-                    החוק החדש חושף ארגונים שאוספים מידע לקנסות של מאות אלפי שקלים.
+                    התאמה מלאה לתיקון 13 בליווי עורך דין בתהליך מהיר ופשוט לעסקים וארגונים.
                 </p>
                 <p style="color: #CBD5E1; font-size: 1.25rem; margin-bottom: 3rem; line-height: 1.5;">
-                    צוות Privacy Hive ילווה אתכם להתאמה מלאה וראש שקט.
+                    <strong>שימו לב:</strong> אי התאמה לחוק עלול לגרור קנסות ותביעות בסך מאות אלפי שקלים
                 </p>
                 
                 <div class="btn-group hero-btn-group" style="display: flex; gap: 1rem; align-items: center; justify-content: flex-start; flex-wrap: wrap;">
-                    <a href="tel:0501234567" class="btn" style="background-color: var(--color-accent); color: white; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; transition: all 0.3s; text-decoration: none; box-shadow: 0 8px 24px rgba(63, 168, 152, 0.5); font-weight: bold;">
+                    <a href="tel:0545445429" class="btn" style="background-color: var(--color-accent); color: white; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; transition: all 0.3s; text-decoration: none; box-shadow: 0 8px 24px rgba(63, 168, 152, 0.5); font-weight: bold;">
                         <i class="fa-solid fa-phone" style="font-size: 1.1rem;"></i>
-                        <span style="direction: ltr; display: inline-block;">התקשרו לייעוץ 050-1234567</span>
+                        <span style="direction: ltr; display: inline-block;">התקשרו לייעוץ 054-544-5429</span>
                     </a>
-                    <a href="https://wa.me/972501234567" class="btn" style="background-color: white; color: var(--color-primary); display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; transition: all 0.3s; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    <a href="https://wa.me/972545445429?text=%D7%94%D7%99%D7%99%20%D7%91%D7%99%D7%A7%D7%A8%D7%AA%D7%99%20%D7%91%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20privacy-hive%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" class="btn" style="background-color: white; color: var(--color-primary); display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; transition: all 0.3s; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
                         <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i>
                         <span>יצירת קשר בווטסאפ</span>
                     </a>
@@ -290,9 +310,7 @@
             <h2 style="color: var(--color-primary); margin-bottom: 1rem; font-size: 2.5rem; font-weight: 900;">
                 בחנו את עצמכם: האם הארגון <span style="color: var(--color-accent); border-bottom: 3px solid var(--color-accent);">חשוף לקנסות?</span>
             </h2>
-            <p style="font-size: 1.25rem; color: #64748B; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                אם אחד מהסעיפים הבאים מתקיים אצלכם — אתם אוספים ומנהלים מידע אישי, והארגון שלכם מחויב מיידית לעמוד בדרישות חוק הגנת הפרטיות ותיקון 13.
-            </p>
+
             
             <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); text-align: center; gap: 2rem;">
                 <div class="card" style="display: flex; flex-direction: column; gap: 1.5rem; align-items: center; justify-content: center; border-bottom: 4px solid var(--color-accent); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); padding: 3rem 2rem; border-radius: 16px; background: white; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
@@ -364,7 +382,7 @@
                 </h2>
             </div>
             <p style="font-size: 1.25rem; color: #64748B; max-width: 800px; margin: 0 auto 3rem auto; line-height: 1.6;">
-                אנו מתמחים בהתאמת עסקים וארגונים לעמידה מלאה בחוק הגנת הפרטיות. הצוות שלנו מונע חשיפה לתביעות, דואג לכל דרישות הרגולציה, ומעניק לארגון שלכם שקט נפשי מוחלט.
+                אנו מתמחים בהתאמת חברות, עמותות ועסקים לעמידה מלאה בחוק הגנת הפרטיות. הצוות שלנו מצמצם חשיפה לתביעות, דואג לכל דרישות הרגולציה, ומעניק לארגון שלכם שקט נפשי מוחלט.
             </p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center;">
@@ -399,51 +417,61 @@
         <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 600px; height: 300px; background: radial-gradient(circle, rgba(239, 68, 68, 0.08) 0%, transparent 70%); pointer-events: none;"></div>
         
         <div class="container text-center" style="position: relative; z-index: 2;">
-            <h2 style="color: white; font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem;">
+            <h2 style="color: white; font-size: 2.5rem; font-weight: 900; margin-bottom: 4rem;">
                 לאילו קנסות ותביעות אתם <span style="color: #EF4444; border-bottom: 3px solid #EF4444;">חשופים היום?</span>
             </h2>
-            <p style="color: #CBD5E1; font-size: 1.25rem; max-width: 800px; margin: 0 auto 4rem auto;">
-                אי־התאמה לחוק הגנת הפרטיות ותיקון 13 יכולה להוביל לסנקציות משמעותיות מטעם הרשות להגנת הפרטיות, ולפגיעה קשה בפעילות העסקית.
-            </p>
+
             
             <div class="fines-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
                 <!-- Card 1 -->
-                <div class="fine-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-top: 4px solid var(--color-accent); border-radius: 16px; padding: 2rem; text-align: center; transition: transform 0.3s; display: flex; flex-direction: column;">
-                    <h3 style="color: white; font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 700;">איסוף מידע בלי גילוי מתאים</h3>
-                    <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">לדוגמה: טופס לידים שלא מסביר בבירור מה עושים עם הפרטים.</p>
-                    <div style="color: var(--color-accent); font-size: 3rem; font-weight: 900; line-height: 1; margin-bottom: 0.5rem; direction: ltr;">₪ 50</div>
-                    <div style="color: #CBD5E1; font-size: 0.9rem; font-weight: 600;">לכל אדם (או 100 ₪ למידע רגיש)</div>
+                <div class="fine-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-top: 4px solid rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 2rem; text-align: center; transition: transform 0.3s; display: flex; flex-direction: column; height: 100%;">
+                    <h3 style="color: white; font-size: 1.4rem; font-weight: 800; min-height: 4.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">לא הכנתם מסמכי הגדרות מאגר?</h3>
+                    <div style="margin-bottom: 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.2rem;">
+                        <span style="color: white; font-size: 1.1rem; font-weight: normal; opacity: 0.8; margin-bottom: -0.2rem;">עד</span>
+                        <span style="color: white; font-size: 2.8rem; font-weight: 900; line-height: 1; direction: ltr; white-space: nowrap;">₪ 160k</span>
+                        <span style="font-size: 1.4rem; font-weight: normal; color: #EF4444;">קנס</span>
+                    </div>
+                    <div style="color: #CBD5E1; font-size: 0.95rem; font-weight: normal; line-height: 1.5; margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.05);">קנס של עד 160 אלף ש״ח</div>
                 </div>
                 
                 <!-- Card 2 -->
-                <div class="fine-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-top: 4px solid var(--color-accent); border-radius: 16px; padding: 2rem; text-align: center; transition: transform 0.3s; display: flex; flex-direction: column;">
-                    <h3 style="color: white; font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 700;">אי־מינוי ממונה פרטיות</h3>
-                    <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">ארגון שחייב למנות ממונה הגנת פרטיות ולא עשה זאת.</p>
-                    <div style="color: var(--color-accent); font-size: 3rem; font-weight: 900; line-height: 1; margin-bottom: 0.5rem; direction: ltr;">₪ 2-4</div>
-                    <div style="color: #CBD5E1; font-size: 0.9rem; font-weight: 600;">לכל אדם במאגר שלכם</div>
+                <div class="fine-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-top: 4px solid rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 2rem; text-align: center; transition: transform 0.3s; display: flex; flex-direction: column; height: 100%;">
+                    <h3 style="color: white; font-size: 1.4rem; font-weight: 800; min-height: 4.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">אין מדיניות פרטיות מעודכנת?</h3>
+                    <div style="margin-bottom: 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.2rem;">
+                        <span style="color: white; font-size: 1.1rem; font-weight: normal; opacity: 0.8; margin-bottom: -0.2rem;">החל מ-</span>
+                        <span style="color: white; font-size: 2.8rem; font-weight: 900; line-height: 1; direction: ltr; white-space: nowrap;">₪ 200k+</span>
+                        <span style="font-size: 1.4rem; font-weight: normal; color: #EF4444;">קנס</span>
+                    </div>
+                    <div style="color: #CBD5E1; font-size: 0.95rem; font-weight: normal; line-height: 1.5; margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.05);">10,000 ש״ח ללא הוכחת נזק ועד 8 ש״ח תוספת לכל אדם שיש לכם במאגר ולא פחות מ-200 אלף ש״ח</div>
                 </div>
                 
                 <!-- Card 3: Highlighted -->
-                <div class="fine-card" style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.3); border-top: 5px solid #EF4444; border-radius: 16px; padding: 2rem; text-align: center; transition: transform 0.3s; transform: scale(1.05); z-index: 2; box-shadow: 0 20px 40px rgba(0,0,0,0.4); display: flex; flex-direction: column; position: relative;">
-                    <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #EF4444; color: white; padding: 4px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; white-space: nowrap;">הקנס המרכזי בחוק</div>
-                    <h3 style="color: white; font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 800; margin-top: 0.5rem;">הפרות אבטחת מידע</h3>
-                    <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">אין נוהל, אין ניהול הרשאות, אין בקרה על ספקים או היעדר תיעוד.</p>
-                    <div style="color: #EF4444; font-size: 3.5rem; font-weight: 900; line-height: 1; margin-bottom: 0.5rem; direction: ltr;">₪ 320k</div>
-                    <div style="color: white; font-size: 1rem; font-weight: 700; background: rgba(239, 68, 68, 0.2); padding: 4px 10px; border-radius: 6px; display: inline-block; margin: 0 auto;">להפרה בודדת!</div>
+                <div class="fine-card" style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.3); border-top: 5px solid #EF4444; border-radius: 16px; padding: 2rem; text-align: center; transition: transform 0.3s; transform: scale(1.05); z-index: 2; box-shadow: 0 20px 40px rgba(0,0,0,0.4); display: flex; flex-direction: column; position: relative; height: 100%;">
+                    <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #EF4444; color: white; padding: 4px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; white-space: nowrap;">סכנת תביעה מוגברת</div>
+                    <h3 style="color: white; font-size: 1.4rem; font-weight: 900; min-height: 4.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">לא החתמתם ספקים על נספח אבטחת מידע?</h3>
+                    <div style="margin-bottom: 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.2rem;">
+                        <span style="color: white; font-size: 1.1rem; font-weight: normal; opacity: 0.8; margin-bottom: -0.2rem;">עד</span>
+                        <span style="color: #EF4444; font-size: 2.8rem; font-weight: 900; line-height: 1; direction: ltr; white-space: nowrap;">₪ 320k</span>
+                        <span style="font-size: 1.4rem; font-weight: normal; color: #EF4444;">קנס</span>
+                    </div>
+                    <div style="color: #CBD5E1; font-size: 0.95rem; font-weight: normal; line-height: 1.5; margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(239,68,68,0.2);">קנסות של עד 320 אלף ש״ח</div>
                 </div>
-                
+
                 <!-- Card 4 -->
-                <div class="fine-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-top: 4px solid var(--color-accent); border-radius: 16px; padding: 2rem; text-align: center; transition: transform 0.3s; display: flex; flex-direction: column;">
-                    <h3 style="color: white; font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 700;">תביעות אזרחיות</h3>
-                    <p style="color: #94A3B8; font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">לקוח או עובד שטוען שהפרטיות שלו נפגעה ותובע את הארגון.</p>
-                    <div style="color: var(--color-accent); font-size: 3rem; font-weight: 900; line-height: 1; margin-bottom: 0.5rem; direction: ltr;">₪ 10k</div>
-                    <div style="color: #CBD5E1; font-size: 0.9rem; font-weight: 600;">ללא הוכחת נזק (במקרים מסוימים)</div>
+                <div class="fine-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-top: 4px solid rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 2rem; text-align: center; transition: transform 0.3s; display: flex; flex-direction: column; height: 100%;">
+                    <h3 style="color: white; font-size: 1.4rem; font-weight: 800; min-height: 4.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">לא ביצעתם סקר סיכונים או מבדק חדירות?</h3>
+                    <div style="margin-bottom: 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.2rem;">
+                        <span style="color: white; font-size: 1.1rem; font-weight: normal; opacity: 0.8; margin-bottom: -0.2rem;">עד</span>
+                        <span style="color: white; font-size: 2.8rem; font-weight: 900; line-height: 1; direction: ltr; white-space: nowrap;">₪ 320k</span>
+                        <span style="font-size: 1.4rem; font-weight: normal; color: #EF4444;">קנס</span>
+                    </div>
+                    <div style="color: #CBD5E1; font-size: 0.95rem; font-weight: normal; line-height: 1.5; margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.05);">קנס של עד 320 אלף ש״ח</div>
                 </div>
             </div>
             
             <!-- CTA Box for Fines -->
             <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 3rem 2rem; max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; backdrop-filter: blur(10px);">
-                <h3 style="color: white; font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;">אל תחכו לביקורת פתע של הרשות להגנת הפרטיות</h3>
+                <h3 style="color: white; font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;">אל תחכו לביקורת פתע או לתביעות ללא הוכחת נזק</h3>
                 <p style="color: #94A3B8; font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px;">הקנסות והתביעות יכולים לשתק את הפעילות העסקית שלכם. אנחנו כאן כדי לוודא שזה לא יקרה.</p>
                 <a href="#contact" class="btn" style="font-size: 1.25rem; font-weight: bold; padding: 1.2rem 3rem; background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%); color: white; border: none; box-shadow: var(--shadow-accent); border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.8rem;">
                     בדקו עכשיו את החשיפה שלכם ללא עלות <i class="fa-solid fa-arrow-left"></i>
@@ -455,9 +483,9 @@
     </section>
 
     <!-- 4. Numerical Example -->
-    <section class="section" style="background-color: #f1f5f9; padding: 8rem 0; overflow: hidden;">
+    <section class="section numerical-section" style="background-color: #f1f5f9; padding: 8rem 0; overflow: hidden;">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 6rem; align-items: center;">
+            <div class="clock-grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 6rem; align-items: center;">
                 
                 <!-- Right Side: Content -->
                 <div style="text-align: right;">
@@ -487,7 +515,7 @@
                     <!-- Decorative elements -->
                     <div style="position: absolute; width: 120%; height: 120%; background: #1e293b; border-radius: 50%; opacity: 0.03; filter: blur(100px); top: -10%; left: -10%; pointer-events: none;"></div>
                     
-                    <div style="background: white; padding: 3.5rem; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.08); position: relative; border-right: 8px solid var(--color-primary); display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="clock-box" style="background: white; padding: 3.5rem; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.08); position: relative; border-right: 8px solid var(--color-primary); display: flex; flex-direction: column; gap: 1.5rem;">
                         <h3 style="font-size: 1.8rem; font-weight: 900; color: #1e293b; margin: 0; border-bottom: 2px solid #e2e8f0; padding-bottom: 1rem;">מה יקרה אם תתעלמו?</h3>
                         
                         <div style="display: flex; gap: 1rem; align-items: flex-start; margin-top: 0.5rem;">
@@ -501,7 +529,7 @@
                         <div style="display: flex; gap: 1rem; align-items: flex-start;">
                             <div style="color: var(--color-accent); font-size: 1.5rem; flex-shrink: 0; margin-top: 2px;"><i class="fa-solid fa-users-slash"></i></div>
                             <div>
-                                <h4 style="font-size: 1.15rem; font-weight: 800; color: #1e293b; margin: 0 0 0.3rem 0;">תביעות קלות נגדכם</h4>
+                                <h4 style="font-size: 1.15rem; font-weight: 800; color: #1e293b; margin: 0 0 0.3rem 0;">תביעות ללא הוכחת נזק</h4>
                                 <p style="font-size: 1.05rem; color: #475569; line-height: 1.5; margin: 0;">לקוח או עובד יכול לתבוע אתכם ב-10,000 שקלים בלי שבכלל יצטרך להוכיח שנגרם לו נזק אמיתי.</p>
                             </div>
                         </div>
@@ -510,7 +538,7 @@
                             <div style="color: var(--color-accent); font-size: 1.5rem; flex-shrink: 0; margin-top: 2px;"><i class="fa-solid fa-user-lock"></i></div>
                             <div>
                                 <h4 style="font-size: 1.15rem; font-weight: 800; color: #1e293b; margin: 0 0 0.3rem 0;">המנהלים בסיכון אישי</h4>
-                                <p style="font-size: 1.05rem; color: #475569; line-height: 1.5; margin: 0;">אם לעסק יש בעיה עם המידע, מנהלים ובעלי תפקידים יכולים לשלם על כך גם מכיסם הפרטי.</p>
+                                <p style="font-size: 1.05rem; color: #475569; line-height: 1.5; margin: 0;">במקרה של הפרה, מנהלים ובעלי תפקידים יכולים לשלם על כך גם מכיסם הפרטי.</p>
                             </div>
                         </div>
                         
@@ -535,7 +563,7 @@
         <div class="container text-center" style="position: relative; z-index: 2;">
             <div style="max-width: 800px; margin: 0 auto 5rem auto;">
                 <h2 style="color: white; font-size: 2.8rem; font-weight: 900; margin-bottom: 1.5rem; letter-spacing: -1px;">איך Privacy Hive <span style="color: var(--color-accent);">פותרת לכם</span> את הבעיה?</h2>
-                <p style="font-size: 1.25rem; color: #CBD5E1; line-height: 1.6;">אנחנו לא רק מספקים ייעוץ תיאורטי. אנחנו בונים עבורכם "כיפת ברזל" רגולטורית שמאפשרת לכם להמשיך לצמוח בראש שקט.</p>
+                <p style="font-size: 1.25rem; color: #CBD5E1; line-height: 1.6;">אנחנו לא רק מספקים ייעוץ תיאורטי, אלא פתרון כולל ומעשי שמאפשר לכם לעמוד בדרישות החוק ולהמשיך לצמוח בראש שקט.</p>
             </div>
             
             <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; text-align: right;">
@@ -615,7 +643,7 @@
             <h2 style="color: var(--color-primary); margin-bottom: 1rem;">המומחים שילוו אתכם בתהליך</h2>
             <p style="font-size: 1.125rem; margin-bottom: 4rem; max-width: 800px; margin-left: auto; margin-right: auto;">ב־Privacy Hive תקבלו שילוב של מומחיות משפטית, אבטחת מידע, ביקורת מערכות וניהול סיכוני פרטיות — כדי שההתאמה לחוק תהיה גם נכונה משפטית וגם ישימה בפועל.</p>
             
-            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); text-align: center;">
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); text-align: center;">
                 <div class="card" style="padding: 2.5rem 1.5rem; border: 1px solid rgba(63, 168, 152, 0.2);">
                     <img src="../assets/maya.avif" alt="מאיה ויסמן" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
                     <h3 style="color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.4rem;">מאיה ויסמן</h3>
@@ -624,22 +652,17 @@
                 <div class="card" style="padding: 2.5rem 1.5rem; border: 1px solid rgba(63, 168, 152, 0.2);">
                     <img src="../assets/MOTI.avif" alt="עו״ד מוטי כהן" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
                     <h3 style="color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.4rem;">עו״ד מוטי כהן</h3>
-                    <p style="font-size: 0.95rem; line-height: 1.5; color: var(--color-text);">עורך דין המתמחה בהגנת הפרטיות, אבטחת מידע, דיני אינטרנט וזכויות יוצרים. מלווה ארגונים בהטמעת חוק הגנת הפרטיות ותקנות אבטחת המידע, ומשמש כממונה הגנת פרטיות חיצוני.</p>
+                    <p style="font-size: 0.95rem; line-height: 1.5; color: var(--color-text);">עורך דין המתמחה בהגנת הפרטיות, אבטחת מידע, דיני אינטרנט וזכויות יוצרים. מלווה ארגונים בהטמעת חוק הגנת הפרטיות ותקנות אבטחת המידע, ומשמש כממונה הגנת פרטיות חיצוני מוסמך, ומוסמך בטכנולוגיות הגנת סייבר DPO מוסמך, ומוסמך בטכנולוגיות הגנת סייבר DPO</p>
                 </div>
-                <div class="card" style="padding: 2.5rem 1.5rem; border: 1px solid rgba(63, 168, 152, 0.2);">
-                    <img src="../assets/mariana.avif" alt="עו״ד מריאנה דן" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.5rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
-                    <h3 style="color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.4rem;">עו״ד מריאנה דן</h3>
-                    <p style="font-size: 0.95rem; line-height: 1.5; color: var(--color-text);">עורכת דין בתחום אבטחת מידע, הגנת הפרטיות וסייבר. מלווה עסקים, חברות, עיריות וארגונים להתנהלות חוקית ונכונה תחת חוק הגנת הפרטיות ותקנות אבטחת המידע.</p>
                 </div>
-            </div>
             
             <!-- CTA After Experts -->
             <div style="margin-top: 5rem; background: white; padding: 4rem 2rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid rgba(63, 168, 152, 0.2);">
                 <h3 style="color: var(--color-primary); font-size: 2.2rem; font-weight: 900; margin-bottom: 1rem;">אל תשאירו את הארגון שלכם חשוף</h3>
                 <p style="font-size: 1.2rem; color: #64748B; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">דברו עם המומחים שלנו עכשיו לשיחת ייעוץ ראשונית ללא התחייבות, ונבין יחד מה הצעדים המיידיים שאתם צריכים לעשות.</p>
                 <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="tel:0501234567" class="btn" style="background: white; color: var(--color-primary); border: 2px solid var(--color-primary); font-size: 1.2rem; padding: 1rem 2.5rem; display: flex; align-items: center; gap: 0.8rem; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s; text-decoration: none;" onmouseover="this.style.background='var(--color-bg-soft)'" onmouseout="this.style.background='white'">
-                        <i class="fa-solid fa-phone" style="color: var(--color-accent);"></i> חייגו: 050-1234567
+                    <a href="tel:0545445429" class="btn" style="background: white; color: var(--color-primary); border: 2px solid var(--color-primary); font-size: 1.2rem; padding: 1rem 2.5rem; display: flex; align-items: center; gap: 0.8rem; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s; text-decoration: none;" onmouseover="this.style.background='var(--color-bg-soft)'" onmouseout="this.style.background='white'">
+                        <i class="fa-solid fa-phone" style="color: var(--color-accent);"></i> חייגו: 054-544-5429
                     </a>
                     <a href="#contact" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2.5rem; display: flex; align-items: center; gap: 0.8rem;">
                         השאירו פרטים לייעוץ <i class="fa-solid fa-arrow-left"></i>
@@ -727,7 +750,7 @@
                 <p style="color: #CBD5E1; font-size: 1.125rem; max-width: 800px; margin: 0 auto;">בשיחת ייעוץ ראשונית ללא עלות נבדוק את מצב הארגון ונראה אילו צעדים כדאי לבצע כבר עכשיו.</p>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; max-width: 1000px; margin: 0 auto; align-items: start;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; max-width: 1000px; margin: 0 auto; align-items: start;">
                 
                 <!-- Info Box -->
                 <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-lg); padding: 2.5rem; color: white;">
@@ -854,19 +877,18 @@
                 <div class="footer-col">
                     <h4>שירותים</h4>
                     <ul class="footer-links">
-                        <li><a href="../tikun-13/index.html">תיקון 13</a></li>
-                        <li><a href="../information-security-for-businesses/index.html">אבטחת מידע לעסקים</a></li>
-                        <li><a href="../information-security-for-organizations/index.html">אבטחת מידע לארגונים</a></li>
-                        <li><a href="../dpo/index.html">שירותי DPO</a></li>
+                        <li><a href="../tikun-13/">תיקון 13</a></li>
+                        <li><a href="../information-security-for-businesses/">אבטחת מידע לעסקים</a></li>
+                        <li><a href="../information-security-for-organizations/">אבטחת מידע לארגונים</a></li>
+                        <li><a href="../dpo/">שירותי DPO</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>יצירת קשר</h4>
                     <ul class="footer-links">
-                        <li>מאיה: maya@privacy-hive.com</li>
-                        <li>מוטי: moti@privacy-hive.com</li>
-                        <li>מריאנה: mariana@privacy-hive.com</li>
-                    </ul>
+                        <li>מאיה: 050-613-6596 | maya@privacy-hive.com</li>
+                        <li>מוטי: 054-544-5429 | moti@privacy-hive.com</li>
+                        </ul>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -882,11 +904,11 @@
     </div>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/972501234567" target="_blank" class="floating-whatsapp" style="position: fixed; bottom: 30px; left: 30px; width: 65px; height: 65px; background-color: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 9999; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <a href="https://wa.me/972545445429?text=%D7%94%D7%99%D7%99%20%D7%91%D7%99%D7%A7%D7%A8%D7%AA%D7%99%20%D7%91%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20privacy-hive%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank" class="floating-whatsapp" style="position: fixed; bottom: 30px; left: 30px; width: 65px; height: 65px; background-color: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 9999; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="../js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script>
         // Cookie Consent Logic
         function acceptCookies() {
@@ -918,3 +940,5 @@
     </script>
 </body>
 </html>
+
+
