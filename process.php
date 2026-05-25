@@ -9,11 +9,12 @@ require 'assets/phpmailer/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    // SMTP Credentials (to be filled by the client)
-    $smtpHost = 'mail.privacy-hive.com'; // Change this
-    $smtpPort = 465; // Change this (465 for SSL, 587 for TLS)
-    $smtpUsername = 'leads@privacy-hive.com'; // Change this
-    $smtpPassword = 'YOUR_PASSWORD_HERE'; // Change this
+    // SMTP Credentials (loaded securely from config.php)
+    $config = require 'config.php';
+    $smtpHost = $config['smtp_host'];
+    $smtpPort = $config['smtp_port'];
+    $smtpUsername = $config['smtp_user'];
+    $smtpPassword = $config['smtp_pass'];
     $smtpEncryption = PHPMailer::ENCRYPTION_SMTPS; // ENCRYPTION_SMTPS for 465, ENCRYPTION_STARTTLS for 587
 
     // Extract form fields

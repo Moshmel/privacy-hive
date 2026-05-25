@@ -13,3 +13,6 @@ desktop.ini
 # Zip files
 *.zip
 *.tar.gz
+
+# Config files with secrets
+config.php
