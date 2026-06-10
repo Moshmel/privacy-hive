@@ -68,11 +68,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         'formLocation': window.location.pathname
                     });
                     
-                    // Redirect to Thank You Page
+                    // Redirect to Thank You Page with delay to allow GTM to fire
                     const thankYouUrl = window.location.pathname.includes('/') && window.location.pathname.split('/').length > 2 
                                        ? '../thank-you.html' 
                                        : 'thank-you.html';
-                    window.location.href = thankYouUrl;
+                    setTimeout(() => {
+                        window.location.href = thankYouUrl;
+                    }, 500);
                 })
                 .catch(error => {
                     console.error('Error:', error);

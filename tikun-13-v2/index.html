@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PTXKVMJ9');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תיקון 13 לחוק הגנת הפרטיות | התאמה לעסקים וארגונים</title>
+    <meta name="description" content="בדקו אם הארגון שלכם מוכן לתיקון 13. ליווי מקצועי להתאמה לחוק הגנת הפרטיות, צמצום סיכון לקנסות ותביעות ושיחת ייעוץ ללא עלות.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/global.css?v=1.1">
+    <link rel="stylesheet" href="../assets/css/components.css?v=1.1">
+    <style>
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.35);
+            width: 100vw;
+            height: 56.25vw;
+            min-height: 100vh;
+            min-width: 177.77vh;
+            pointer-events: none;
+        }
+        @media (max-width: 768px) {
+            .hero-video {
+                width: 700vw;
+                height: 393.75vw;
+            }
+        }
+
+        /* Specific overrides for Tikun 13 landing page */
+        @media (min-width: 993px) {
+            .hero-inner {
+                grid-template-columns: 2fr 1fr;
+                gap: 4rem;
+            }
+            .hero-floating-form {
+                max-width: 400px;
+                margin-right: auto;
+            }
+        }
+        
+        .fines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .fine-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            text-align: right;
+            transition: transform var(--transition-fast);
+        }
+        .fine-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.08); }
+        .fine-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+            margin-top: 1rem;
+            display: block;
+        }
+        .fine-number-sub {
+            font-size: 1rem;
+            color: var(--color-accent);
+            font-weight: 700;
+        }
+        .wow-box {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-floating);
+            padding: 4rem 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .wow-left { border-right: 2px dashed var(--color-border); padding-right: 3rem; }
+        @media (max-width: 768px) {
+            .wow-box { grid-template-columns: 1fr; padding: 1.5rem !important; gap: 1.5rem !important; }
+            .wow-left { border-right: none; padding-right: 0; border-top: 2px dashed var(--color-border); padding-top: 1.5rem; margin-top: 0.5rem; text-align: center; }
+            .fine-number { font-size: 2rem; }
+            .wow-box h3, .wow-box h2, .wow-box p, .wow-box ul { text-align: center !important; }
+            .wow-box ul { list-style-position: inside; padding: 0; }
+            .wow-box ul li { text-align: center; display: block; margin-bottom: 0.5rem; }
+            
+            /* General Mobile Padding & Alignment */
+            .numerical-section { padding: 2.5rem 0 !important; }
+            .clock-box { padding: 1.5rem !important; text-align: center; }
+            h2.section-title { text-align: center !important; margin-bottom: 1.5rem !important; }
+            .section-subtitle { text-align: center !important; }
+            .fine-card { padding: 1.5rem !important; text-align: center !important; }
+            .fines-grid { gap: 1rem !important; }
+            p { text-align: center !important; }
+        }
+        @keyframes softGlow {
+            0% { text-shadow: 0 0 10px rgba(63, 168, 152, 0.4); }
+            50% { text-shadow: 0 0 25px rgba(63, 168, 152, 0.8), 0 0 10px rgba(63, 168, 152, 0.5); }
+            100% { text-shadow: 0 0 10px rgba(63, 168, 152, 0.4); }
+        }
+        .gradient-glow-text {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: softGlow 3s infinite alternate;
+            display: inline-block;
+        }
+        
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-content {
+            animation: marqueeScroll 40s linear infinite;
+            display: flex;
+            width: max-content;
+        }
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .hero-content { text-align: center !important; }
+            .hero-badge-container { justify-content: center !important; }
+            .hero-btn-group { justify-content: center !important; flex-direction: column; width: 100%; gap: 1rem !important; margin-bottom: 0px !important; }
+            .hero-btn-group .btn { width: 100%; justify-content: center; font-size: 1.25rem !important; padding: 1.2rem 1rem !important; white-space: normal !important; line-height: 1.3; font-weight: 800; }
+            .hero-badge-text { font-size: 0.85rem !important; }
+            .floating-whatsapp { width: 55px !important; height: 55px !important; font-size: 1.8rem !important; bottom: 15px !important; left: 15px !important; }
+            .hero { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+            .marquee-container { gap: 1rem !important; }
+            .marquee-title { font-size: 0.85rem !important; }
+            .marquee-content { gap: 2rem !important; }
+            .marquee-content img { height: 25px !important; }
+            .clock-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+            .clock-box { padding: 2rem !important; border-right: none !important; border-top: 8px solid var(--color-primary) !important; }
+            .numerical-section { padding: 4rem 0 !important; }
+        }
+        
+        @keyframes pulsePhoneHeader {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(63, 168, 152, 0.6); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(63, 168, 152, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(63, 168, 152, 0); }
+        }
+        .header-phone-btn {
+            animation: pulsePhoneHeader 2s infinite;
+            font-size: 1.15rem !important;
+            padding: 0.5rem 1.8rem !important;
+            font-weight: 800 !important;
+        }
+    
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem !important; text-align: center; }
+            .hero-content h2 { font-size: 1.6rem !important; text-align: center; line-height: 1.4 !important; }
+            .hero-content p { text-align: center; font-size: 1.1rem !important; }
+            .hero-btn-group { justify-content: center !important; }
+        }
+    
+        @media (max-width: 768px) {
+            .desktop-marquee { display: none !important; }
+            .mobile-marquee { display: block !important; }
+            .full-bleed-mobile {
+                width: 100vw !important;
+                position: relative;
+                left: 50%;
+                right: 50%;
+                margin-left: -50vw;
+                margin-right: -50vw;
+            }
+        }
+        @media (min-width: 769px) {
+            .mobile-marquee { display: none !important; }
+            .desktop-marquee { display: block !important; }
+        }
+        
+        /* Force all CTA buttons in sections to match hero design */
+        section a.btn-primary, section a.btn-secondary {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 0.8rem !important;
+            font-size: 1.25rem !important;
+            padding: 1rem 2.2rem !important;
+            border-radius: 50px !important;
+            font-weight: 800 !important;
+            text-decoration: none !important;
+            border: none !important;
+        }
+        
+        section a.btn-primary {
+            background-color: var(--color-accent) !important;
+            color: white !important;
+            box-shadow: 0 8px 24px rgba(63, 168, 152, 0.5) !important;
+        }
+        
+        section a.btn-secondary {
+            background-color: white !important;
+            color: var(--color-primary) !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+        }
+        
+        section a.btn-primary i { color: white !important; font-size: 1.25rem !important; }
+        section a.btn-secondary i { color: var(--color-primary) !important; font-size: 1.4rem !important; }
+
+        @media (max-width: 768px) {
+            .desktop-only { display: none !important; }
+            section[style*="padding: 6rem"] {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            section h2[style*="text-align: right"], 
+            section div[style*="text-align: right"] {
+                text-align: center !important;
+            }
+            section div[style*="display: flex"][style*="gap: 1rem"] {
+                flex-direction: column !important;
+                width: 100% !important;
+            }
+            section a.btn-primary, section a.btn-secondary {
+                width: 100% !important;
+                font-size: 1.25rem !important;
+                padding: 1.2rem 1rem !important;
+                white-space: normal !important;
+                line-height: 1.3 !important;
+                margin-bottom: 0.5rem !important;
+            }
+        }
+    </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18176010346"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18176010346');
+</script>
+</head>
+
+<body>
+    <div id="contact"></div>
+    <div id="risk"></div>
+    <div id="process"></div>
+    <div id="team"></div>
+    <div id="quiz"></div>
+    <div id="whatif"></div>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTXKVMJ9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="../"><img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive Logo"></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../tikun-13/" style="color: var(--color-accent); font-weight: 700;">תיקון 13</a></li>
+                    <li><a href="../information-security-for-businesses/">אבטחת מידע לעסקים</a></li>
+                    <li><a href="../information-security-for-organizations/">אבטחת מידע לארגונים</a></li>
+                    <li><a href="../dpo/">שירותי DPO</a></li>
+                </ul>
+            </nav>
+            <a href="tel:0545445429" class="btn btn-primary nav-btn header-phone-btn" style="direction: ltr;"><i class="fa-solid fa-phone" style="margin-right: 0.5rem;" class="header-icon"></i> <span class="header-phone-text">054-544-5429</span></a>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="hero section-dark has-bg-video" style="padding-top: 5rem; padding-bottom: 5rem; position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <!-- Animated Premium Background -->
+        <div class="video-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; pointer-events: none;">
+            <style>
+                @keyframes heroGradientAnim {
+                    0% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                    100% { background-position: 0% 50%; }
+                }
+                .animated-hero-bg {
+                    position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
+                    background: linear-gradient(-45deg, #0f172a, #1e293b, #11363f, #051a24);
+                    background-size: 400% 400%;
+                    animation: heroGradientAnim 15s ease infinite;
+                }
+            </style>
+            <div class="animated-hero-bg"></div>
+            <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.4) 100%); z-index: 1;"></div>
+        </div>
+
+        <div class="container hero-inner" style="position: relative; z-index: 2;">
+            
+            <div class="hero-content" style="text-align: right;">
+                <h1 style="color: white; font-size: clamp(2rem, 3.5vw, 4rem); line-height: 1.1; margin-bottom: 1.5rem; font-weight: 900; letter-spacing: -1px;">
+                    תיקון 13 לחוק הגנת הפרטיות
+                </h1>
+                
+                <h2 style="color: white; font-size: 1.8rem; margin-bottom: 2.5rem; line-height: 1.5; font-weight: 500;">
+                    התאימו את העסק לדרישות החוק הישראלי והGDPR <span style="color: var(--color-accent);">בהליך ברור ומהיר</span> —<span style="display: block; margin-top: 0.8rem;"><span style="color: var(--color-accent);">בליווי עורך דין</span> ומומחי פרטיות ואבטחת מידע.</span>
+                </h2>
+
+
+                <div style="display: block; color: white; font-weight: 600; margin-bottom: 0.8rem; font-size: 1.1rem;">
+                    לשיחת ייעוץ חינם:
+                </div>
+                <div class="btn-group hero-btn-group" style="display: flex; gap: 1.5rem; align-items: center; justify-content: flex-start; flex-wrap: wrap;">
+                    <a href="tel:0545445429" class="btn" style="background-color: var(--color-accent); color: white; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.25rem; padding: 1rem 2.2rem; border-radius: 50px; transition: all 0.3s; text-decoration: none; box-shadow: 0 8px 24px rgba(63, 168, 152, 0.5); font-weight: bold;">
+                        <i class="fa-solid fa-phone" style="font-size: 1.25rem;"></i>
+                        <span>חייגו: 054-544-5429</span>
+                    </a>
+                    <a href="#contact-section" class="btn" style="background-color: white; color: var(--color-primary); display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.25rem; padding: 1rem 2.2rem; border-radius: 50px; transition: all 0.3s; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                        <i class="fa-regular fa-envelope" style="font-size: 1.4rem;"></i>
+                        <span>השאירו פרטים</span>
+                    </a>
+                </div>
+            </div>
+
+            
+            <!-- Clients Marquee Mobile -->
+            <div class="mobile-marquee full-bleed-mobile" style="margin-top: -5px; margin-bottom: -10px;">
+                <div style="background-color: transparent; width: 100%; display: flex; align-items: center; padding: 0.5rem 0; overflow: hidden; position: relative; z-index: 10;">
+                    <div class="container marquee-container" style="display: flex; align-items: center; width: 100%; gap: 3rem;">
+                        
+                        <div style="overflow: hidden; flex-grow: 1; position: relative; direction: ltr;">
+                            <div class="marquee-content" style="display: flex; gap: 4rem; align-items: center;">
+                    <img src="../assets/customers-logos/Clip path group-1.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-2.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-3.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-4.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-5.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-6.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-7.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-8.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-9.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-10.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Group 96.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Group.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Rectangle-1.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Rectangle.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <!-- Set 2 -->
+                    <img src="../assets/customers-logos/Clip path group-1.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-2.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-3.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-4.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-5.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-6.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-7.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-8.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-9.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-10.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Group 96.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Group.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Rectangle-1.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Rectangle.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hero-floating-form" style="position: relative; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); border-radius: 20px; background: white; padding: 1.8rem 1.5rem;">
+                    <h3 style="margin-bottom: 1.2rem; text-align: center; color: var(--color-primary); font-size: 1.4rem; font-weight: 800;">קבעו שיחת ייעוץ ראשונית ללא עלות</h3>
+                    <form id="hero-form" class="lead-form" style="box-shadow: none; padding: 0;">
+                        <div class="form-group" style="margin-bottom: 0.6rem;">
+                            <input type="text" id="h-fname" name="fname" class="form-control" placeholder="שם מלא" required style="border: none; background: #F1F5F9; border-radius: 10px; text-align: right; padding: 0.8rem 1rem; font-size: 0.95rem;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0.6rem;">
+                            <input type="tel" id="h-phone" name="phone" class="form-control" placeholder="טלפון" dir="rtl" required style="border: none; background: #F1F5F9; border-radius: 10px; text-align: right; padding: 0.8rem 1rem; font-size: 0.95rem;">
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 0.8rem;">
+                            <input type="text" id="h-company" name="company" class="form-control" placeholder="שם העסק" style="border: none; background: #F1F5F9; border-radius: 10px; text-align: right; padding: 0.8rem 1rem; font-size: 0.95rem;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.5rem; text-align: right;">
+                            <input type="checkbox" id="h-privacy" name="privacy" required style="margin-top: 0.25rem;">
+                            <label for="h-privacy" style="font-size: 0.85rem; color: #64748B; margin: 0; line-height: 1.4; cursor: pointer;">
+                                אני מאשר שיחזרו אלי ומסכים ל<a href="/privacy-policy" target="_blank" style="color: var(--color-accent); text-decoration: underline;">מדיניות הפרטיות</a>
+                            </label>
+                        </div>
+                        <input type="hidden" name="reason" value="tikun-13-hero">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; font-weight: bold; padding: 1rem; background: var(--color-primary); color: white; border: none; border-radius: 10px; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.4);">
+                            קבעו לי שיחה חינמית
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+<!-- Clients Marquee Desktop -->
+<div class="desktop-marquee">
+<!-- Clients Marquee -->
+    <div style="background-color: var(--color-accent); width: 100%; display: flex; align-items: center; padding: 1.2rem 0; overflow: hidden; border-bottom: 2px solid rgba(255,255,255,0.1); position: relative; z-index: 10;">
+        <div class="container marquee-container" style="display: flex; align-items: center; width: 100%; gap: 3rem;">
+            <!-- Right side text -->
+            <div class="marquee-title" style="color: white; font-weight: 900; font-size: 1.3rem; white-space: nowrap; flex-shrink: 0; z-index: 2;">
+                לקוחותינו
+            </div>
+            <!-- Left side slider -->
+            <div style="overflow: hidden; flex-grow: 1; position: relative; direction: ltr;">
+                <!-- Fading edges -->
+                <div style="position: absolute; top: 0; left: 0; width: 50px; height: 100%; background: linear-gradient(to right, var(--color-accent), transparent); z-index: 2;"></div>
+                <div style="position: absolute; top: 0; right: 0; width: 50px; height: 100%; background: linear-gradient(to left, var(--color-accent), transparent); z-index: 2;"></div>
+                
+                <div class="marquee-content" style="display: flex; gap: 4rem; align-items: center;">
+                    <!-- Set 1 -->
+                    <img src="../assets/customers-logos/Clip path group-1.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-2.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-3.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-4.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-5.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-6.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-7.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-8.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-9.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-10.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Group 96.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Group.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Rectangle-1.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Rectangle.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <!-- Set 2 -->
+                    <img src="../assets/customers-logos/Clip path group-1.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-2.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-3.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-4.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-5.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-6.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-7.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-8.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-9.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group-10.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Clip path group.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Group 96.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Group.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Rectangle-1.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                    <img src="../assets/customers-logos/Rectangle.svg" alt="Client Logo" style="height: 35px; width: auto; opacity: 0.9;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Reviews Section -->
+    <section class="section" style="padding: 5rem 0; background-color: white;">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 3.5rem; font-size: 2.2rem; font-weight: 900; color: var(--color-primary);">מה הלקוחות שלנו אומרים?</h2>
+            <style>
+                .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+                @media (max-width: 992px) { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+                @media (max-width: 768px) { .reviews-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+            </style>
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div style="background: #F8FAFC; border-radius: var(--radius-lg); padding: 2rem; display: flex; flex-direction: column; gap: 1rem; border: 1px solid #E2E8F0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                            <span style="font-weight: 800; color: var(--color-primary); font-size: 1.1rem;">עדיאל לוי</span>
+                        </div>
+                        <div style="display: flex; gap: 0.2rem; color: #F59E0B; font-size: 0.9rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p style="font-size: 1rem; color: #334155; line-height: 1.5; margin: 0; text-align: right;">
+                        הגענו לעו"ד מוטי כהן לצורך כתיבת תקנון ומדיניות פרטיות לאתר שלנו. קיבלנו שירות מקצועי ברמה הגבוהה ביותר, עם ירידה לפרטים הקטנים והבנה עמוקה של הצרכים העסקיים שלנו. הכל נעשה בסבלנות, בשקיפות ובמהירות. מומלץ בחום לכל בעל עסק שרוצה שקט נפשי משפטי.
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
+                <div style="background: #F8FAFC; border-radius: var(--radius-lg); padding: 2rem; display: flex; flex-direction: column; gap: 1rem; border: 1px solid #E2E8F0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                            <span style="font-weight: 800; color: var(--color-primary); font-size: 1.1rem; direction: ltr; text-align: right;">ariel azulay</span>
+                        </div>
+                        <div style="display: flex; gap: 0.2rem; color: #F59E0B; font-size: 0.9rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p style="font-size: 1rem; color: #334155; line-height: 1.5; margin: 0; text-align: right;">
+                        אני רוצה לפרגן למוטי היקר<br>היחס והשירות שקיבלתי ממנו ברמה הכי גבוהה בתור אחד שעובד בדיגיטל הוא נותן לי מענה לכל מה שצריך ולא רק אני מבסוט גם הלקוחות שלי מבסוטים מהשירות שלו<br><br>ממליץ בחום ללא ספק
+                    </p>
+                </div>
+
+                <!-- Review 3 -->
+                <div style="background: #F8FAFC; border-radius: var(--radius-lg); padding: 2rem; display: flex; flex-direction: column; gap: 1rem; border: 1px solid #E2E8F0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                            <span style="font-weight: 800; color: var(--color-primary); font-size: 1.1rem;">ליליאן אוחנה</span>
+                        </div>
+                        <div style="display: flex; gap: 0.2rem; color: #F59E0B; font-size: 0.9rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p style="font-size: 1rem; color: #334155; line-height: 1.5; margin: 0; text-align: right;">
+                        שלום, מודה מאד לעו"ד מוטי כהן שסייע במקצועיות, ומתוך רצון כנה ואמיתי לעזור.<br><br>בזכות עזרתו והכוונתו המקצועית והמועילה, זכינו לסגור דרישת תשלום שרירותית של אלפי ש"ח בהפחתה משמעותית לכמה מאות ש"ח, ולעזור לעסק שנסגר ונקלע בשל המצב לקשיים וחובות.<br>בברכה<br>א. עו"ד
+                    </p>
+                </div>
+
+                <!-- Review 4 -->
+                <div style="background: #F8FAFC; border-radius: var(--radius-lg); padding: 2rem; display: flex; flex-direction: column; gap: 1rem; border: 1px solid #E2E8F0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                            <span style="font-weight: 800; color: var(--color-primary); font-size: 1.1rem;">שיר עוזיאל</span>
+                        </div>
+                        <div style="display: flex; gap: 0.2rem; color: #F59E0B; font-size: 0.9rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p style="font-size: 1rem; color: #334155; line-height: 1.5; margin: 0; text-align: right;">
+                        עבדתי עם מוטי על ניסוח חוזה לשימוש באתר, והחוויה הייתה מצוינת. הוא היה זמין ויעיל, סיפק מענה מהיר ושירות מדויק. בפרויקט אחר גם עלה לשיחת ייעוץ מול לקוח שלי כשהיה צורך ומעבר למקצועיות, מוטי הסביר כל דבר בצורה פשוטה, בגובה העיניים, ונתן ביטחון מלא בתהליך.
+                    </p>
+                </div>
+
+                <!-- Review 5 -->
+                <div style="background: #F8FAFC; border-radius: var(--radius-lg); padding: 2rem; display: flex; flex-direction: column; gap: 1rem; border: 1px solid #E2E8F0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                            <span style="font-weight: 800; color: var(--color-primary); font-size: 1.1rem; direction: ltr; text-align: right;">Yuval Mor</span>
+                        </div>
+                        <div style="display: flex; gap: 0.2rem; color: #F59E0B; font-size: 0.9rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p style="font-size: 1rem; color: #334155; line-height: 1.5; margin: 0; text-align: right;">
+                        מוטי נתן שירות מדהים, מהיר ומקצועי, כל פעם שלא הבנתי משהו הוא לקח את הזמן להסביר לי ובכללי היה ממש כיף לעבוד איתו. אני מאוד מרוצה מהתוצאה וממליץ בחום.
+                    </p>
+                </div>
+
+                <!-- Review 6 -->
+                <div style="background: #F8FAFC; border-radius: var(--radius-lg); padding: 2rem; display: flex; flex-direction: column; gap: 1rem; border: 1px solid #E2E8F0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; flex-direction: column; gap: 0.2rem;">
+                            <span style="font-weight: 800; color: var(--color-primary); font-size: 1.1rem; direction: ltr; text-align: right;">maya rok</span>
+                        </div>
+                        <div style="display: flex; gap: 0.2rem; color: #F59E0B; font-size: 0.9rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p style="font-size: 1rem; color: #334155; line-height: 1.5; margin: 0; text-align: right;">
+                        המלצה חמה חמה!!<br>מוטי כהן הוא עורך דין מוכשר בעל אבחנה והבנה חדה בתחום הגנת הפרטיות הזכויות יוצרים. הוא מגלה יוזמה, רצינות וממש מלווה לעומק בכל תיק, נעזרתי בו לכתוב חוזים, נהלים, ביקורות של פרטיות ועוד, הוא מעולה.
+                    </p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3.5rem;">
+                <a href="#contact-section" class="btn btn-primary">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>השאירו פרטים</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section style="background-color: #F8FAFC; padding: 2.5rem 0; border-bottom: 1px solid #E2E8F0;">
+        <div class="container text-center">
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; justify-content: center;">
+                <div style="display: flex; align-items: center; gap: 0.6rem; background: white; border: 1px solid #E2E8F0; border-right: 3px solid var(--color-accent); padding: 0.6rem 1.2rem; border-radius: 50px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                    <div style="color: var(--color-accent); font-size: 1.1rem;"><i class="fa-solid fa-gavel"></i></div>
+                    <span style="color: var(--color-primary); font-weight: 700; font-size: 1rem;">עו״ד בתחום הגנת הפרטיות</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.6rem; background: white; border: 1px solid #E2E8F0; border-right: 3px solid var(--color-accent); padding: 0.6rem 1.2rem; border-radius: 50px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                    <div style="color: var(--color-accent); font-size: 1.1rem;"><i class="fa-solid fa-user-shield"></i></div>
+                    <span style="color: var(--color-primary); font-weight: 700; font-size: 1rem;">DPO חיצוני</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.6rem; background: white; border: 1px solid #E2E8F0; border-right: 3px solid var(--color-accent); padding: 0.6rem 1.2rem; border-radius: 50px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                    <div style="color: var(--color-accent); font-size: 1.1rem;"><i class="fa-solid fa-shield-halved"></i></div>
+                    <span style="color: var(--color-primary); font-weight: 700; font-size: 1rem;">מומחי אבטחת מידע</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.6rem; background: white; border: 1px solid #E2E8F0; border-right: 3px solid var(--color-accent); padding: 0.6rem 1.2rem; border-radius: 50px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+                    <div style="color: var(--color-accent); font-size: 1.1rem;"><i class="fa-solid fa-award"></i></div>
+                    <span style="color: var(--color-primary); font-weight: 700; font-size: 1rem;">תקני אבטחה בינלאומיים</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audience Match Section -->
+    <section class="section" style="padding: 6rem 0; background-color: #F8FAFC; overflow: hidden;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                <div style="text-align: right;">
+                    <h2 style="color: var(--color-primary); margin-bottom: 1.5rem; font-size: 2.4rem; font-weight: 900; line-height: 1.2;">
+                        רוצים לדעת אם העסק שלכם עומד בדרישות תיקון 13?
+                    </h2>
+                    <p style="font-size: 1.3rem; color: #334155; line-height: 1.6; font-weight: 600; margin-bottom: 1.5rem;">
+                        אם יש לכם רשימת לקוחות, מערכת CRM, טפסי לידים באתר או שאתם שולחים דיוור/SMS/וואטסאפ ללקוחות — <strong style="color: var(--color-primary); background: rgba(63, 168, 152, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px;">תיקון 13 רלוונטי לעסק שלכם.</strong>
+                    </p>
+                    <p style="font-size: 1.15rem; color: #64748B; line-height: 1.6; margin-bottom: 2.5rem;">
+                        ב־Privacy Hive נעזור לכם להבין מה חסר, מה צריך לסדר, ואיך להתאים את העסק לדרישות החוק בצורה פשוטה וברורה.
+                    </p>
+                    
+                    
+                    <div style="margin-top: 1.5rem;">
+                        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                            <a href="tel:0545445429" class="btn btn-primary" style="font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.8rem; font-weight: bold;">
+                                <i class="fa-solid fa-phone"></i> חייגו: 054-544-5429
+                            </a>
+                            <a href="#contact-section" class="btn btn-secondary" style="font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.8rem; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.05); color: var(--color-primary);">
+                                <i class="fa-regular fa-envelope" style="color: var(--color-primary); font-size: 1.3rem;"></i> השאירו פרטים
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="position: relative;">
+                    <!-- Decorative blob behind image -->
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120%; height: 120%; background: radial-gradient(circle, rgba(63,168,152,0.1) 0%, transparent 70%); z-index: 1;"></div>
+                    <img src="../assets/crm_illustration.png" alt="מערכות CRM וטפסי לידים" style="width: 100%; max-width: 400px; display: block; margin: 0 auto; position: relative; z-index: 2; mix-blend-mode: multiply; opacity: 0.9;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section section-dark" style="background-color: var(--color-primary); padding: 6rem 0; color: white; position: relative; overflow: hidden;">
+        <!-- Faint background pattern -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.03; background-image: radial-gradient(circle at 20px 20px, white 2px, transparent 0); background-size: 40px 40px;"></div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            <h2 style="font-size: 2.8rem; font-weight: 900; margin-bottom: 3rem; color: white; text-align: center;">למה לבחור ב־Privacy Hive?</h2>
+            
+            <div style="max-width: 1000px; margin: 0 auto; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 4rem; border-radius: 20px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 4rem; flex-wrap: wrap-reverse; justify-content: center;">
+                
+                <!-- Left: Graphic -->
+                <div style="flex: 1; min-width: 250px; display: flex; justify-content: center; position: relative;">
+                    <!-- Glow effect behind SVG -->
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 150px; height: 150px; background: var(--color-accent); filter: blur(70px); opacity: 0.3; border-radius: 50%;"></div>
+                    
+                    <svg width="220" height="220" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: relative; z-index: 2;">
+                        <path d="M50 5L90 28V72L50 95L10 72V28L50 5Z" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+                        <path d="M50 15L80 32V68L50 85L20 68V32L50 15Z" stroke="var(--color-accent)" stroke-width="3" stroke-linejoin="round"/>
+                        <path d="M50 25L70 36V64L50 75L30 64V36L50 25Z" fill="rgba(63,168,152,0.1)"/>
+                        <path d="M40 50L47 57L62 42" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="50" cy="5" r="3" fill="var(--color-accent)"/>
+                        <circle cx="90" cy="28" r="3" fill="var(--color-accent)"/>
+                        <circle cx="90" cy="72" r="3" fill="var(--color-accent)"/>
+                        <circle cx="50" cy="95" r="3" fill="var(--color-accent)"/>
+                        <circle cx="10" cy="72" r="3" fill="var(--color-accent)"/>
+                        <circle cx="10" cy="28" r="3" fill="var(--color-accent)"/>
+                    </svg>
+                </div>
+
+                <!-- Right: Text -->
+                <div style="flex: 2; min-width: 300px; text-align: right;">
+                    <p style="font-size: 1.5rem; line-height: 1.8; margin-bottom: 1.5rem; color: #E2E8F0 !important;">
+                        Privacy Hive מרכזת עבורכם את כל מה שצריך להתאמה לתיקון 13 במקום אחד: <br>
+                        <strong style="color: var(--color-accent); font-weight: 900; font-size: 1.7rem; display: block; margin-top: 0.5rem;">ליווי של מומחי פרטיות מנוסים, מחיר הוגן ותהליך מהיר וברור.</strong>
+                    </p>
+                    <p style="font-size: 1.25rem; line-height: 1.7; color: #94A3B8 !important; margin-bottom: 0;">
+                        אנחנו מטפלים במדיניות פרטיות, תקנון, טפסים, נהלים, ספקים, אבטחת מידע ושירותי DPO לפי הצורך, עם פתרון מקצועי שמותאם לדרישות החוק ולפעילות העסק שלכם.
+                    </p>
+                </div>
+
+            </div>
+            
+            
+            <div style="text-align: center; margin-top: 4rem;">
+                <div class="btn-group" style="display: flex; gap: 1rem; align-items: center; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:0545445429" class="btn btn-primary" style="font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.8rem; font-weight: bold;">
+                        <i class="fa-solid fa-phone"></i> חייגו: 054-544-5429
+                    </a>
+                    <a href="#contact-section" class="btn btn-secondary" style="font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.8rem; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.1); color: var(--color-primary); background: white;">
+                        <i class="fa-regular fa-envelope" style="color: var(--color-primary); font-size: 1.3rem;"></i> השאירו פרטים
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="section" style="padding: 5rem 0; background-color: white;">
+        <div class="container text-center">
+            <h2 style="color: var(--color-primary); margin-bottom: 4rem; font-size: 2.5rem; font-weight: 900;">
+                כל מה שצריך כדי להתחיל להתאים את העסק לתיקון 13
+            </h2>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
+                <div style="flex: 1 1 250px; max-width: 300px; background: #F8FAFC; padding: 2.5rem 1.5rem; border-radius: 16px; border: 1px solid #E2E8F0; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+                    <i class="fa-solid fa-file-contract" style="font-size: 2.5rem; color: var(--color-accent); margin-bottom: 1.5rem;"></i>
+                    <h3 style="color: var(--color-primary); font-size: 1.25rem; font-weight: 800; margin: 0;">כתיבת תקנון ומדיניות פרטיות לאתר</h3>
+                </div>
+                <div style="flex: 1 1 250px; max-width: 300px; background: #F8FAFC; padding: 2.5rem 1.5rem; border-radius: 16px; border: 1px solid #E2E8F0; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+                    <i class="fa-solid fa-list-check" style="font-size: 2.5rem; color: var(--color-accent); margin-bottom: 1.5rem;"></i>
+                    <h3 style="color: var(--color-primary); font-size: 1.25rem; font-weight: 800; margin: 0;">סידור טפסים והסכמות באתר</h3>
+                </div>
+                <div style="flex: 1 1 250px; max-width: 300px; background: #F8FAFC; padding: 2.5rem 1.5rem; border-radius: 16px; border: 1px solid #E2E8F0; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+                    <i class="fa-solid fa-sitemap" style="font-size: 2.5rem; color: var(--color-accent); margin-bottom: 1.5rem;"></i>
+                    <h3 style="color: var(--color-primary); font-size: 1.25rem; font-weight: 800; margin: 0;">מיפוי מאגרי מידע</h3>
+                </div>
+                <div style="flex: 1 1 250px; max-width: 300px; background: #F8FAFC; padding: 2.5rem 1.5rem; border-radius: 16px; border: 1px solid #E2E8F0; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+                    <i class="fa-solid fa-folder-open" style="font-size: 2.5rem; color: var(--color-accent); margin-bottom: 1.5rem;"></i>
+                    <h3 style="color: var(--color-primary); font-size: 1.25rem; font-weight: 800; margin: 0;">נהלים ומסמכי מאגר</h3>
+                </div>
+                <div style="flex: 1 1 250px; max-width: 300px; background: #F8FAFC; padding: 2.5rem 1.5rem; border-radius: 16px; border: 1px solid #E2E8F0; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+                    <i class="fa-solid fa-handshake" style="font-size: 2.5rem; color: var(--color-accent); margin-bottom: 1.5rem;"></i>
+                    <h3 style="color: var(--color-primary); font-size: 1.25rem; font-weight: 800; margin: 0;">נהלי עבודה מול ספקים</h3>
+                </div>
+                <div style="flex: 1 1 250px; max-width: 300px; background: #F8FAFC; padding: 2.5rem 1.5rem; border-radius: 16px; border: 1px solid #E2E8F0; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+                    <i class="fa-solid fa-lock" style="font-size: 2.5rem; color: var(--color-accent); margin-bottom: 1.5rem;"></i>
+                    <h3 style="color: var(--color-primary); font-size: 1.25rem; font-weight: 800; margin: 0;">אבטחת מידע והרשאות</h3>
+                </div>
+                <div style="flex: 1 1 250px; max-width: 300px; background: #F8FAFC; padding: 2.5rem 1.5rem; border-radius: 16px; border: 1px solid #E2E8F0; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='none'">
+                    <i class="fa-solid fa-user-tie" style="font-size: 2.5rem; color: var(--color-accent); margin-bottom: 1.5rem;"></i>
+                    <h3 style="color: var(--color-primary); font-size: 1.25rem; font-weight: 800; margin: 0;">שירותי DPO חיצוני</h3>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 4rem;">
+                <div class="btn-group" style="display: flex; gap: 1rem; align-items: center; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:0545445429" class="btn btn-primary" style="font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.8rem; font-weight: bold;">
+                        <i class="fa-solid fa-phone"></i> חייגו: 054-544-5429
+                    </a>
+                    <a href="#contact-section" class="btn btn-secondary" style="font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.8rem; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.1); color: var(--color-primary);">
+                        <i class="fa-regular fa-envelope" style="color: var(--color-primary); font-size: 1.3rem;"></i> השאירו פרטים
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority / Team Section -->
+    <section class="section section-dark" style="background: #0f172a; color: white; padding: 6rem 0;">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 4rem; font-size: 2.5rem; font-weight: 900;">הכירו את הצוות</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; padding-top: 3rem;">
+                <div style="background: rgba(255,255,255,0.03); padding: 3rem 2.5rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 15px 30px rgba(0,0,0,0.2); position: relative; text-align: center; margin-top: 5rem;">
+                    <div style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; position: absolute; top: -75px; left: 50%; transform: translateX(-50%); border: 4px solid var(--color-accent); box-shadow: 0 15px 35px rgba(0,0,0,0.4);">
+                        <img src="../assets/maya.avif" alt="מאיה ויסמן" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="margin-top: 4.5rem;">
+                        <h3 style="font-size: 2rem; margin-bottom: 0.5rem; color: white; font-weight: 900;">מאיה ויסמן</h3>
+                        <p style="font-size: 1.25rem; font-weight: 700; color: var(--color-accent); margin-bottom: 1.5rem;">
+                            מומחית להגנת הפרטיות, ניהול סיכונים וביקורת.
+                        </p>
+                        <p style="font-size: 1.15rem; line-height: 1.7; color: #CBD5E1 !important;">
+                            בעלת ניסיון עשיר בביקורת פנימית, חברה בוועדה המקצועית של לשכת המבקרים הישראלית וחברת מועצה ב־ISACA ישראל. בעלת הסמכות CISA, CPDSE ו־CDAA.
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.03); padding: 3rem 2.5rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 15px 30px rgba(0,0,0,0.2); position: relative; text-align: center; margin-top: 5rem;">
+                    <div style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; position: absolute; top: -75px; left: 50%; transform: translateX(-50%); border: 4px solid var(--color-accent); box-shadow: 0 15px 35px rgba(0,0,0,0.4);">
+                        <img src="../assets/MOTI.avif" alt="עו״ד מוטי כהן" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="margin-top: 4.5rem;">
+                        <h3 style="font-size: 2rem; margin-bottom: 0.5rem; color: white; font-weight: 900;">עו״ד מוטי כהן</h3>
+                        <p style="font-size: 1.25rem; font-weight: 700; color: var(--color-accent); margin-bottom: 1.5rem;">
+                            עורך דין המתמחה בהגנת הפרטיות, אבטחת מידע, דיני אינטרנט וזכויות יוצרים.
+                        </p>
+                        <p style="font-size: 1.15rem; line-height: 1.7; color: #CBD5E1 !important;">
+                            מלווה ארגונים בהטמעת חוק הגנת הפרטיות ותקנות אבטחת המידע, ומשמש כממונה הגנת פרטיות חיצוני מוסמך.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 4rem;">
+                <div class="btn-group" style="display: flex; gap: 1rem; align-items: center; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:0545445429" class="btn btn-primary" style="font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.8rem; font-weight: bold;">
+                        <i class="fa-solid fa-phone"></i> חייגו: 054-544-5429
+                    </a>
+                    <a href="#contact-section" class="btn btn-secondary" style="font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.8rem; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.1); color: var(--color-primary); background: white;">
+                        <i class="fa-regular fa-envelope" style="color: var(--color-primary); font-size: 1.3rem;"></i> השאירו פרטים
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 Steps Section -->
+    <section class="section" style="padding: 6rem 0; background-color: #F8FAFC;">
+        <div class="container text-center">
+            <h2 style="color: var(--color-primary); font-size: 2.5rem; font-weight: 900; margin-bottom: 4rem;">3 צעדים פשוטים להתאמה לתיקון 13</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; position: relative;">
+                <div style="position: relative; z-index: 2; background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid var(--color-accent);">
+                    <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 900; margin: -3.5rem auto 1.5rem auto; box-shadow: 0 8px 20px rgba(63,168,152,0.3); border: 4px solid white;">1</div>
+                    <h3 style="color: var(--color-primary); margin-bottom: 1rem; font-size: 1.4rem; font-weight: 800;">שלב 1 — שיחת ייעוץ ראשונית</h3>
+                    <p style="color: #64748B; font-size: 1.1rem; line-height: 1.6;">נבין מה העסק עושה, איזה מידע אתם אוספים, ואילו מערכות קיימות אצלכם.</p>
+                </div>
+                <div style="position: relative; z-index: 2; background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid var(--color-accent);">
+                    <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 900; margin: -3.5rem auto 1.5rem auto; box-shadow: 0 8px 20px rgba(63,168,152,0.3); border: 4px solid white;">2</div>
+                    <h3 style="color: var(--color-primary); margin-bottom: 1rem; font-size: 1.4rem; font-weight: 800;">שלב 2 — בדיקת פערים</h3>
+                    <p style="color: #64748B; font-size: 1.1rem; line-height: 1.6;">נבדוק מה חסר: מדיניות פרטיות, טפסים, נהלים, ספקים, הרשאות או אבטחת מידע.</p>
+                </div>
+                <div style="position: relative; z-index: 2; background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid var(--color-accent);">
+                    <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 900; margin: -3.5rem auto 1.5rem auto; box-shadow: 0 8px 20px rgba(63,168,152,0.3); border: 4px solid white;">3</div>
+                    <h3 style="color: var(--color-primary); margin-bottom: 1rem; font-size: 1.4rem; font-weight: 800;">שלב 3 — יישום וליווי</h3>
+                    <p style="color: #64748B; font-size: 1.1rem; line-height: 1.6;">במידת הצורך, נסדר עבורכם את המסמכים, הנהלים והתהליכים הנדרשים להתאמה לחוק.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 4rem;">
+                <div class="btn-group" style="display: flex; gap: 1rem; align-items: center; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:0545445429" class="btn btn-primary" style="font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.8rem; font-weight: bold;">
+                        <i class="fa-solid fa-phone"></i> חייגו: 054-544-5429
+                    </a>
+                    <a href="#contact-section" class="btn btn-secondary" style="font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.8rem; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.1); color: var(--color-primary);">
+                        <i class="fa-regular fa-envelope" style="color: var(--color-primary); font-size: 1.3rem;"></i> השאירו פרטים
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="padding: 6rem 0; background-color: white;">
+        <div class="container">
+            <h2 class="text-center" style="color: var(--color-primary); margin-bottom: 3rem; font-size: 2.5rem; font-weight: 900;">שאלות נפוצות</h2>
+            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>האם תיקון 13 חל גם על עסק קטן?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>אם העסק מחזיק מידע על לקוחות, עובדים, ספקים או לידים — כדאי לבדוק את רמת ההתאמה שלו לדרישות החוק.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>יש לי מדיניות פרטיות באתר. זה מספיק?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>לא תמיד. מדיניות פרטיות צריכה להתאים למה שהעסק שלכם באמת עושה עם מידע: טפסים, CRM, דיוור, ספקים והרשאות.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>מה מקבלים בשיחת הייעוץ הראשונית?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>תמונת מצב ראשונית ו־2 צעדים שכדאי לבצע כדי להתחיל להתאים את העסק לדרישות החוק.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>האם חייבים להמשיך לשירות בתשלום?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>לא. שיחת הייעוץ הראשונית היא ללא עלות וללא התחייבות.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>כמה זמן לוקח התהליך?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>זה תלוי בגודל העסק, בכמות המערכות ובמה שכבר קיים. לאחר השיחה נוכל לתת הערכה ברורה יותר.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 4rem;">
+                <div class="btn-group" style="display: flex; gap: 1rem; align-items: center; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:0545445429" class="btn btn-primary" style="font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.8rem; font-weight: bold;">
+                        <i class="fa-solid fa-phone"></i> חייגו: 054-544-5429
+                    </a>
+                    <a href="#contact-section" class="btn btn-secondary" style="font-size: 1.1rem; padding: 0.8rem 1.8rem; border-radius: 50px; display: inline-flex; align-items: center; gap: 0.8rem; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.1); color: var(--color-primary);">
+                        <i class="fa-regular fa-envelope" style="color: var(--color-primary); font-size: 1.3rem;"></i> השאירו פרטים
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Gen Section -->
+    <section id="contact-section" class="section section-dark" style="background-color: var(--color-primary); padding: 6rem 0; text-align: center; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; background-image: radial-gradient(circle at 20px 20px, white 2px, transparent 0); background-size: 40px 40px;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <h2 style="color: white; font-size: 2.8rem; font-weight: 900; margin-bottom: 1.5rem;">מוכנים להתאים את העסק שלכם לתיקון 13?</h2>
+            
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 3rem;">
+                <p style="color: #E2E8F0 !important; font-size: 1.4rem; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+                    השאירו פרטים ונחזור אליכם לשיחת ייעוץ ראשונית ללא עלות. תקבלו תמונת מצב ברורה ו־2 צעדים ראשונים ליישום כבר עכשיו.
+                </p>
+            </div>
+            
+            <div style="max-width: 500px; margin: 0 auto; background: white; padding: 3rem 2rem; border-radius: 16px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);">
+                <form id="contact-form" class="lead-form" style="box-shadow: none; padding: 0;">
+                    <div class="form-group" style="margin-bottom: 1rem;">
+                        <input type="text" id="fname" name="fname" class="form-control" placeholder="שם מלא *" required style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 0.9rem 1rem;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1rem;">
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="טלפון *" dir="rtl" required style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; text-align: right; padding: 0.9rem 1rem;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <input type="text" id="company" name="company" class="form-control" placeholder="שם העסק *" required style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 0.9rem 1rem;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 0.5rem; text-align: right;">
+                        <input type="checkbox" id="privacy" name="privacy" required style="margin-top: 0.25rem;">
+                        <label for="privacy" style="font-size: 0.9rem; color: #64748B; margin: 0; line-height: 1.4; cursor: pointer;">
+                            אני מאשר שיחזרו אלי ומסכים ל<a href="/privacy-policy" target="_blank" style="color: var(--color-accent); text-decoration: underline;">מדיניות הפרטיות</a>
+                        </label>
+                    </div>
+                    <input type="hidden" name="reason" value="tikun-13-footer">
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.25rem; font-weight: 800; padding: 1rem; border-radius: 10px; display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: var(--color-accent); box-shadow: 0 8px 20px rgba(63,168,152,0.4);">
+                        קבעו שיחה חינמית
+                    </button>
+                    <p style="font-size: 0.85rem; color: #94A3B8; margin-top: 1rem; margin-bottom: 0;">הפרטים שלכם ישמשו ליצירת קשר בלבד ולא יועברו לגורם אחר.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive" style="height: 48px; margin-bottom: 1.5rem; filter: brightness(0) invert(1);">
+                    <p>הגנת פרטיות, אבטחת מידע ועמידה בדרישות רגולציה לעסקים וארגונים.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>שירותים</h4>
+                    <ul class="footer-links">
+                        <li><a href="../tikun-13/">תיקון 13</a></li>
+                        <li><a href="../information-security-for-businesses/">אבטחת מידע לעסקים</a></li>
+                        <li><a href="../information-security-for-organizations/">אבטחת מידע לארגונים</a></li>
+                        <li><a href="../dpo/">שירותי DPO</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>יצירת קשר</h4>
+                    <ul class="footer-links">
+                        <li style="direction: ltr; text-align: right;"><i class="fa-solid fa-phone" style="margin-left: 0.5rem; color: var(--color-accent);"></i> 054-544-5429</li>
+                        <li>מאיה: 050-613-6596</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Privacy Hive כל הזכויות שמורות | <a href="privacy-policy.html" style="color: inherit; text-decoration: none;">מדיניות פרטיות</a> | <a href="terms.html" style="color: inherit; text-decoration: none;">תנאי שימוש</a> | <a href="accessibility.html" style="color: inherit; text-decoration: none;">הצהרת נגישות</a></p>
+            </div>
+        </div>
+    </footer>
+<!-- Cookie Consent Popup -->
+    <div id="cookie-consent" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: white; padding: 1.5rem 2rem; box-shadow: 0 10px 40px rgba(0,0,0,0.2); border-radius: 16px; z-index: 10000; display: none; align-items: center; justify-content: space-between; max-width: 1000px; margin: 0 auto; border: 1px solid rgba(0,0,0,0.05);">
+        <p style="margin: 0; font-size: 1rem; color: #475569; font-weight: 600;">אנו משתמשים בעוגיות כדי לשפר את חווית הגלישה שלך. המשך הגלישה מהווה הסכמה לשימוש בעוגיות.</p>
+        <button onclick="acceptCookies()" style="background: var(--color-accent); color: white; border: none; padding: 0.8rem 2rem; border-radius: 50px; font-weight: 800; cursor: pointer; transition: all 0.2s;">אישור והבנתי</button>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/972545445429?text=%D7%94%D7%99%D7%99%20%D7%91%D7%99%D7%A7%D7%A8%D7%AA%D7%99%20%D7%91%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20privacy-hive%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank" class="floating-whatsapp" style="position: fixed; bottom: 30px; left: 30px; width: 65px; height: 65px; background-color: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 9999; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="../assets/js/main.js?v=1.1"></script>
+    <script>
+        // Cookie Consent Logic
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-consent').style.display = 'none';
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-consent').style.display = 'flex';
+            }
+        });
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('.faq-icon');
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    icon.textContent = '+';
+                } else {
+                    document.querySelectorAll('.faq-answer').forEach(ans => ans.style.maxHeight = null);
+                    document.querySelectorAll('.faq-icon').forEach(icn => icn.textContent = '+');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    icon.textContent = '-';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
