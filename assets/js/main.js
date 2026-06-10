@@ -48,14 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 const formData = new FormData(form);
                 formData.append('source_page', window.location.pathname);
 
-                // Send to PHP processing file
-                // Using an absolute path or relative depending on host. Assuming process.php is at root.
-                // We determine root by checking if we are in a subdirectory
-                const processUrl = window.location.pathname.includes('/') && window.location.pathname.split('/').length > 2 
-                                   ? '../process.php' 
-                                   : 'process.php';
+                // Send to Make.com Webhook
+                const webhookUrl = 'https://hook.eu2.make.com/wrk781ymtplke4lopluidshmxbyjpwyd';
 
-                fetch(processUrl, {
+                fetch(webhookUrl, {
                     method: 'POST',
                     body: formData
                 })
