@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PTXKVMJ9');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>בדיקת התאמה לתיקון 13 | Privacy Hive</title>
+    <meta name="description" content="הכניסו כתובת אתר וקבלו בדיקה ראשונית ללא עלות להתאמה לתיקון 13 לחוק הגנת הפרטיות.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/global.css?v=1.1">
+    <link rel="stylesheet" href="../assets/css/components.css?v=1.1">
+    
+    <style>
+        /* Scoped CSS for tikun-13-check page */
+        html, body {
+            width: 100%;
+        }
+        
+        body {
+            background-color: #F8FAFC;
+        }
+
+        .check-hero {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #1e293b 100%);
+            color: white;
+            padding: 4rem 1rem 3rem;
+            text-align: center;
+        }
+
+        .check-hero-title {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: white !important;
+        }
+
+        .check-hero-subtitle {
+            font-size: 1.2rem;
+            color: #E2E8F0;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-items: center;
+            text-align: right;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .check-form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            max-width: 460px;
+            margin: 0 auto;
+            color: #334155;
+            position: relative;
+            overflow: hidden;
+            min-height: 250px;
+        }
+
+        .form-step {
+            transition: all 0.4s ease;
+            width: 100%;
+        }
+
+        .form-step.hidden {
+            display: none;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .check-input {
+            width: 100%;
+            background: #F8FAFC;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 0.8rem 1rem;
+            font-size: 1.1rem;
+            font-family: inherit;
+            margin-bottom: 1.2rem;
+            text-align: right;
+            transition: border-color 0.3s ease;
+        }
+
+        .check-input:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 4px rgba(63, 168, 152, 0.1);
+        }
+
+        .check-input::placeholder {
+            direction: ltr;
+            text-align: right;
+        }
+
+        .check-btn {
+            width: 100%;
+            background: var(--color-accent);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 12px;
+            font-size: 1.25rem;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(63,168,152,0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            animation: pulseBtn 2s infinite;
+        }
+
+        @keyframes pulseBtn {
+            0% { box-shadow: 0 0 0 0 rgba(63, 168, 152, 0.6); }
+            70% { box-shadow: 0 0 0 15px rgba(63, 168, 152, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(63, 168, 152, 0); }
+        }
+
+        .check-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(63,168,152,0.6);
+            animation: none;
+        }
+
+        .check-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+            animation: none;
+        }
+
+        .trust-badge-group {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1.2rem;
+            white-space: nowrap;
+        }
+
+        .trust-badge-item {
+            font-size: 0.8rem;
+            color: #334155;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        .trust-badge-item i {
+            color: var(--color-accent);
+        }
+
+        .step-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-subtitle {
+            font-size: 1rem;
+            color: #64748B;
+            margin-bottom: 1.5rem;
+        }
+
+        .check-checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            text-align: right;
+            margin-bottom: 1.5rem;
+            background: #F8FAFC;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+        }
+
+        .check-checkbox-group input {
+            margin-top: 0.3rem;
+            width: 18px;
+            height: 18px;
+            accent-color: var(--color-accent);
+            cursor: pointer;
+        }
+
+        .check-checkbox-group label {
+            font-size: 0.95rem;
+            color: #334155;
+            cursor: pointer;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .small-note {
+            font-size: 0.85rem;
+            color: #94A3B8;
+            margin-top: 1rem;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .success-message {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: #25D366; /* WhatsApp Green */
+            margin-bottom: 1.5rem;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .section-check {
+            padding: 5rem 1rem;
+            background: white;
+        }
+
+        .section-check.alt-bg {
+            background: #F8FAFC;
+        }
+
+        .check-section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .check-section-subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            color: #475569;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .points-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+
+        .point-card {
+            background: white;
+            border: 1px solid #E2E8F0;
+            padding: 1.5rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            font-weight: 600;
+            color: #334155;
+            font-size: 1.1rem;
+        }
+
+        .point-icon {
+            color: var(--color-accent);
+            font-size: 1.5rem;
+            background: rgba(63, 168, 152, 0.1);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .scroll-to-form-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: var(--color-primary);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-decoration: none;
+            margin: 0 auto;
+            box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .scroll-to-form-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.3);
+            color: white;
+        }
+
+        .center-btn {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .floating-action-btn {
+            position: fixed;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9998;
+            background: var(--color-accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            box-shadow: 0 10px 25px rgba(63, 168, 152, 0.4);
+            transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s;
+            opacity: 0;
+            pointer-events: none;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .floating-action-btn.visible {
+            bottom: 2rem;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        @media (min-width: 769px) {
+            .floating-action-btn {
+                display: none !important;
+            }
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-question::after {
+            content: '\f078';
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--color-accent);
+            transition: transform 0.3s ease;
+        }
+
+        details[open] .faq-question::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: #475569;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            border-top: 1px solid #F1F5F9;
+            margin-top: 0.5rem;
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .check-hero { padding: 1.5rem 1rem 3rem; }
+            .check-hero-title { font-size: 2.2rem; order: 1; }
+            .check-form-container { padding: 1.5rem; }
+            .check-section-title { font-size: 1.6rem; }
+            .point-card { padding: 1.2rem; font-size: 1rem; }
+            .scroll-to-form-btn { width: 100%; font-size: 1.1rem; }
+            .trust-badge-group { flex-wrap: wrap; white-space: normal; gap: 0.5rem; }
+            
+            .hero-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+            .hero-text { display: contents; }
+            .hero-form { order: 2; margin-bottom: 1rem; }
+            .check-hero-subtitle { order: 3; margin-top: 0; }
+
+            
+            .logo img { height: 40px !important; }
+            .header-phone-btn { 
+                padding: 0.5rem 1rem !important; 
+                font-size: 1rem !important; 
+            }
+        }
+    </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18176010346"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18176010346');
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x7vkrlhvx4");
+</script>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTXKVMJ9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="../"><img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive Logo"></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../tikun-13/" style="color: var(--color-accent); font-weight: 700;">תיקון 13</a></li>
+                    <li><a href="../information-security-for-businesses/">אבטחת מידע לעסקים</a></li>
+                    <li><a href="../information-security-for-organizations/">אבטחת מידע לארגונים</a></li>
+                    <li><a href="../dpo/">שירותי DPO</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:0545445429" class="btn header-phone-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 800; background-color: var(--color-accent); color: white; border: none; border-radius: 8px; padding: 0.6rem 1.2rem;">
+                    <i class="fa-solid fa-phone"></i> 054-5445429
+                </a>
+            </div>
+        </div>
+    </header>
+
+<div style="overflow-x: hidden; width: 100%; position: relative; max-width: 100vw;">
+    <!-- Hero / Form Section -->
+    <section class="check-hero" id="top-form-section">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1 class="check-hero-title">רוצים לדעת אם <u>האתר שלכם</u> עומד בדרישות <span style="color: var(--color-accent); text-shadow: 0 2px 10px rgba(63, 168, 152, 0.3);">תיקון 13</span>?</h1>
+                    <p class="check-hero-subtitle">הכניסו את כתובת האתר וקבלו בדיקה ראשונית ללא עלות.<br>אי עמידה בדרישות החוק להגנת הפרטיות עלול לגרום לקנסות ותביעות.</p>
+                </div>
+
+                <div class="hero-form">
+                    <div class="check-form-container" id="form-wrapper">
+                        <form id="tikun-check-form">
+                            
+                            <!-- Step 1 -->
+                            <div id="step-1" class="form-step">
+                                <div style="text-align: right; margin-bottom: 0.5rem; font-weight: 700;">מה כתובת האתר שלכם?</div>
+                                <input type="text" id="website_url" name="website_url" class="check-input" placeholder="www.yoursite.co.il" required dir="ltr">
+                                <button type="button" id="btn-next" class="check-btn">
+                                    <span>התחילו בדיקה חינם</span>
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </button>
+                                <div class="trust-badge-group">
+                                    <div class="trust-badge-item"><i class="fa-solid fa-check"></i> ללא עלות</div>
+                                    <div class="trust-badge-item"><i class="fa-solid fa-check"></i> תוצאות בוואטסאפ</div>
+                                    <div class="trust-badge-item"><i class="fa-solid fa-check"></i> ללא התחייבות</div>
+                                </div>
+                            </div>
+
+                    <!-- Step 2 -->
+                    <div id="step-2" class="form-step hidden">
+                        <div class="step-title">תוצאות הבדיקה יתקבלו בוואטסאפ</div>
+                        <p class="step-subtitle">רשמו את שם העסק ואת מספר הטלפון שלכם:</p>
+                        
+                        <input type="text" id="business_name" name="business_name" class="check-input" placeholder="שם העסק *" required>
+                        <input type="tel" id="whatsapp_phone" name="whatsapp_phone" class="check-input" placeholder="מספר וואטסאפ *" required dir="ltr">
+                        
+                        <div class="check-checkbox-group">
+                            <input type="checkbox" id="consent_checkbox" name="consent_checkbox" required>
+                            <label for="consent_checkbox">אני מאשר/ת את <a href="../privacy-policy.html" target="_blank" style="text-decoration: underline; color: inherit;">מדיניות הפרטיות</a> ושיחזרו אליי עם תוצאות הבדיקה.</label>
+                        </div>
+
+                        <button type="submit" id="btn-submit" class="check-btn">
+                            <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i>
+                            <span>שלחו לי תוצאות</span>
+                        </button>
+                        <p class="small-note">ללא עלות וללא התחייבות.</p>
+                    </div>
+
+                    <!-- Success State -->
+                    <div id="step-success" class="form-step hidden success-message">
+                        <i class="fa-brands fa-whatsapp success-icon"></i>
+                        <h3 style="font-size: 1.6rem; color: var(--color-primary); margin-bottom: 1rem; font-weight: 800;">תודה, קיבלנו את הפרטים!</h3>
+                        <p style="font-size: 1.1rem; color: #475569; line-height: 1.5;">צוות המומחים שלנו יבצע בדיקה ראשונית וישלח אליכם את התוצאות לוואטסאפ בהקדם.</p>
+                    </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Check? -->
+    <section class="section-check alt-bg">
+        <div class="container">
+            <h2 class="check-section-title">האתר שלכם אוסף מידע אישי?</h2>
+            <p class="check-section-subtitle">טפסי לידים, פיקסלים, וואטסאפ, דיוור, חנות אונליין או CRM יכולים להפוך את האתר לנקודת איסוף מידע שדורשת בדיקה.</p>
+            
+            <div class="points-grid">
+                <div class="point-card"><div class="point-icon"><i class="fa-solid fa-check"></i></div>טפסי לידים</div>
+                <div class="point-card"><div class="point-icon"><i class="fa-solid fa-check"></i></div>פיקסלים וכלי מדידה</div>
+                <div class="point-card"><div class="point-icon"><i class="fa-solid fa-check"></i></div>וואטסאפ באתר</div>
+                <div class="point-card"><div class="point-icon"><i class="fa-solid fa-check"></i></div>דיוור או SMS</div>
+                <div class="point-card"><div class="point-icon"><i class="fa-solid fa-check"></i></div>חנות אונליין</div>
+                <div class="point-card"><div class="point-icon"><i class="fa-solid fa-check"></i></div>CRM או רשימת לקוחות</div>
+            </div>
+
+            <div class="center-btn">
+                <a href="#top-form-section" class="scroll-to-form-btn">
+                    בדקו את האתר שלי <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risks -->
+    <section class="section-check">
+        <div class="container">
+            <h2 class="check-section-title">מה הסיכון אם לא עומדים בדרישות?</h2>
+            <p class="check-section-subtitle">תיקון 13 הרחיב את סמכויות האכיפה והגדיל את החשיפה של עסקים לסיכונים משפטיים וכספיים.</p>
+            
+            <div class="points-grid" style="max-width: 800px;">
+                <div class="point-card" style="border-left: 4px solid #EF4444;"><div class="point-icon" style="color: #EF4444; background: rgba(239, 68, 68, 0.1);"><i class="fa-solid fa-triangle-exclamation"></i></div>קנסות ועיצומים כספיים</div>
+                <div class="point-card" style="border-left: 4px solid #EF4444;"><div class="point-icon" style="color: #EF4444; background: rgba(239, 68, 68, 0.1);"><i class="fa-solid fa-gavel"></i></div>תביעות מצד לקוחות או משתמשים</div>
+                <div class="point-card" style="border-left: 4px solid #EF4444;"><div class="point-icon" style="color: #EF4444; background: rgba(239, 68, 68, 0.1);"><i class="fa-solid fa-scale-unbalanced"></i></div>פיצוי ללא הוכחת נזק במקרים מסוימים</div>
+                <div class="point-card" style="border-left: 4px solid #EF4444;"><div class="point-icon" style="color: #EF4444; background: rgba(239, 68, 68, 0.1);"><i class="fa-solid fa-file-signature"></i></div>דרישות תיקון מהרשות להגנת הפרטיות</div>
+                <div class="point-card" style="border-left: 4px solid #EF4444;"><div class="point-icon" style="color: #EF4444; background: rgba(239, 68, 68, 0.1);"><i class="fa-solid fa-user-shield"></i></div>פגיעה באמון הלקוחות</div>
+            </div>
+
+            <div class="center-btn">
+                <a href="#top-form-section" class="scroll-to-form-btn">
+                    אני רוצה בדיקה ראשונית <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="section-check alt-bg">
+        <div class="container" style="text-align: center;">
+            <img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive Logo" style="width: 100px; margin-bottom: 1rem; display: inline-block;">
+            <h2 class="check-section-title">קצת על Privacy Hive</h2>
+            <p class="check-section-subtitle">Privacy Hive מלווה עסקים, ארגונים ואתרים בהתאמה לחוק הגנת הפרטיות ותיקון 13, עם שילוב של ידע משפטי, פרטיות, DPO ואבטחת מידע.</p>
+            
+            <div class="points-grid" style="text-align: right;">
+                <div class="point-card"><div class="point-icon"><i class="fa-solid fa-check"></i></div>ליווי מקצועי בתחום הפרטיות ואבטחת המידע</div>
+                <div class="point-card"><div class="point-icon"><i class="fa-solid fa-check"></i></div>הבנה מעשית של אתרים, לידים, CRM ופיקסלים</div>
+                <div class="point-card"><div class="point-icon"><i class="fa-solid fa-check"></i></div>סיכום ראשוני ברור בשפה פשוטה</div>
+                <div class="point-card"><div class="point-icon"><i class="fa-solid fa-check"></i></div>מתאים לעסקים שמקבלים פניות דרך האתר</div>
+            </div>
+
+            <div class="center-btn">
+                <a href="#top-form-section" class="scroll-to-form-btn">
+                    שלחו אתר לבדיקה <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-check">
+        <div class="container">
+            <h2 class="check-section-title">שאלות נפוצות</h2>
+            <div class="faq-container" style="max-width: 800px; margin: 0 auto 3rem;">
+                <details class="faq-item">
+                    <summary class="faq-question">1. מה זה תיקון 13 לחוק הגנת הפרטיות?</summary>
+                    <div class="faq-answer">תיקון 13 לחוק הגנת הפרטיות הוא תיקון משמעותי שמעדכן את החובות החלות על עסקים וארגונים שמחזיקים או מעבדים מידע אישי. בין היתר, התיקון מרחיב את סמכויות האכיפה של הרשות להגנת הפרטיות ומעדכן חובות שונות בתחום מאגרי מידע, פרטיות ואבטחת מידע.</div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">2. האם תיקון 13 רלוונטי גם לאתר עסקי קטן?</summary>
+                    <div class="faq-answer">כן, במקרים רבים. אם האתר שלכם אוסף פרטים דרך טפסי לידים, וואטסאפ, הרשמה, חנות אונליין, דיוור, פיקסלים או CRM, ייתכן שיש נקודות שצריך לבדוק לפי חוק הגנת הפרטיות ותיקון 13.</div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">3. האם כל אתר חייב מדיניות פרטיות?</summary>
+                    <div class="faq-answer">לא כל אתר נמצא באותו מצב, אבל אם האתר אוסף מידע אישי מגולשים, חשוב לבדוק אם יש צורך במדיניות פרטיות ברורה ועדכנית, הודעות מתאימות בטפסים והתייחסות לאיסוף ושימוש במידע.</div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">4. מה בודקים בבדיקת אתר לתיקון 13?</summary>
+                    <div class="faq-answer">בבדיקה ראשונית בוחנים נקודות כמו מדיניות פרטיות, טפסי לידים, פיקסלים, כלי מדידה, דיוור, וואטסאפ, איסוף מידע אישי וחיבור למערכות CRM או רשימות לקוחות.</div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">5. מה הסיכון אם האתר לא עומד בחוק הגנת הפרטיות?</summary>
+                    <div class="faq-answer">אי עמידה בדרישות החוק עלולה לחשוף עסקים לסיכונים כמו קנסות ועיצומים כספיים, תביעות, דרישות תיקון מצד הרשות להגנת הפרטיות ופגיעה באמון הלקוחות. תיקון 13 הרחיב את כלי האכיפה והפיקוח של הרשות להגנת הפרטיות.</div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">6. האם הבדיקה הראשונית מחליפה ייעוץ משפטי?</summary>
+                    <div class="faq-answer">לא. הבדיקה הראשונית נועדה לתת אינדיקציה ראשונית לנקודות שכדאי לבדוק באתר. היא אינה מהווה ייעוץ משפטי ואינה מחליפה בדיקה מקצועית מלאה של עורך דין או מומחה פרטיות.</div>
+                </details>
+            </div>
+            
+            <div class="center-btn">
+                <a href="#top-form-section" class="scroll-to-form-btn">
+                    בדקו את האתר שלי <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section-check" style="background: var(--color-primary); color: white;">
+        <div class="container" style="text-align: center;">
+            <h2 class="check-section-title" style="color: white;">רוצים לבדוק את האתר שלכם?</h2>
+            <p class="check-section-subtitle" style="color: #CBD5E1;">הכניסו כתובת אתר וקבלו בדיקה ראשונית בוואטסאפ ללא עלות וללא התחייבות.</p>
+            
+            <a href="#top-form-section" class="scroll-to-form-btn" style="background: var(--color-accent); margin-bottom: 1.5rem;">
+                בדקו את האתר שלי בחינם <i class="fa-solid fa-arrow-up"></i>
+            </a>
+            
+            <p style="font-size: 0.85rem; color: #94A3B8; margin-top: 1rem;">הבדיקה הראשונית אינה מהווה ייעוץ משפטי ואינה מחליפה בדיקה מקצועית מלאה.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive" style="height: 48px; margin-bottom: 1.5rem; filter: brightness(0) invert(1);">
+                    <p>הגנת פרטיות, אבטחת מידע ועמידה בדרישות רגולציה לעסקים וארגונים.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>שירותים</h4>
+                    <ul class="footer-links">
+                        <li><a href="../tikun-13/">תיקון 13</a></li>
+                        <li><a href="../information-security-for-businesses/">אבטחת מידע לעסקים</a></li>
+                        <li><a href="../information-security-for-organizations/">אבטחת מידע לארגונים</a></li>
+                        <li><a href="../dpo/">שירותי DPO</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>יצירת קשר</h4>
+                    <ul class="footer-links">
+                        <li style="direction: ltr; text-align: right;"><i class="fa-solid fa-phone" style="margin-left: 0.5rem; color: var(--color-accent);"></i> 054-544-5429</li>
+                        <li>מאיה: 050-613-6596</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Privacy Hive כל הזכויות שמורות | <a href="../privacy-policy.html" style="color: inherit; text-decoration: none;">מדיניות פרטיות</a> | <a href="../terms.html" style="color: inherit; text-decoration: none;">תנאי שימוש</a> | <a href="../accessibility.html" style="color: inherit; text-decoration: none;">הצהרת נגישות</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btnNext = document.getElementById('btn-next');
+            const btnSubmit = document.getElementById('btn-submit');
+            const step1 = document.getElementById('step-1');
+            const step2 = document.getElementById('step-2');
+            const stepSuccess = document.getElementById('step-success');
+            const websiteInput = document.getElementById('website_url');
+            const checkForm = document.getElementById('tikun-check-form');
+            
+            // Smooth Scroll for CTA buttons
+            document.querySelectorAll('.scroll-to-form-btn').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Focus on input if still on step 1
+                    if(!step1.classList.contains('hidden')) {
+                        setTimeout(() => websiteInput.focus(), 800);
+                    }
+                });
+            });
+
+            // Handle Next Button (URL Validation)
+            btnNext.addEventListener('click', function() {
+                const val = websiteInput.value.trim();
+                if(val === '' || !val.includes('.')) {
+                    websiteInput.setCustomValidity('נא להזין כתובת אתר (לדוגמא: yoursite.co.il)');
+                    websiteInput.reportValidity();
+                    websiteInput.style.borderColor = 'red';
+                    return;
+                } else {
+                    websiteInput.setCustomValidity('');
+                }
+                
+                // If valid URL, proceed to step 2
+                websiteInput.style.borderColor = '#E2E8F0';
+                step1.classList.add('hidden');
+                setTimeout(() => {
+                    step2.classList.remove('hidden');
+                }, 100);
+            });
+
+            // Prevent enter key on step 1 from submitting whole form, just trigger Next
+            websiteInput.addEventListener('keypress', function(e) {
+                if(e.key === 'Enter') {
+                    e.preventDefault();
+                    btnNext.click();
+                }
+            });
+
+            // Parse UTMs
+            function getUTMParams() {
+                const params = new URLSearchParams(window.location.search);
+                return {
+                    utm_source: params.get('utm_source') || '',
+                    utm_medium: params.get('utm_medium') || '',
+                    utm_campaign: params.get('utm_campaign') || '',
+                    utm_content: params.get('utm_content') || '',
+                    utm_term: params.get('utm_term') || '',
+                    gclid: params.get('gclid') || '',
+                    fbclid: params.get('fbclid') || ''
+                };
+            }
+
+            // Handle Final Submit
+            checkForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const phoneInput = document.getElementById('whatsapp_phone');
+                const phoneVal = phoneInput.value.replace(/\D/g, ''); // strip non-digits
+                
+                // Israeli phone validation (starts with 05 and has 10 digits)
+                if(!/^05\d{8}$/.test(phoneVal)) {
+                    phoneInput.setCustomValidity('נא להזין מספר פלאפון ישראלי תקין (10 ספרות שמתחילות ב-05)');
+                    phoneInput.reportValidity();
+                    phoneInput.style.borderColor = 'red';
+                    return;
+                } else {
+                    phoneInput.setCustomValidity('');
+                    phoneInput.style.borderColor = '#E2E8F0';
+                }
+
+                // Show loading state
+                const originalBtnText = btnSubmit.innerHTML;
+                btnSubmit.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>שולח...</span>';
+                btnSubmit.disabled = true;
+
+                // Gather Data
+                const utms = getUTMParams();
+                const formData = new FormData();
+                
+                formData.append('website_url', websiteInput.value);
+                formData.append('business_name', document.getElementById('business_name').value);
+                formData.append('whatsapp_phone', document.getElementById('whatsapp_phone').value);
+                formData.append('consent_checkbox', document.getElementById('consent_checkbox').checked ? 'true' : 'false');
+                formData.append('page_source', 'tikun-13-check');
+                formData.append('landing_page_url', window.location.href);
+                formData.append('created_at', new Date().toISOString());
+                
+                // Add UTMs
+                Object.keys(utms).forEach(key => {
+                    formData.append(key, utms[key]);
+                });
+
+                // Webhook URL
+                const webhookUrl = 'https://hook.eu2.make.com/wrk781ymtplke4lopluidshmxbyjpwyd';
+
+                // Send Fetch
+                fetch(webhookUrl, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    // Fire GTM
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'tikun_check_submit',
+                        'formLocation': 'tikun-13-check'
+                    });
+                    
+                    // Show Success
+                    step2.classList.add('hidden');
+                    setTimeout(() => {
+                        stepSuccess.classList.remove('hidden');
+                    }, 100);
+                })
+                .catch(error => {
+                    console.error('Error submitting check:', error);
+                    btnSubmit.innerHTML = 'שגיאה בשליחה, נסו שוב';
+                    btnSubmit.disabled = false;
+                });
+            });
+        });
+    </script>
+</div>
+
+    <!-- Mobile Floating Action Button -->
+    <a href="#top-form-section" id="mobile-fab" class="floating-action-btn">
+        בדקו את האתר שלי <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fab = document.getElementById('mobile-fab');
+            if(fab) {
+                window.addEventListener('scroll', () => {
+                    // Show after 120vh
+                    if (window.scrollY > window.innerHeight * 1.2) {
+                        fab.classList.add('visible');
+                    } else {
+                        fab.classList.remove('visible');
+                    }
+                });
+                
+                fab.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    document.querySelector('#top-form-section').scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
