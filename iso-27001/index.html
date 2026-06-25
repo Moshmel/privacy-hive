@@ -1,0 +1,2852 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PTXKVMJ9');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>ליווי והכנה לתקן ISO 27001 לארגונים | Privacy Hive</title>
+    <meta name="description" content="הכנה מקיפה לתקן ISO 27001 ללא בירוקרטיה מיותרת. ליווי מקצועי של מומחי אבטחת מידע, סקר סיכונים, מיפוי פערים, כתיבת נהלים ומענה לשאלוני לקוחות.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/global.css?v=1.1">
+    <link rel="stylesheet" href="../assets/css/components.css?v=1.1">
+    
+    <style>
+        /* Scoped Theme Styling for ISO 27001 Landing Page */
+        html, body {
+            width: 100%;
+            overflow-x: clip;
+            font-family: var(--font-base);
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-size: 1.15rem;
+            line-height: 1.75;
+            color: var(--color-text);
+        }
+
+        /* Section Global Settings */
+        .section-iso {
+            padding: 5.5rem 1.5rem;
+            position: relative;
+        }
+        
+        /* Alternating Background Colors */
+        .section-iso.dark-bg {
+            background-color: var(--color-primary-dark);
+            color: #E2E8F0;
+        }
+        .section-iso.dark-bg .section-title-iso {
+            color: #FFFFFF;
+        }
+        .section-iso.dark-bg .section-subtitle-iso {
+            color: #94A3B8;
+        }
+
+        .section-iso.light-bg {
+            background-color: #FFFFFF;
+            color: var(--color-text);
+        }
+        .section-iso.light-bg .section-title-iso {
+            color: var(--color-heading);
+        }
+        .section-iso.light-bg .section-subtitle-iso {
+            color: var(--color-muted);
+        }
+
+        .section-iso.process-section {
+            background-color: #F8FAFC;
+            color: var(--color-text);
+        }
+        .section-iso.process-section .section-title-iso {
+            color: var(--color-heading);
+        }
+        .section-iso.process-section .section-subtitle-iso {
+            color: var(--color-muted);
+        }
+
+        .section-title-iso {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 1.2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle-iso {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 4.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        /* Header Style */
+        .iso-header {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0.85rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .iso-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .iso-logo {
+            height: 46px;
+        }
+
+        .contact-btn-top {
+            background-color: var(--color-accent);
+            border: 2px solid var(--color-accent);
+            color: #FFFFFF !important;
+            padding: 0.55rem 1.3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .contact-btn-top:hover {
+            background-color: var(--color-accent-dark);
+            border-color: var(--color-accent-dark);
+            box-shadow: var(--shadow-accent);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Layout (Dark background) */
+        .iso-hero {
+            background: radial-gradient(circle at 80% 20%, #1a253c 0%, var(--color-primary-dark) 100%);
+            padding: 6rem 1.5rem 5.5rem;
+            position: relative;
+            color: #E2E8F0;
+            border-radius: 24px 24px 0 0;
+            margin: 1.5rem 1.5rem 0 1.5rem;
+        }
+
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.18;
+        }
+
+        .hero-video-container iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 4rem;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            text-align: right;
+        }
+
+        .hero-tagline {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--color-accent);
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+            order: 0;
+            text-align: right;
+        }
+
+        .hero-title {
+            font-size: 3.8rem;
+            font-weight: 900;
+            line-height: 1.12;
+            margin-bottom: 1.5rem;
+            color: #FFFFFF;
+            letter-spacing: -1px;
+            text-align: right;
+        }
+
+        .hero-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .hero-bullets li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #E2E8F0;
+        }
+
+        .hero-bullets li i {
+            color: var(--color-accent);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .hero-dial-wrapper {
+            margin-top: 2rem;
+            text-align: right;
+        }
+
+        /* Hero Trust Badge */
+        .hero-trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(63, 168, 152, 0.15);
+            border: 1px solid rgba(63, 168, 152, 0.3);
+            border-radius: 50px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Floating B2B Form Card */
+        .iso-form-card {
+            background: #FFFFFF;
+            padding: 2.8rem 2.2rem;
+            border-radius: 24px;
+            box-shadow: 0 30px 75px -10px rgba(0,0,0,0.7);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #334155;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Stats row below hero on mobile */
+        .hero-stats-strip {
+            display: none;
+        }
+
+        .form-card-title {
+            text-align: center;
+            color: var(--color-primary);
+            font-size: 1.9rem;
+            font-weight: 900;
+            margin-bottom: 0.6rem;
+            letter-spacing: -0.4px;
+            line-height: 1.2;
+        }
+
+        .form-card-subtitle {
+            text-align: center;
+            color: var(--color-muted);
+            margin-bottom: 2.2rem;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .iso-form-group {
+            margin-bottom: 1.1rem;
+        }
+
+        .iso-form-control {
+            width: 100%;
+            background: #F8FAFC;
+            border: 2px solid #E2E8F0;
+            border-radius: 14px;
+            padding: 1rem 1.25rem;
+            font-size: 1.1rem;
+            font-family: inherit;
+            text-align: right;
+            transition: all 0.3s ease;
+        }
+
+        .iso-form-control:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            background: #FFFFFF;
+            box-shadow: 0 0 0 4px rgba(63, 168, 152, 0.18);
+        }
+
+        .iso-textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .iso-consent-label {
+            display: flex;
+            gap: 0.6rem;
+            align-items: flex-start;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #64748B;
+            margin-top: 1.2rem;
+            user-select: none;
+        }
+
+        .iso-consent-checkbox {
+            margin-top: 0.2rem;
+            width: 17px;
+            height: 17px;
+            accent-color: var(--color-accent);
+        }
+
+        .iso-submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--color-accent) 0%, #2D9A8A 100%);
+            color: #FFFFFF;
+            border: none;
+            padding: 1.3rem;
+            border-radius: 14px;
+            font-size: 1.25rem;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: 0 8px 25px -5px rgba(63, 168, 152, 0.55);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        .iso-submit-btn:hover {
+            background: linear-gradient(135deg, var(--color-accent-dark) 0%, #247060 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px -5px rgba(63, 168, 152, 0.7);
+        }
+
+        .iso-submit-btn:active {
+            transform: translateY(0px);
+        }
+
+        .form-trust-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--color-muted);
+            margin-top: 0.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+        }
+
+        .form-trust-text::before {
+            content: '🔒';
+            font-size: 0.85rem;
+        }
+
+        /* Success Message styling */
+        .iso-success-box {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .iso-success-icon {
+            font-size: 3.5rem;
+            color: var(--color-accent);
+            margin-bottom: 1.2rem;
+        }
+
+        /* Expertise Strip */
+        .expertise-strip {
+            background-color: #0F1420;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.5rem 0;
+            position: relative;
+            z-index: 5;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .expertise-strip .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .expertise-strip span {
+            color: #E2E8F0;
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .expertise-strip .dot {
+            color: var(--color-accent);
+            font-size: 1.3rem;
+            font-weight: 900;
+        }
+
+        /* Clients Section (Green Strip) */
+        .clients-section-iso {
+            background-color: var(--color-accent);
+            padding: 1.8rem 1.5rem;
+            position: relative;
+            text-align: center;
+            border-radius: 0 0 24px 24px;
+            margin: 0 1.5rem 1.5rem 1.5rem;
+        }
+
+        .clients-title-iso {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .marquee-slider {
+            overflow: hidden;
+            position: relative;
+            direction: ltr;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .marquee-slider::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100%;
+            background: linear-gradient(to right, var(--color-accent), transparent);
+            z-index: 2;
+        }
+
+        .marquee-slider::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100%;
+            background: linear-gradient(to left, var(--color-accent), transparent);
+            z-index: 2;
+        }
+
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 4.5rem;
+            align-items: center;
+            width: max-content;
+            animation: marqueeScroll 40s linear infinite;
+        }
+
+        .marquee-track img {
+            height: 34px;
+            width: auto;
+            opacity: 0.95;
+            filter: brightness(0) invert(1);
+            transition: all 0.3s ease;
+        }
+
+        .marquee-track img:hover {
+            opacity: 1;
+        }
+
+        /* Short Explanation Section (Dark Background) */
+        .explain-box {
+            background-color: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 3.5rem;
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Short Explanation Section 3 Styling */
+        .explain-section {
+            padding: 6rem 1.5rem;
+        }
+        .explain-container {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .explain-logo-wrapper {
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        .explain-logo {
+            height: 144px;
+            width: auto;
+            max-width: 100%;
+            display: inline-block;
+        }
+        .explain-title {
+            margin-bottom: 2rem;
+            color: #0F172A;
+        }
+        .explain-content-box {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        .explain-lead-p {
+            font-weight: 800;
+            color: #0F172A;
+            font-size: 1.6rem;
+            margin-bottom: 1.8rem;
+            line-height: 1.5;
+            letter-spacing: -0.3px;
+        }
+        .explain-body-p {
+            font-weight: 500;
+            color: #334155;
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+        }
+        .explain-accent-p {
+            font-weight: 900;
+            color: var(--color-accent-dark);
+            font-size: 2.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .explain-text {
+            font-size: 1.25rem;
+            line-height: 1.75;
+            color: #CBD5E1;
+            margin-bottom: 2.5rem;
+        }
+
+        .explain-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .explain-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .scroll-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: var(--color-accent);
+            color: white !important;
+            padding: 1.2rem 3.5rem;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            font-weight: 900;
+            text-decoration: none;
+            box-shadow: var(--shadow-accent);
+            transition: all 0.3s ease;
+        }
+
+        .scroll-cta-btn:hover {
+            background-color: var(--color-accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(63, 168, 152, 0.5);
+        }
+
+        /* Why Choose Us Cards (Light Background) */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-card {
+            background-color: #FFFFFF;
+            border: 1px solid var(--color-border);
+            border-radius: 20px;
+            padding: 2rem 1.8rem;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+            text-align: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(32, 40, 63, 0.04);
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--color-accent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 0 20px 20px 0;
+        }
+
+        .why-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(32, 40, 63, 0.08);
+            border-color: rgba(63, 168, 152, 0.25);
+        }
+
+        .why-card:hover::before {
+            opacity: 1;
+        }
+
+        .why-card-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(63, 168, 152, 0.1);
+            color: var(--color-accent);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover .why-card-icon {
+            background-color: var(--color-accent);
+            color: #FFFFFF;
+            transform: scale(1.05);
+            box-shadow: var(--shadow-accent);
+        }
+
+        .why-card-title {
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: var(--color-heading);
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .why-card-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--color-text);
+            margin: 0;
+        }
+
+        /* What the Service Includes (Dark Background Panel) */
+        .checklist-premium-container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: radial-gradient(circle at 100% 0%, #1e263d 0%, #141926 100%);
+            border: 1px solid rgba(63, 168, 152, 0.3);
+            border-radius: 28px;
+            padding: 4.5rem;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #E2E8F0;
+            line-height: 1.5;
+        }
+
+        .service-list li i {
+            color: var(--color-accent);
+            font-size: 1.6rem;
+            margin-top: 0.1rem;
+        }
+
+        /* Our Commitment Premium Card (White Section background containing Dark Card) */
+        .commitment-premium-card {
+            background: radial-gradient(circle at 0% 0%, #1c2438 0%, #101420 100%);
+            border: 2px solid rgba(63, 168, 152, 0.45);
+            border-radius: 28px;
+            padding: 5rem 4.5rem;
+            max-width: 950px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 2;
+        }
+
+        .commitment-premium-title {
+            font-size: 2.3rem;
+            font-weight: 900;
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
+            line-height: 1.25;
+        }
+
+        .commitment-premium-desc {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #CBD5E1;
+            margin-bottom: 3.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Consistent CTA Helper Elements */
+        .section-cta-wrapper {
+            text-align: center;
+            margin-top: 3.5rem;
+        }
+
+        .cta-dual-wrapper {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 3.5rem;
+        }
+
+        .cta-dual-wrapper .btn-premium-cta.callback-btn {
+            background: transparent;
+            border: 2px solid var(--color-accent);
+            color: var(--color-accent) !important;
+            box-shadow: none;
+        }
+
+        .cta-dual-wrapper .btn-premium-cta.callback-btn:hover {
+            background: rgba(63, 168, 152, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .btn-premium-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: var(--color-accent);
+            color: white !important;
+            padding: 1.15rem 3.8rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-decoration: none;
+            box-shadow: var(--shadow-accent);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-premium-cta:hover {
+            background-color: var(--color-accent-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(63, 168, 152, 0.6);
+        }
+
+        /* How it Works Step-by-Step */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto 3.5rem;
+            position: relative;
+        }
+
+        @media (min-width: 993px) {
+            .process-steps::before {
+                content: '';
+                position: absolute;
+                top: 40px;
+                right: 10%;
+                left: 10%;
+                height: 2px;
+                background: linear-gradient(to left, rgba(63, 168, 152, 0.1), rgba(63, 168, 152, 0.4), rgba(63, 168, 152, 0.1));
+                z-index: 1;
+            }
+        }
+
+        .step-item {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .step-number {
+            width: 72px;
+            height: 72px;
+            background-color: var(--color-primary-dark);
+            border: 2px solid rgba(63, 168, 152, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: var(--color-accent);
+            box-shadow: 0 0 0 6px rgba(63, 168, 152, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .step-item:hover .step-number {
+            border-color: var(--color-accent);
+            box-shadow: var(--shadow-accent);
+            transform: scale(1.1);
+        }
+
+        .step-info {
+            text-align: center;
+        }
+
+        .step-title-text {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-desc-text {
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: #94A3B8;
+            margin: 0;
+            padding: 0 0.3rem;
+        }
+
+        .process-section .step-number {
+            background-color: #FFFFFF;
+            border-color: #E2E8F0;
+            color: var(--color-accent-dark);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+        }
+        .process-section .step-item:hover .step-number {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+            box-shadow: var(--shadow-accent);
+        }
+        .process-section .step-title-text {
+            color: var(--color-heading);
+        }
+        .process-section .step-desc-text {
+            color: var(--color-text);
+        }
+
+        /* Who is it for Section (Light Background) */
+        .fits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.8rem;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .fits-card {
+            background-color: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 1.8rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .fits-card:hover {
+            border-color: rgba(63, 168, 152, 0.3);
+            background-color: #FFFFFF;
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .fits-checkmark {
+            color: var(--color-accent);
+            font-size: 1.8rem;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+        .fits-text {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-heading);
+        }
+
+        /* Pre-FAQ CTA Section (Dark Background) */
+        .cta-section-iso {
+            background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+            padding: 7rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .prefaq-cta {
+            position: relative;
+            z-index: 2;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .prefaq-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 4rem;
+            align-items: center;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .prefaq-text-col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: right;
+        }
+
+        @media (max-width: 992px) {
+            .prefaq-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                text-align: center;
+            }
+            .prefaq-text-col {
+                align-items: center;
+                text-align: center;
+            }
+            .prefaq-cta-title {
+                font-size: 2.3rem !important;
+                text-align: center !important;
+            }
+        }
+
+        .prefaq-cta-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+
+        .prefaq-cta-subtitle {
+            font-size: 1.3rem;
+            color: #94A3B8;
+            margin-bottom: 2.8rem;
+            line-height: 1.7;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-large-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: var(--color-accent);
+            color: white !important;
+            padding: 1.25rem 4rem;
+            border-radius: 50px;
+            font-size: 1.35rem;
+            font-weight: 900;
+            text-decoration: none;
+            box-shadow: var(--shadow-accent);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-large-btn:hover {
+            background-color: var(--color-accent-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(63, 168, 152, 0.6);
+        }
+
+        /* FAQ Interactive Accordion (Light Background) */
+        .faq-accordion-iso {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item-iso {
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item-iso.active {
+            border-color: rgba(63, 168, 152, 0.3);
+            background: #FFFFFF;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-btn-iso {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.5rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-heading);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: right;
+            font-family: inherit;
+        }
+
+        .faq-icon-iso {
+            color: var(--color-accent);
+            font-size: 1.3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item-iso.active .faq-icon-iso {
+            transform: rotate(45deg);
+        }
+
+        .faq-content-iso {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: transparent;
+        }
+
+        .faq-content-inner {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--color-text);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Footer styling overrides */
+        .site-footer-iso {
+            background-color: var(--color-primary-dark);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #94A3B8;
+            padding: 5rem 0 2rem;
+            font-size: 1rem;
+        }
+
+        .footer-grid-iso {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.2fr;
+            gap: 4rem;
+            margin-bottom: 3.5rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 1.5rem;
+        }
+
+        .footer-logo-box img {
+            height: 40px;
+            filter: brightness(0) invert(1);
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-links-title {
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-links-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 35px;
+            height: 2px;
+            background-color: var(--color-accent);
+        }
+
+        .footer-link-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .footer-link-list a {
+            color: #94A3B8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-link-list a:hover {
+            color: #FFFFFF;
+        }
+
+        .footer-bottom-iso {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 2rem 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-bottom-iso a {
+            color: #64748B;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-bottom-iso a:hover {
+            color: #FFFFFF;
+        }
+
+        /* Floating WhatsApp Button */
+        .wa-floating-btn {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white !important;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.1rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            transition: transform 0.3s ease;
+        }
+
+        .wa-floating-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Floating Action Button - Only shown on mobile */
+        .mobile-floating-cta {
+            display: none; /* Hidden on desktop */
+        }
+
+        @media (max-width: 992px) {
+            .mobile-floating-cta {
+                position: fixed;
+                bottom: -100px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 9998;
+                background: linear-gradient(135deg, var(--color-accent) 0%, #2D9A8A 100%);
+                color: white !important;
+                padding: 1rem 2.5rem;
+                border-radius: 50px;
+                font-size: 1.1rem;
+                font-weight: 900;
+                box-shadow: 0 8px 30px rgba(63, 168, 152, 0.55);
+                transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s;
+                opacity: 0;
+                pointer-events: none;
+                text-decoration: none;
+                white-space: nowrap;
+                display: none;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .mobile-floating-cta.visible {
+                bottom: 20px;
+                opacity: 1;
+                pointer-events: auto;
+                display: flex;
+            }
+        }
+
+        /* ==========================================
+           RESPONSIVE - TABLET (992px)
+        ========================================== */
+        @media (max-width: 992px) {
+            .hero-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .hero-content {
+                display: contents;
+            }
+
+            .hero-tagline {
+                font-size: 1rem;
+                margin-bottom: 0.4rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            .hero-title {
+                order: 1;
+                font-size: 2.8rem;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero-form-box {
+                order: 4;
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .hero-bullets {
+                order: 2;
+                align-items: flex-start;
+                margin: 0 auto 1.5rem auto;
+                gap: 10px;
+                max-width: 320px;
+                width: 100%;
+            }
+
+            .hero-dial-wrapper {
+                order: 3;
+                text-align: center;
+                width: 100%;
+                margin-top: 0.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-trust-badge {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .footer-grid-iso {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .footer-links-title::after {
+                right: 50%;
+                transform: translateX(50%);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .checklist-premium-container {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .service-list {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+
+            .commitment-premium-card {
+                padding: 2.5rem 2rem;
+            }
+        }
+
+        /* ==========================================
+           RESPONSIVE - MOBILE (768px)
+        ========================================== */
+        @media (max-width: 768px) {
+            .section-iso {
+                padding: 2.5rem 1.2rem;
+            }
+
+            .explain-section {
+                padding: 2.5rem 1.2rem;
+            }
+            .explain-logo-wrapper {
+                margin-bottom: 1.5rem;
+            }
+            .explain-logo {
+                height: 70px;
+            }
+            .explain-lead-p {
+                font-size: 1.15rem;
+                font-weight: 800;
+                margin-bottom: 1rem;
+            }
+            .explain-body-p {
+                font-size: 1.05rem;
+                margin-bottom: 1.5rem;
+            }
+            .explain-accent-p {
+                font-size: 1.4rem;
+                margin-top: 1.5rem;
+            }
+            .explain-content-box {
+                margin-bottom: 2rem;
+            }
+
+            .iso-hero {
+                padding: 2.5rem 15px 3rem;
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .hero-title {
+                font-size: 2.3rem;
+                letter-spacing: -0.5px;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-bullets li {
+                font-size: 15px;
+                text-align: right;
+            }
+
+            .section-title-iso {
+                font-size: 2.3rem;
+                margin-bottom: 1rem;
+            }
+
+            .section-subtitle-iso {
+                font-size: 1.05rem;
+                margin-bottom: 1.8rem;
+            }
+
+            /* Form adjustments for mobile */
+            .iso-form-card {
+                padding: 1.5rem 1.25rem;
+                border-radius: 20px;
+            }
+
+            .form-card-title {
+                font-size: 1.55rem;
+            }
+
+            .iso-submit-btn {
+                font-size: 1.15rem;
+                padding: 1.15rem;
+            }
+
+            /* CTA buttons: full width on mobile */
+            .btn-premium-cta,
+            .cta-large-btn,
+            .scroll-cta-btn {
+                width: 100%;
+                padding: 1.15rem 1.5rem;
+                font-size: 1.1rem;
+                justify-content: center;
+            }
+
+            .explain-box {
+                padding: 2rem 1.25rem;
+            }
+
+            .checklist-premium-container {
+                padding: 2rem 1.25rem;
+                border-radius: 18px;
+            }
+
+            .service-list {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .service-list li {
+                font-size: 1.05rem;
+            }
+
+            .commitment-premium-card {
+                padding: 2rem 1.25rem;
+                border-radius: 18px;
+            }
+
+            .commitment-premium-title {
+                font-size: 1.5rem;
+            }
+
+            .commitment-premium-desc {
+                font-size: 1.05rem;
+                margin-bottom: 2rem;
+            }
+
+            .cta-section-iso {
+                padding: 2.5rem 1.2rem;
+            }
+
+            .prefaq-cta {
+                padding: 0;
+                border-radius: 0;
+            }
+
+            .prefaq-grid {
+                gap: 1.5rem;
+            }
+
+            .prefaq-text-col div {
+                margin-bottom: 0.5rem !important;
+            }
+
+            .prefaq-cta-title {
+                font-size: 1.55rem;
+                margin-bottom: 1.2rem !important;
+            }
+
+            .prefaq-cta-subtitle {
+                font-size: 1.05rem;
+                margin-bottom: 1.2rem;
+            }
+
+            .expertise-strip span {
+                font-size: 0.9rem;
+            }
+
+            .expertise-strip .dot {
+                font-size: 1rem;
+            }
+
+            .expertise-strip .container {
+                gap: 0.8rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.2rem;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .why-card {
+                padding: 1.5rem 1.25rem;
+                gap: 1rem;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .why-card-icon {
+                width: 48px;
+                height: 48px;
+                font-size: 1.3rem;
+                flex-shrink: 0;
+            }
+
+            .fits-grid {
+                grid-template-columns: 1fr;
+                gap: 0.85rem;
+            }
+
+            .fits-card {
+                padding: 1.1rem 1.25rem;
+            }
+
+            .clients-section-iso {
+                padding: 1.2rem 1.2rem;
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .faq-btn-iso {
+                font-size: 1.05rem;
+                padding: 1.2rem;
+            }
+            
+            /* Move WhatsApp button up so it doesn't overlap mobile CTA */
+            .wa-floating-btn {
+                bottom: 95px;
+                left: 16px;
+                width: 52px;
+                height: 52px;
+                font-size: 1.8rem;
+            }
+            
+            .footer-bottom-iso {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .footer-bottom-iso a {
+                margin: 0 0.75rem;
+            }
+
+            .footer-grid-iso {
+                padding: 0 1.2rem;
+            }
+
+            .section-cta-wrapper {
+                margin-top: 2rem;
+            }
+
+            .cta-dual-wrapper {
+                flex-direction: column;
+                gap: 0.85rem;
+                margin-top: 2rem;
+                width: 100%;
+                max-width: 480px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        /* ==========================================
+           RESPONSIVE - SMALL PHONE (480px)
+        ========================================== */
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.0rem;
+            }
+
+            .section-title-iso {
+                font-size: 2.0rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            /* Show step items horizontally (number left, text right) */
+            .step-item {
+                flex-direction: row;
+                text-align: right;
+                gap: 1rem;
+                background: #FFFFFF;
+                border: 1px solid #E2E8F0;
+                border-radius: 14px;
+                padding: 1.3rem 1.5rem;
+                box-shadow: var(--shadow-sm);
+            }
+
+            .process-section .step-item {
+                background: rgba(63, 168, 152, 0.04);
+                border-color: rgba(63, 168, 152, 0.12);
+            }
+
+            .step-number {
+                width: 52px;
+                height: 52px;
+                font-size: 1.3rem;
+                flex-shrink: 0;
+                box-shadow: none;
+            }
+
+            .step-info {
+                text-align: right;
+                flex: 1;
+            }
+
+            .step-title-text {
+                font-size: 1.05rem;
+                color: var(--color-heading);
+            }
+
+            .step-desc-text {
+                color: var(--color-text);
+            }
+
+            .contact-btn-top span {
+                display: inline;
+                font-size: 0.85rem;
+            }
+
+            .contact-btn-top {
+                padding: 0.45rem 0.85rem;
+            }
+
+            .iso-submit-btn {
+                font-size: 1.1rem;
+            }
+
+            .why-card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* ==========================================
+           MOBILE CTA - Font size override for very small screens
+        ========================================== */
+        @media (max-width: 480px) {
+            .mobile-floating-cta {
+                font-size: 1rem;
+                padding: 0.9rem 1.8rem;
+            }
+        }
+        /* Testimonials/Reviews Section Styling */
+        .reviews-section-iso {
+            background-color: #F8FAFC;
+            padding: 5.5rem 1.5rem;
+            border-bottom: 1px solid var(--color-border);
+            text-align: center;
+        }
+        .reviews-grid-iso {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .review-card-iso {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 2.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            border: 1px solid #E2E8F0;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            text-align: right;
+        }
+        .review-card-iso:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(63, 168, 152, 0.2);
+        }
+        @media (max-width: 992px) {
+            .reviews-grid-iso {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .reviews-section-iso {
+                padding: 4rem 1.2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .reviews-grid-iso {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        /* Modal Overlay styling */
+        .iso-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .iso-modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .iso-modal-card {
+            background: #FFFFFF;
+            padding: 3rem 2.5rem 2.5rem 2.5rem;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 460px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+            position: relative;
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+            color: #334155;
+            text-align: right;
+        }
+        .iso-modal-overlay.active .iso-modal-card {
+            transform: translateY(0);
+        }
+        .iso-modal-close-btn {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #94A3B8;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.2s;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .iso-modal-close-btn:hover {
+            color: #0F172A;
+            background-color: #F1F5F9;
+        }
+        @media (max-width: 768px) {
+            .iso-modal-card {
+                padding: 2.2rem 1.5rem 1.8rem 1.5rem;
+                border-radius: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTXKVMJ9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation Header -->
+    <header class="iso-header">
+        <div class="container">
+            <a href="../home-page.html">
+                <img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive" class="iso-logo">
+            </a>
+            <a href="tel:0545445429" class="contact-btn-top" style="direction: ltr;">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>054-544-5429</span>
+                </a>
+        </div>
+    </header>
+
+    <!-- Section 1: Hero Section (Dark Background) -->
+    <section id="top-form-section" class="iso-hero" style="position: relative; overflow: hidden;">
+        <!-- YouTube Background Video Container -->
+        <div class="hero-video-container">
+            <div id="hero-yt-player"></div>
+        </div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="hero-grid">
+                
+                <!-- Hero Left Content -->
+                <div class="hero-content">
+                    <!-- Brand Tagline -->
+                    <div class="hero-tagline">Privacy Hive - פרטיות חכמה לעסקים</div>
+                    <!-- H1 Title -->
+                    <h1 class="hero-title">התאמה מלאה לתקן ISO 27001 - <span style="color: var(--color-accent);">בהתחייבות</span></h1>
+
+                    <!-- Bullets -->
+                    <ul class="hero-bullets">
+                        <li><i class="fa-solid fa-check"></i> <span>ניסיון מוכח בהשגת תקן ISO 27001 לחברות ועסקים</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span>מומחי אבטחת מידע ומשפט תחת קורת גג אחת</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span>תדעו מה חסר לכם - כבר מהשיחה הראשונה</span></li>
+                        <li><i class="fa-solid fa-check"></i> <span>100% שביעות רצון מובטחת</span></li>
+                    </ul>
+
+                    <!-- Dial Button -->
+                    <div class="hero-dial-wrapper">
+                        <a href="tel:0545445429" class="btn-premium-cta" style="background: linear-gradient(135deg, var(--color-accent) 0%, #2D9A8A 100%);">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>חייגו: 054-544-5429</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right Form Card -->
+                <div class="hero-form-box">
+                    <div class="iso-form-card">
+                        <h3 class="form-card-title">ייעוץ ראשוני ללא עלות</h3>
+                        <p class="form-card-subtitle">הדרך לקבלת ISO 27001 מתחילה כאן</p>
+                        
+                        <form id="iso-lead-form" class="lead-form">
+                            <!-- Input Fields -->
+                            <div class="iso-form-group">
+                                <input type="text" id="fname" name="fname" class="iso-form-control" placeholder="שם מלא" required>
+                            </div>
+                            <div class="iso-form-group">
+                                <input type="tel" id="phone" name="phone" class="iso-form-control" placeholder="טלפון" required>
+                            </div>
+                            
+                            <!-- Hidden source parameter -->
+                            <input type="hidden" name="reason" value="iso-27001-form">
+
+                            <!-- Consent Checkbox -->
+                            <label class="iso-consent-label">
+                                <input type="checkbox" required class="iso-consent-checkbox" checked>
+                                <span>אני מאשר/ת שיחזרו אליי עם מידע לייעוץ בנושא ISO 27001</span>
+                            </label>
+
+                            <!-- Submit Button -->
+                            <button type="submit" id="submit-btn" class="iso-submit-btn">
+                                <span>לתיאום שיחת התאמה</span> <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <!-- Trust text under button -->
+                            <div class="form-trust-text">ללא התחייבות | מענה תוך 24 שעות</div>
+                        </form>
+
+                        <!-- Form Success State -->
+                        <div id="form-success-state" class="iso-success-box" style="display: none;">
+                            <div class="iso-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.8rem; font-weight: 800;">תודה, הפרטים התקבלו!</h3>
+                            <p style="color: #475569; font-size: 1.05rem; line-height: 1.5; margin: 0;">נציג מצוות Privacy Hive ייצור עמכם קשר לשיחת התאמה בהקדם.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Section 2: Clients Section (Green Strip) -->
+    <section class="clients-section-iso">
+        <div class="container">
+            <h3 class="clients-title-iso">לקוחותינו</h3>
+            <div class="marquee-slider">
+                <div class="marquee-track">
+                    <img src="../assets/customers-logos/Clip path group-1.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-2.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-3.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-4.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-5.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-6.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-7.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-8.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-9.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-10.svg" alt="Client Logo">
+                    
+                    <!-- Repeated set for infinite scroll loop -->
+                    <img src="../assets/customers-logos/Clip path group-1.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-2.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-3.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-4.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-5.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-6.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-7.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-8.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-9.svg" alt="Client Logo">
+                    <img src="../assets/customers-logos/Clip path group-10.svg" alt="Client Logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Reviews Section (Soft Grey Background) -->
+    <section class="reviews-section-iso">
+        <div class="container">
+            <h2 class="section-title-iso">מה הלקוחות שלנו אומרים?</h2>
+            <p class="section-subtitle-iso" style="margin-bottom: 3.5rem;">מילים חמות מאנשים ועסקים שעובדים איתנו ביום-יום</p>
+            
+            <div class="reviews-grid-iso">
+                <!-- Review 1 -->
+                <div class="review-card-iso">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-weight: 800; color: var(--color-primary); font-size: 1.1rem;">אריאל אזולאי</span>
+                        <div style="display: flex; gap: 0.2rem; color: #F59E0B; font-size: 0.9rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p style="font-size: 1rem; color: #334155; line-height: 1.6; margin: 0;">
+                        היחס והשירות שקיבלתי ממוטי הם ברמה הכי גבוהה שיש. הוא נותן מענה מהיר ומדויק לכל מה שצריך. ממליץ בחום ללא ספק!
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card-iso">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-weight: 800; color: var(--color-primary); font-size: 1.1rem; direction: ltr; text-align: right;">Yuval Mor</span>
+                        <div style="display: flex; gap: 0.2rem; color: #F59E0B; font-size: 0.9rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p style="font-size: 1rem; color: #334155; line-height: 1.6; margin: 0;">
+                        מוטי נתן שירות מדהים, מהיר ומקצועי. כל פעם שלא הבנתי משהו הוא לקח את הזמן להסביר לי ובכללי היה ממש כיף לעבוד איתו. אני מאוד מרוצה מהתוצאה וממליץ בחום.
+                    </p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card-iso">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-weight: 800; color: var(--color-primary); font-size: 1.1rem;">שיר עוזיאל</span>
+                        <div style="display: flex; gap: 0.2rem; color: #F59E0B; font-size: 0.9rem;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p style="font-size: 1rem; color: #334155; line-height: 1.6; margin: 0;">
+                        החוויה הייתה מצוינת. מוטי היה זמין ויעיל, סיפק מענה מהיר ושירות מדויק. מעבר למקצועיות, הוא הסביר כל דבר בצורה פשוטה, בגובה העיניים, ונתן ביטחון מלא בתהליך.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Section 3: Short Explanation Section (White Background with Subtle Shapes) -->
+    <section class="section-iso light-bg explain-section" style="position: relative; overflow: hidden;">
+        <!-- Subtle Brand Shape Watermarks (Hexagons) -->
+        <svg viewBox="0 0 100 100" style="position: absolute; top: -5%; left: -5%; width: 280px; height: 280px; color: var(--color-accent); opacity: 0.04; pointer-events: none; transform: rotate(15deg);">
+            <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" fill="none" stroke="currentColor" stroke-width="2" />
+        </svg>
+        <svg viewBox="0 0 100 100" style="position: absolute; bottom: -5%; right: -5%; width: 350px; height: 350px; color: var(--color-accent); opacity: 0.03; pointer-events: none; transform: rotate(-10deg);">
+            <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" fill="none" stroke="currentColor" stroke-width="2" />
+            <polygon points="50,15 85,30 85,70 50,85 15,70 15,30" fill="none" stroke="currentColor" stroke-dasharray="4,4" stroke-width="1.5" />
+        </svg>
+        <svg viewBox="0 0 100 100" style="position: absolute; top: 40%; right: -8%; width: 180px; height: 180px; color: var(--color-accent); opacity: 0.02; pointer-events: none; transform: rotate(45deg);">
+            <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" fill="none" stroke="currentColor" stroke-width="2" />
+        </svg>
+
+        <div class="container explain-container">
+            <!-- Brand Logo Above Title (centered) -->
+            <div class="explain-logo-wrapper">
+                <img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive Logo" class="explain-logo">
+            </div>
+            
+            <h2 class="section-title-iso explain-title">צריכים הסמכת ISO 27001 לארגון שלכם?</h2>
+            
+            <div class="explain-content-box">
+                <p class="explain-lead-p">
+                    Privacy Hive מעניקה לכם תהליך מסודר, ליווי מקצועי והכנה מלאה למבדק ההסמכה.
+                </p>
+                <p class="explain-body-p">
+                    אנחנו מתמחים בליווי חברות וארגונים לעמידה בתקן ISO 27001 — ממיפוי הפערים, דרך ניהול הסיכונים והנהלים, ועד מוכנות מלאה להסמכה. עם Privacy Hive אתם מקבלים דרך ברורה, צוות מנוסה ושקט ניהולי לאורך כל התהליך.
+                </p>
+                <p class="explain-accent-p">
+                    ISO 27001 בראש שקט.
+                </p>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="cta-dual-wrapper" style="margin-top: 0;">
+                <a href="tel:0545445429" class="btn-premium-cta">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>חייגו: 054-544-5429</span>
+                </a>
+                <a href="#top-form-section" class="btn-premium-cta scroll-trigger callback-btn">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>תחזרו אליי</span>
+                </a>
+            </div>
+        </div>
+    </section>
+  
+    <!-- Section 4: Why Choose Us (Light Grey Background with White Cards) -->
+    <section class="section-iso" style="background-color: #F8FAFC;">
+        <div class="container">
+            <h2 class="section-title-iso">למה לבחור בנו?</h2>
+            
+            <div class="why-grid">
+                <!-- Card 1 -->
+                <div class="why-card">
+                    <div class="why-card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h4 class="why-card-title">ליווי משפטי וטכנולוגי תחת קורת גג אחת</h4>
+                    <p class="why-card-desc">הצוות כולל עורך דין ומומחי פרטיות, אבטחת מידע וביקורת — כך שאתם מקבלים מענה רחב גם לדרישות התקן וגם להיבטי ציות ורגולציה.</p>
+                </div>
+ 
+                <!-- Card 2 -->
+                <div class="why-card">
+                    <div class="why-card-icon"><i class="fa-solid fa-award"></i></div>
+                    <h4 class="why-card-title">צוות מוסמך עם ניסיון מוכח</h4>
+                    <p class="why-card-desc">ליווי על ידי מומחים בעלי הסמכות כגון CISA, CPDSE, CDAA וניסיון מעשי בביקורת, פרטיות, ניהול סיכונים ואבטחת מידע.</p>
+                </div>
+ 
+                <!-- Card 3 -->
+                <div class="why-card">
+                    <div class="why-card-icon"><i class="fa-solid fa-file-circle-check"></i></div>
+                    <h4 class="why-card-title">היכרות עמוקה עם תהליכי ISO 27001</h4>
+                    <p class="why-card-desc">ממיפוי פערים וניהול סיכונים, דרך כתיבת מדיניות ונהלים, ועד הכנה מלאה למבדק ההסמכה.</p>
+                </div>
+ 
+                <!-- Card 4 -->
+                <div class="why-card">
+                    <div class="why-card-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                    <h4 class="why-card-title">תהליך ברור ומהיר</h4>
+                    <p class="why-card-desc">אנחנו מתרגמים את דרישות התקן לתכנית עבודה ברורה, ישימה ומסודרת — בלי להעמיס על הצוות שלכם מעבר למה שצריך.</p>
+                </div>
+            </div>
+            <!-- CTA Button -->
+            <div class="cta-dual-wrapper">
+                <a href="tel:0545445429" class="btn-premium-cta">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>חייגו: 054-544-5429</span>
+                </a>
+                <a href="#top-form-section" class="btn-premium-cta scroll-trigger callback-btn">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>תחזרו אליי</span>
+                </a>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Section 7: How it Works (Dark Background) -->
+    <section class="section-iso dark-bg">
+        <div class="container">
+            <h2 class="section-title-iso">הדרך שלכם ל־ISO 27001</h2>
+            
+            <div class="process-steps">
+                <!-- Step 1 -->
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-info">
+                        <h4 class="step-title-text">אבחון ראשוני</h4>
+                        <p class="step-desc-text">בודקים את מצב הארגון ומבינים מה נדרש להסמכה.</p>
+                    </div>
+                </div>
+ 
+                <!-- Step 2 -->
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-info">
+                        <h4 class="step-title-text">מיפוי פערים</h4>
+                        <p class="step-desc-text">מזהים את הפערים מול דרישות התקן ובונים סדר עדיפויות ברור.</p>
+                    </div>
+                </div>
+ 
+                <!-- Step 3 -->
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-info">
+                        <h4 class="step-title-text">יישום וליווי</h4>
+                        <p class="step-desc-text">מכינים נהלים, בקרות ותהליכי עבודה מותאמים לארגון.</p>
+                    </div>
+                </div>
+ 
+                <!-- Step 4 -->
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-info">
+                        <h4 class="step-title-text">מוכנות למבדק</h4>
+                        <p class="step-desc-text">מגיעים למבדק ההסמכה בצורה מסודרת, מקצועית ובטוחה.</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="cta-dual-wrapper">
+                <a href="tel:0545445429" class="btn-premium-cta">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>חייגו: 054-544-5429</span>
+                </a>
+                <a href="#top-form-section" class="btn-premium-cta scroll-trigger callback-btn">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>תחזרו אליי</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 9: Informative Article (Light Grey/Soft Background) -->
+    <section class="section-iso" style="background-color: #F8FAFC; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0;">
+        <div class="container" style="max-width: 900px; margin: 0 auto; text-align: right;">
+            <h2 class="section-title-iso" style="text-align: center; margin-bottom: 3.5rem; font-weight: 900; color: #0F172A;">מדריך מקצועי: כל מה שצריך לדעת על תקן ISO 27001</h2>
+            
+            <article class="iso-article" style="line-height: 1.85; color: #334155; font-size: 1.15rem;">
+                <h3 style="color: #0F172A; font-size: 1.8rem; font-weight: 800; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem; display: inline-block;">מהו תקן ISO 27001?</h3>
+                <p style="margin-bottom: 1.5rem;">
+                    תקן <strong>ISO 27001</strong> הוא התקן הבינלאומי המוביל והמוערך ביותר לניהול אבטחת מידע בארגונים (ISMS - Information Security Management System). התקן מגדיר תהליך שיטתי ומובנה להגנה על המידע הרגיש של הארגון, של לקוחותיו ושל שותפיו העסקיים, באמצעות גישה מבוססת ניהול סיכונים.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    בניגוף לפתרונות אבטחה נקודתיים (כמו התקנת אנטי-וירוס או חומת אש בלבד), תקן ISO 27001 מסתכל על אבטחת המידע באופן הוליסטי ומקיף שלושה עמודי תווך מרכזיים: <strong>טכנולוגיה, אנשים ותהליכים</strong>.
+                </p>
+
+                <h3 style="color: #0F172A; font-size: 1.8rem; font-weight: 800; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem; display: inline-block;">מדוע הארגון שלכם חייב את ההסמכה הזו?</h3>
+                <p style="margin-bottom: 1.2rem;">
+                    כיום, הסמכה לתקן ISO 27001 היא כבר מזמן לא רק "תעודה על הקיר" – היא מהווה תנאי סף עסקי קריטי:
+                </p>
+                <ul style="list-style-type: none; padding: 0; margin: 0 0 1.8rem 0; display: flex; flex-direction: column; gap: 0.8rem;">
+                    <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
+                        <i class="fa-solid fa-circle-check" style="color: var(--color-accent); margin-top: 0.35rem;"></i>
+                        <span><strong>סגירת עסקאות Enterprise:</strong> חברות גלובליות ותאגידי ענק דורשים מכל ספק טכנולוגיה או שירותים להציג תעודת ISO 27001 בתוקף כתנאי מקדים לחתימה על חוזה.</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
+                        <i class="fa-solid fa-circle-check" style="color: var(--color-accent); margin-top: 0.35rem;"></i>
+                        <span><strong>השתתפות במכרזים:</strong> מרבית המכרזים הממשלתיים והציבוריים בישראל ובעולם מחייבים עמידה בתקן אבטחת מידע מוסדר.</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
+                        <i class="fa-solid fa-circle-check" style="color: var(--color-accent); margin-top: 0.35rem;"></i>
+                        <span><strong>שקט ניהולי והגנה ממתקפות סייבר:</strong> על ידי זיהוי וצמצום שיטתי של סיכוני האבטחה, אתם מפחיתים משמעותית את ההסתברות לאירועי כופר או דליפת מידע הרסניים.</span>
+                    </li>
+                </ul>
+
+                <h3 style="color: #0F172A; font-size: 1.8rem; font-weight: 800; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem; display: inline-block;">ממה מורכב תהליך ההסמכה?</h3>
+                <p style="margin-bottom: 1.5rem;">
+                    התקן מורכב משני חלקים מרכזיים: דרישות הליבה של מערכת הניהול (סעיפים 4-10 של התקן) ונספח א' (Annex A) המכיל בקרות אבטחה ספציפיות המכסות את כלל ההיבטים הארגוניים והטכנולוגיים (כגון בקרת גישה, אבטחה פיזית, הצפנה, התאוששות מאסון ועוד).
+                </p>
+                <div style="background-color: #FFFFFF; border-right: 4px solid var(--color-accent); padding: 1.5rem; border-radius: 4px 12px 12px 4px; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03); margin-bottom: 1.8rem;">
+                    <h4 style="color: #0F172A; font-weight: 800; margin-top: 0; margin-bottom: 0.6rem; font-size: 1.2rem;">ארבעת השלבים המרכזיים בדרך לתעודה:</h4>
+                    <ol style="margin: 0; padding-right: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <li><strong>מיפוי פערים (Gap Analysis):</strong> בדיקת המצב הקיים בארגון מול דרישות התקן כדי לבנות תוכנית עבודה מדויקת.</li>
+                        <li><strong>סקר סיכונים (Risk Assessment):</strong> זיהוי האיומים על נכסי המידע של החברה וקביעת דרכי טיפול בהם.</li>
+                        <li><strong>כתיבת נהלים והטמעה:</strong> ניסוח מסמכי מדיניות, נהלי עבודה והטמעת בקרות בשטח.</li>
+                        <li><strong>מבדק ההסמכה (Auditing):</strong> הגעת סוקר חיצוני רשמי לבחינת המוכנות והענקת התעודה הרשמית.</li>
+                    </ol>
+                </div>
+
+                <h3 style="color: #0F172A; font-size: 1.8rem; font-weight: 800; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--color-accent); padding-bottom: 0.5rem; display: inline-block;">מדוע לבצע את התהליך עם Privacy Hive?</h3>
+                <p style="margin-bottom: 1.5rem;">
+                    הכנה ל-ISO 27001 יכולה להיות תהליך ארוך, בירוקרטי ומסורבל אם היא נעשית באופן שבלוני. ב-<strong>Privacy Hive</strong> אנחנו פועלים אחרת:
+                </p>
+                <ul style="list-style-type: none; padding: 0; margin: 0 0 2.5rem 0; display: flex; flex-direction: column; gap: 1rem;">
+                    <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
+                        <i class="fa-solid fa-shield-halved" style="color: var(--color-accent); margin-top: 0.35rem; font-size: 1.1rem;"></i>
+                        <span><strong>צוות מומחים רב-תחומי:</strong> אנחנו משלבים מומחי אבטחה, מבקרי מערכות מידע ועורכי דין מנוסים. תקבלו מענה מלא גם להיבטי האבטחה הטכנולוגיים וגם להיבטים המשפטיים והרגולטוריים.</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
+                        <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--color-accent); margin-top: 0.35rem; font-size: 1.1rem;"></i>
+                        <span><strong>התאמה אישית מלאה:</strong> אנו לא מאמינים בנהלי "העתק-הדבק" גנריים שחונקים את זרימת העבודה. הנהלים שלנו נכתבים ספציפית לפי תרבות העבודה וכלי התוכנה שהארגון שלכם כבר משתמש בהם.</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 0.6rem;">
+                        <i class="fa-solid fa-handshake-angle" style="color: var(--color-accent); margin-top: 0.35rem; font-size: 1.1rem;"></i>
+                        <span><strong>ליווי מקצה לקצה:</strong> אנחנו לא מסתפקים במסירת מסמכים. אנו מלווים אתכם בפועל, מדריכים את העובדים, עורכים מבדק דמה ומייצגים אתכם מול הסוקר החיצוני ביום המבדק.</span>
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- Section 9.5: Pre-FAQ CTA Section (Dark Background) -->
+    <section class="cta-section-iso">
+        <div class="container">
+            <div class="prefaq-cta">
+                <div class="prefaq-grid">
+                    <!-- Right Column: Brand, Title, and Call button -->
+                    <div class="prefaq-text-col">
+                        <div style="font-size: 1.35rem; font-weight: 900; color: var(--color-accent); letter-spacing: 2px; margin-bottom: 1.2rem; text-transform: uppercase;">Privacy Hive</div>
+                        <h3 class="prefaq-cta-title" style="margin-bottom: 2rem; text-align: right; line-height: 1.3;">הדרך שלכם ל-ISO 27001<br>בראש שקט</h3>
+                        
+                        <a href="tel:0545445429" class="btn-premium-cta" style="background: var(--color-accent); border: 2px solid var(--color-accent); color: #FFFFFF !important; display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 2.5rem; border-radius: 50px; font-weight: 800; font-size: 1.15rem; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(63, 168, 152, 0.25);">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>חייגו: 054-544-5429</span>
+                        </a>
+                    </div>
+
+                    <!-- Left Column: White Form box -->
+                    <div class="prefaq-form-col" style="width: 100%; max-width: 480px; margin: 0 auto;">
+                        <div style="background: #FFFFFF; padding: 2.2rem 2rem; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); color: #334155; text-align: right;">
+                            <form id="iso-bottom-lead-form" class="lead-form">
+                                <!-- Input Fields -->
+                                <div class="iso-form-group" style="margin-bottom: 1.1rem;">
+                                    <input type="text" id="fname-bottom" name="fname" class="iso-form-control" placeholder="שם מלא" required style="width: 100%; background: #F8FAFC; border: 2px solid #E2E8F0; border-radius: 14px; padding: 1rem 1.25rem; font-size: 1.1rem; text-align: right;">
+                                </div>
+                                <div class="iso-form-group" style="margin-bottom: 1.1rem;">
+                                    <input type="tel" id="phone-bottom" name="phone" class="iso-form-control" placeholder="טלפון" required style="width: 100%; background: #F8FAFC; border: 2px solid #E2E8F0; border-radius: 14px; padding: 1rem 1.25rem; font-size: 1.1rem; text-align: right;">
+                                </div>
+                                
+                                <!-- Consent Checkbox -->
+                                <label class="iso-consent-label" style="display: flex; gap: 0.6rem; align-items: flex-start; cursor: pointer; font-size: 0.9rem; color: #64748B; margin-top: 1.2rem; user-select: none;">
+                                    <input type="checkbox" required class="iso-consent-checkbox" checked style="margin-top: 0.2rem; width: 17px; height: 17px; accent-color: var(--color-accent);">
+                                    <span>אני מאשר/ת שיחזרו אליי עם מידע לייעוץ בנושא ISO 27001</span>
+                                </label>
+
+                                <!-- Submit Button -->
+                                <button type="submit" id="submit-btn-bottom" class="iso-submit-btn" style="width: 100%; background: linear-gradient(135deg, var(--color-accent) 0%, #2D9A8A 100%); color: #FFFFFF; border: none; padding: 1.3rem; border-radius: 14px; font-size: 1.25rem; font-weight: 900; cursor: pointer; box-shadow: 0 8px 25px -5px rgba(63, 168, 152, 0.55); transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 0.6rem; margin-top: 1.5rem; letter-spacing: 0.3px;">
+                                    <span>לתיאום שיחת התאמה</span> <i class="fa-solid fa-arrow-left"></i>
+                                </button>
+                                <!-- Trust text under button -->
+                                <div class="form-trust-text" style="text-align: center; font-size: 0.9rem; color: #64748B; margin-top: 0.8rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">ללא התחייבות | מענה תוך 24 שעות</div>
+                            </form>
+
+                            <!-- Form Success State -->
+                            <div id="form-success-state-bottom" class="iso-success-box" style="display: none; text-align: center; padding: 2rem 1rem;">
+                                <div class="iso-success-icon" style="font-size: 3.5rem; color: var(--color-accent); margin-bottom: 1.2rem;"><i class="fa-solid fa-circle-check"></i></div>
+                                <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.8rem; font-weight: 800;">תודה, הפרטים התקבלו!</h3>
+                                <p style="color: #475569; font-size: 1.05rem; line-height: 1.5; margin: 0;">נציג מצוות Privacy Hive ייצור עמכם קשר לשיחת התאמה בהקדם.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: FAQ Section (Light Background) -->
+    <section class="section-iso light-bg">
+        <div class="container">
+            <h2 class="section-title-iso">שאלות נפוצות</h2>
+            <p class="section-subtitle-iso">כמה תשובות לשאלות החשובות ביותר על תהליך ההיערכות לתקן</p>
+            
+            <div class="faq-accordion-iso">
+                <!-- FAQ 1 -->
+                <div class="faq-item-iso">
+                    <button class="faq-btn-iso">
+                        <span>מה זה ISO 27001 ולמה כולם פתאום דורשים את זה?</span>
+                        <i class="fa-solid fa-plus faq-icon-iso"></i>
+                    </button>
+                    <div class="faq-content-iso">
+                        <div class="faq-content-inner">
+                            <p>ISO 27001 הוא תקן בינלאומי לניהול אבטחת מידע. בשנים האחרונות הוא הפך לדרישת כניסה בשווקים רבים — ממכרזים ממשלתיים, דרך לקוחות enterprise ועד שותפים עסקיים. ארגון שמחזיק בתעודה מוכיח שהוא מנהל מידע בצורה מסודרת ואחראית.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item-iso">
+                    <button class="faq-btn-iso">
+                        <span>כמה זמן לוקח התהליך?</span>
+                        <i class="fa-solid fa-plus faq-icon-iso"></i>
+                    </button>
+                    <div class="faq-content-iso">
+                        <div class="faq-content-inner">
+                            <p>זה תלוי בגודל הארגון ובמצב הקיים. עם ארגון שכבר יש לו בסיס — 3-4 חודשים. ארגון שמתחיל מאפס — 6-9 חודשים. בשיחת ההתאמה נספר לכם בדיוק מה לצפות.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item-iso">
+                    <button class="faq-btn-iso">
+                        <span>כמה עולה ליווי לתקן ISO 27001?</span>
+                        <i class="fa-solid fa-plus faq-icon-iso"></i>
+                    </button>
+                    <div class="faq-content-iso">
+                        <div class="faq-content-inner">
+                            <p>העלות תלויה בגודל הארגון, מורכבות התהליכים וכמות הפערים. בשיחת ההתאמה נעריך את ההיקף ונציג הצעה מותאמת — ללא עלות.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item-iso">
+                    <button class="faq-btn-iso">
+                        <span>האם אתם גוף הסמכה?</span>
+                        <i class="fa-solid fa-plus faq-icon-iso"></i>
+                    </button>
+                    <div class="faq-content-iso">
+                        <div class="faq-content-inner">
+                            <p>לא. אנחנו מכינים את הארגון למבדק. ההסמכה עצמה מבוצעת ע"י גוף הסמכה מוסמך. אנחנו נדריך אתכם גם לבחירת גוף ההסמכה המתאים.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item-iso">
+                    <button class="faq-btn-iso">
+                        <span>מה קורה אם הארגון שלנו לא עומד בכל הדרישות?</span>
+                        <i class="fa-solid fa-plus faq-icon-iso"></i>
+                    </button>
+                    <div class="faq-content-iso">
+                        <div class="faq-content-inner">
+                            <p>זה בדיוק למה יש שלב ה-Gap Analysis. לא מצפים שארגון יעמוד בהכל מהיום הראשון. אנחנו מזהים, מתקנים, ומגיעים למבדק מוכנים.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item-iso">
+                    <button class="faq-btn-iso">
+                        <span>האם אפשר להתחיל תהליך גם אם יש לי דד-ליין קרוב?</span>
+                        <i class="fa-solid fa-plus faq-icon-iso"></i>
+                    </button>
+                    <div class="faq-content-iso">
+                        <div class="faq-content-inner">
+                            <p>כן. פנו אלינו עכשיו ונראה מה ניתן לסדר. יש מקרים שבהם עבדנו עם לקוחות תוך לחץ זמן — ואנחנו יודעים לתעדף.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="cta-dual-wrapper" style="margin-top: 4rem;">
+                <a href="tel:0545445429" class="btn-premium-cta">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>חייגו: 054-544-5429</span>
+                </a>
+                <a href="#top-form-section" class="btn-premium-cta scroll-trigger callback-btn">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>תחזרו אליי</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer-iso">
+        <div class="container">
+            <div class="footer-grid-iso">
+                <!-- Col 1 -->
+                <div class="footer-logo-box">
+                    <img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive">
+                    <p style="line-height: 1.7; color: #94A3B8; max-width: 400px; margin: 0;">ליווי מקצועי ומעשי לעסקים וארגונים בהתאמה לחוק הגנת הפרטיות, שירותי DPO, אבטחת מידע ותקן ISO 27001.</p>
+                </div>
+                <!-- Col 2 -->
+                <div class="footer-links-box">
+                    <h4 class="footer-links-title">שירותים</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="../tikun-13/index.html">תיקון 13</a></li>
+                        <li><a href="../information-security-for-businesses/index.html">אבטחת מידע לעסקים</a></li>
+                        <li><a href="../information-security-for-organizations/index.html">אבטחת מידע לארגונים</a></li>
+                        <li><a href="../dpo/index.html">שירותי DPO</a></li>
+                    </ul>
+                </div>
+                <!-- Col 3 -->
+                <div class="footer-links-box">
+                    <h4 class="footer-links-title">יצירת קשר</h4>
+                    <ul class="footer-link-list" style="direction: ltr; text-align: right;">
+                        <li style="color: #94A3B8;"><i class="fa-solid fa-phone" style="margin-left: 0.5rem; color: var(--color-accent);"></i> 054-544-5429</li>
+                        <li style="color: #94A3B8;"><i class="fa-solid fa-envelope" style="margin-left: 0.5rem; color: var(--color-accent);"></i> contact@privacy-hive.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom-iso">
+                <p style="margin: 0; font-size: 0.95rem;">&copy; 2026 Privacy Hive. כל הזכויות שמורות.</p>
+                <div class="footer-legal-links">
+                    <a href="../privacy-policy.html">מדיניות פרטיות</a>
+                    <a href="../terms.html">תנאי שימוש</a>
+                    <a href="../accessibility.html">הצהרת נגישות</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/972545445429?text=%D7%94%D7%99%D7%99%20%D7%91%D7%99%D7%A7%D7%A8%D7%AA%D7%99%20%D7%91%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20privacy-hive%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D" target="_blank" class="wa-floating-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Mobile Floating CTA Button -->
+    <a href="#top-form-section" id="iso-mobile-fab" class="mobile-floating-cta scroll-trigger callback-btn">
+        <i class="fa-solid fa-phone-flip"></i>
+        <span>לתיאום שיחת התאמה</span>
+    </a>
+
+    <!-- Modal Popup for Contact Form -->
+    <div id="contact-modal" class="iso-modal-overlay">
+        <div class="iso-modal-card">
+            <button id="close-modal-btn" class="iso-modal-close-btn">&times;</button>
+            <h3 class="form-card-title">ייעוץ ראשוני ללא עלות</h3>
+            <p class="form-card-subtitle">הדרך לקבלת ISO 27001 מתחילה כאן</p>
+            
+            <form id="iso-modal-lead-form" class="lead-form">
+                <div class="iso-form-group" style="margin-bottom: 1.1rem;">
+                    <input type="text" id="fname-modal" name="fname" class="iso-form-control" placeholder="שם מלא" required style="width: 100%; background: #F8FAFC; border: 2px solid #E2E8F0; border-radius: 14px; padding: 1rem 1.25rem; font-size: 1.1rem; text-align: right;">
+                </div>
+                <div class="iso-form-group" style="margin-bottom: 1.1rem;">
+                    <input type="tel" id="phone-modal" name="phone" class="iso-form-control" placeholder="טלפון" required style="width: 100%; background: #F8FAFC; border: 2px solid #E2E8F0; border-radius: 14px; padding: 1rem 1.25rem; font-size: 1.1rem; text-align: right;">
+                </div>
+                <input type="hidden" name="reason" value="iso-27001-modal">
+
+                <label class="iso-consent-label" style="display: flex; gap: 0.6rem; align-items: flex-start; cursor: pointer; font-size: 0.9rem; color: #64748B; margin-top: 1.2rem; user-select: none;">
+                    <input type="checkbox" required class="iso-consent-checkbox" checked style="margin-top: 0.2rem; width: 17px; height: 17px; accent-color: var(--color-accent);">
+                    <span>אני מאשר/ת שיחזרו אליי עם מידע לייעוץ בנושא ISO 27001</span>
+                </label>
+
+                <button type="submit" id="submit-btn-modal" class="iso-submit-btn" style="width: 100%; background: linear-gradient(135deg, var(--color-accent) 0%, #2D9A8A 100%); color: #FFFFFF; border: none; padding: 1.3rem; border-radius: 14px; font-size: 1.25rem; font-weight: 900; cursor: pointer; box-shadow: 0 8px 25px -5px rgba(63, 168, 152, 0.55); transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 0.6rem; margin-top: 1.5rem; letter-spacing: 0.3px;">
+                    <span>לתיאום שיחת התאמה</span> <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div class="form-trust-text" style="text-align: center; font-size: 0.9rem; color: #64748B; margin-top: 0.8rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">ללא התחייבות | מענה תוך 24 שעות</div>
+            </form>
+
+            <!-- Modal Success State -->
+            <div id="form-success-state-modal" class="iso-success-box" style="display: none; text-align: center; padding: 2rem 1rem;">
+                <div class="iso-success-icon" style="font-size: 3.5rem; color: var(--color-accent); margin-bottom: 1.2rem;"><i class="fa-solid fa-circle-check"></i></div>
+                <h3 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 0.8rem; font-weight: 800;">תודה, הפרטים התקבלו!</h3>
+                <p style="color: #475569; font-size: 1.05rem; line-height: 1.5; margin: 0;">נציג מצוות Privacy Hive ייצור עמכם קשר לשיחת התאמה בהקדם.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Validation, UTM params & Submission JS script -->
+    <script>
+        // Load YouTube IFrame Player API asynchronously
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        let ytPlayer;
+        window.onYouTubeIframeAPIReady = function() {
+            ytPlayer = new YT.Player('hero-yt-player', {
+                videoId: 'Hgg7M3kSqyE',
+                playerVars: {
+                    'autoplay': 1,
+                    'controls': 0,
+                    'mute': 1,
+                    'loop': 1,
+                    'playlist': 'Hgg7M3kSqyE',
+                    'start': 5,
+                    'end': 15,
+                    'rel': 0,
+                    'modestbranding': 1,
+                    'playsinline': 1,
+                    'showinfo': 0,
+                    'fs': 0,
+                    'iv_load_policy': 3,
+                    'disablekb': 1,
+                    'autohide': 1
+                },
+                events: {
+                    'onReady': function(e) {
+                        e.target.mute();
+                        e.target.playVideo();
+                        
+                        // periodic check for video timing loop (5s to 15s)
+                        setInterval(function() {
+                            if (e.target && typeof e.target.getCurrentTime === 'function') {
+                                if (e.target.getCurrentTime() >= 14.8) {
+                                    e.target.seekTo(5);
+                                    e.target.playVideo();
+                                }
+                            }
+                        }, 250);
+                    },
+                    'onStateChange': function(e) {
+                        if (e.data === 0) { // ENDED
+                            e.target.seekTo(5);
+                            e.target.playVideo();
+                        }
+                    }
+                }
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const topForm = document.getElementById('iso-lead-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const successState = document.getElementById('form-success-state');
+
+            // Modal Elements
+            const modal = document.getElementById('contact-modal');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const modalForm = document.getElementById('iso-modal-lead-form');
+            const submitBtnModal = document.getElementById('submit-btn-modal');
+            const successStateModal = document.getElementById('form-success-state-modal');
+
+            // Open Modal Handler
+            document.addEventListener('click', function(e) {
+                const callbackBtn = e.target.closest('.callback-btn');
+                if (callbackBtn) {
+                    e.preventDefault();
+                    modal.classList.add('active');
+                    if (modalForm) modalForm.style.display = 'block';
+                    if (successStateModal) successStateModal.style.display = 'none';
+                    if (submitBtnModal) {
+                        submitBtnModal.disabled = false;
+                        submitBtnModal.innerHTML = '<span>לתיאום שיחת התאמה</span> <i class="fa-solid fa-arrow-left"></i>';
+                    }
+                    setTimeout(() => {
+                        const fnameInput = document.getElementById('fname-modal');
+                        if (fnameInput) fnameInput.focus();
+                    }, 400);
+                }
+            });
+
+            // Close Modal Handlers
+            const closeModal = () => {
+                modal.classList.remove('active');
+            };
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', closeModal);
+            }
+            if (modal) {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        closeModal();
+                    }
+                });
+            }
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+
+            // Modal Form Submit handler
+            if (modalForm) {
+                modalForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Israeli phone number validation
+                    const phoneInput = document.getElementById('phone-modal');
+                    const phoneVal = phoneInput.value.replace(/\D/g, '');
+                    if (!/^05\d{8}$/.test(phoneVal)) {
+                        phoneInput.setCustomValidity('נא להזין מספר פלאפון ישראלי תקין (10 ספרות שמתחילות ב-05)');
+                        phoneInput.reportValidity();
+                        phoneInput.style.borderColor = 'red';
+                        return;
+                    } else {
+                        phoneInput.setCustomValidity('');
+                        phoneInput.style.borderColor = '#E2E8F0';
+                    }
+
+                    // Disable button & show spinner loading
+                    submitBtnModal.disabled = true;
+                    submitBtnModal.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>שולח...</span>';
+
+                    // Gather Form Data
+                    const utms = getUTMParams();
+                    const formData = new FormData();
+                    formData.append('fname', document.getElementById('fname-modal').value);
+                    formData.append('phone', document.getElementById('phone-modal').value);
+                    formData.append('email', '');
+                    formData.append('company', '');
+                    formData.append('message', '');
+                    formData.append('reason', 'iso-27001-modal-lead');
+                    formData.append('landing_page_url', window.location.href);
+                    formData.append('source_page', '/iso-27001-modal/');
+                    formData.append('created_at', new Date().toISOString());
+
+                    // Append UTMs
+                    Object.keys(utms).forEach(key => {
+                        formData.append(key, utms[key]);
+                    });
+
+                    // Send to Make.com Webhook
+                    const webhookUrl = 'https://hook.eu2.make.com/wrk781ymtplke4lopluidshmxbyjpwyd';
+                    
+                    fetch(webhookUrl, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        // Fire GTM events
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({
+                            'event': 'lead_form_submit',
+                            'formLocation': '/iso-27001-modal/'
+                        });
+
+                        // Show Success State
+                        modalForm.style.display = 'none';
+                        successStateModal.style.display = 'block';
+                        
+                        // Auto-close modal after 2.5s
+                        setTimeout(closeModal, 2500);
+                    })
+                    .catch(error => {
+                        console.error('Error submitting form:', error);
+                        submitBtnModal.disabled = false;
+                        submitBtnModal.innerHTML = 'שגיאה בשליחה, נסו שוב';
+                    });
+                });
+            }
+            
+            // Smooth scroll triggers
+            document.querySelectorAll('.scroll-trigger').forEach(trigger => {
+                trigger.addEventListener('click', function(e) {
+                    if (this.classList.contains('callback-btn')) {
+                        return; // Modal click handler takes care of it
+                    }
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                            
+                            // Focus on the first form input if scrolling to form
+                            if (href === '#top-form-section') {
+                                setTimeout(() => {
+                                    document.getElementById('fname').focus();
+                                }, 800);
+                            }
+                        }
+                    }
+                });
+            });
+
+            // Mobile FAB display handler on scroll (only for mobile/tablet)
+            const mobileFab = document.getElementById('iso-mobile-fab');
+            if (mobileFab) {
+                const showFabAfterScroll = window.innerHeight * 0.4; // Show after 40% viewport height
+                window.addEventListener('scroll', function() {
+                    if (window.innerWidth <= 992) { // Only on mobile/tablet
+                        if (window.scrollY > showFabAfterScroll) {
+                            mobileFab.classList.add('visible');
+                        } else {
+                            mobileFab.classList.remove('visible');
+                        }
+                    }
+                }, { passive: true });
+            }
+
+            // FAQ Accordion Toggle JS (Event Delegation)
+            document.addEventListener('click', function(e) {
+                const btn = e.target.closest('.faq-btn-iso');
+                if (!btn) return;
+                
+                const item = btn.closest('.faq-item-iso');
+                if (!item) return;
+                
+                const content = item.querySelector('.faq-content-iso');
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQs first
+                document.querySelectorAll('.faq-item-iso').forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    const otherContent = otherItem.querySelector('.faq-content-iso');
+                    if (otherContent) {
+                        otherContent.style.maxHeight = null;
+                    }
+                });
+                
+                if (!isActive) {
+                    item.classList.add('active');
+                    if (content) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    }
+                }
+            });
+
+            // Extract UTM Parameters from URL
+            function getUTMParams() {
+                const urlParams = new URLSearchParams(window.location.search);
+                return {
+                    utm_source: urlParams.get('utm_source') || '',
+                    utm_medium: urlParams.get('utm_medium') || '',
+                    utm_campaign: urlParams.get('utm_campaign') || '',
+                    utm_content: urlParams.get('utm_content') || '',
+                    utm_term: urlParams.get('utm_term') || '',
+                    gclid: urlParams.get('gclid') || '',
+                    fbclid: urlParams.get('fbclid') || ''
+                };
+            }
+
+            // Form Submit handler
+            if (topForm) {
+                topForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Israeli phone number validation
+                    const phoneInput = document.getElementById('phone');
+                    const phoneVal = phoneInput.value.replace(/\D/g, ''); // strip non-digits
+                    if (!/^05\d{8}$/.test(phoneVal)) {
+                        phoneInput.setCustomValidity('נא להזין מספר פלאפון ישראלי תקין (10 ספרות שמתחילות ב-05)');
+                        phoneInput.reportValidity();
+                        phoneInput.style.borderColor = 'red';
+                        return;
+                    } else {
+                        phoneInput.setCustomValidity('');
+                        phoneInput.style.borderColor = '#E2E8F0';
+                    }
+
+                    // Disable button & show spinner loading
+                    submitBtn.disabled = true;
+                    const originalBtnContent = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>שולח...</span>';
+
+                    // Gather Form Data
+                    const utms = getUTMParams();
+                    const formData = new FormData();
+                    formData.append('fname', document.getElementById('fname').value);
+                    formData.append('phone', document.getElementById('phone').value);
+                    formData.append('email', '');
+                    formData.append('company', '');
+                    formData.append('message', '');
+                    formData.append('reason', 'iso-27001-lead');
+                    formData.append('landing_page_url', window.location.href);
+                    formData.append('source_page', '/iso-27001/');
+                    formData.append('created_at', new Date().toISOString());
+
+                    // Append UTMs
+                    Object.keys(utms).forEach(key => {
+                        formData.append(key, utms[key]);
+                    });
+
+                    // Send to Make.com Webhook
+                    const webhookUrl = 'https://hook.eu2.make.com/wrk781ymtplke4lopluidshmxbyjpwyd';
+                    
+                    fetch(webhookUrl, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        // Fire GTM events
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({
+                            'event': 'lead_form_submit',
+                            'formLocation': '/iso-27001/'
+                        });
+
+                        // Show Success State
+                        topForm.style.display = 'none';
+                        successState.style.display = 'block';
+                    })
+                    .catch(error => {
+                        console.error('Error submitting form:', error);
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = 'שגיאה בשליחה, נסו שוב';
+                    });
+                });
+            }
+
+            // Bottom Form Submit handler
+            const bottomForm = document.getElementById('iso-bottom-lead-form');
+            const submitBtnBottom = document.getElementById('submit-btn-bottom');
+            const successStateBottom = document.getElementById('form-success-state-bottom');
+            
+            if (bottomForm) {
+                bottomForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Israeli phone number validation
+                    const phoneInput = document.getElementById('phone-bottom');
+                    const phoneVal = phoneInput.value.replace(/\D/g, ''); // strip non-digits
+                    if (!/^05\d{8}$/.test(phoneVal)) {
+                        phoneInput.setCustomValidity('נא להזין מספר פלאפון ישראלי תקין (10 ספרות שמתחילות ב-05)');
+                        phoneInput.reportValidity();
+                        phoneInput.style.borderColor = 'red';
+                        return;
+                    } else {
+                        phoneInput.setCustomValidity('');
+                        phoneInput.style.borderColor = '#E2E8F0';
+                    }
+
+                    // Disable button & show spinner loading
+                    submitBtnBottom.disabled = true;
+                    submitBtnBottom.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>שולח...</span>';
+
+                    // Gather Form Data
+                    const utms = getUTMParams();
+                    const formData = new FormData();
+                    formData.append('fname', document.getElementById('fname-bottom').value);
+                    formData.append('phone', document.getElementById('phone-bottom').value);
+                    formData.append('email', '');
+                    formData.append('company', '');
+                    formData.append('message', '');
+                    formData.append('reason', 'iso-27001-lead-bottom');
+                    formData.append('landing_page_url', window.location.href);
+                    formData.append('source_page', '/iso-27001-bottom/');
+                    formData.append('created_at', new Date().toISOString());
+
+                    // Append UTMs
+                    Object.keys(utms).forEach(key => {
+                        formData.append(key, utms[key]);
+                    });
+
+                    // Send to Make.com Webhook
+                    const webhookUrl = 'https://hook.eu2.make.com/wrk781ymtplke4lopluidshmxbyjpwyd';
+                    
+                    fetch(webhookUrl, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        // Fire GTM events
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({
+                            'event': 'lead_form_submit',
+                            'formLocation': '/iso-27001-bottom/'
+                        });
+
+                        // Show Success State
+                        bottomForm.style.display = 'none';
+                        successStateBottom.style.display = 'block';
+                    })
+                    .catch(error => {
+                        console.error('Error submitting form:', error);
+                        submitBtnBottom.disabled = false;
+                        submitBtnBottom.innerHTML = 'שגיאה בשליחה, נסו שוב';
+                    });
+                });
+            // Track Phone Calls Clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'click_phone',
+                        'phoneNumber': this.getAttribute('href').replace('tel:', ''),
+                        'pagePath': window.location.pathname
+                    });
+                });
+            });
+
+            // Track WhatsApp Clicks
+            document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'click_whatsapp',
+                        'pagePath': window.location.pathname
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -93,4 +93,27 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // Track Phone Calls Clicks
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+        link.addEventListener('click', function() {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'click_phone',
+                'phoneNumber': this.getAttribute('href').replace('tel:', ''),
+                'pagePath': window.location.pathname
+            });
+        });
+    });
+
+    // Track WhatsApp Clicks
+    document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]').forEach(link => {
+        link.addEventListener('click', function() {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'click_whatsapp',
+                'pagePath': window.location.pathname
+            });
+        });
+    });
 });
