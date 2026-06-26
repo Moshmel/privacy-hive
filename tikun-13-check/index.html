@@ -918,28 +918,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 // Gather Data
                 const utms = getUTMParams();
-                const formData = new FormData();
-                
-                formData.append('website_url', websiteInput.value);
-                formData.append('business_name', document.getElementById('business_name').value);
-                formData.append('whatsapp_phone', document.getElementById('whatsapp_phone').value);
-                formData.append('consent_checkbox', document.getElementById('consent_checkbox').checked ? 'true' : 'false');
-                formData.append('page_source', 'tikun-13-check');
-                formData.append('landing_page_url', window.location.href);
-                formData.append('created_at', new Date().toISOString());
-                
-                // Add UTMs
-                Object.keys(utms).forEach(key => {
-                    formData.append(key, utms[key]);
-                });
+                const payload = {
+                    website_url: websiteInput.value,
+                    business_name: document.getElementById('business_name').value,
+                    whatsapp_phone: document.getElementById('whatsapp_phone').value,
+                    consent_checkbox: document.getElementById('consent_checkbox').checked ? 'true' : 'false',
+                    page_source: 'tikun-13-check',
+                    landing_page_url: window.location.href,
+                    created_at: new Date().toISOString(),
+                    ...utms
+                };
 
                 // Webhook URL
                 const webhookUrl = 'https://hook.eu2.make.com/wrk781ymtplke4lopluidshmxbyjpwyd';
 
-                // Send Fetch
+                // Send Fetch as JSON
                 fetch(webhookUrl, {
                     method: 'POST',
-                    body: formData
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
                 })
                 .then(response => response.text())
                 .then(data => {
