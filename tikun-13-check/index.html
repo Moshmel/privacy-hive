@@ -837,6 +837,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             const websiteInput = document.getElementById('website_url');
             const checkForm = document.getElementById('tikun-check-form');
             
+            // Clear custom validity on input changes to prevent HTML5 validation lock bugs
+            websiteInput.addEventListener('input', function() {
+                websiteInput.setCustomValidity('');
+                websiteInput.style.borderColor = '#E2E8F0';
+            });
+            
+            const phoneInputObj = document.getElementById('whatsapp_phone');
+            if (phoneInputObj) {
+                phoneInputObj.addEventListener('input', function() {
+                    phoneInputObj.setCustomValidity('');
+                    phoneInputObj.style.borderColor = '#E2E8F0';
+                });
+            }
+            
             // Smooth Scroll for CTA buttons
             document.querySelectorAll('.scroll-to-form-btn').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
