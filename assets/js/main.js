@@ -48,12 +48,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 const formData = new FormData(form);
                 formData.append('source_page', window.location.pathname);
 
-                // Send to Make.com Webhook
-                const webhookUrl = 'https://hook.eu2.make.com/wrk781ymtplke4lopluidshmxbyjpwyd';
+                // Convert to plain object for JSON submission (safest for Make.com)
+                const dataObj = {};
+                formData.forEach((value, key) => {
+                    dataObj[key] = value;
+                });
+
+                // Send to Make.com Webhook (excluding tikun-13 which has its own webhook)
+                let webhookUrl = 'https://hook.eu2.make.com/wh2lk7yndr8ucxc33hw9d8pxciwcb57a';
+                if (window.location.pathname.includes('tikun-13')) {
+                    webhookUrl = 'https://hook.eu2.make.com/wrk781ymtplke4lopluidshmxbyjpwyd';
+                }
 
                 fetch(webhookUrl, {
                     method: 'POST',
-                    body: formData
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dataObj)
                 })
                 .then(response => response.text())
                 .then(data => {

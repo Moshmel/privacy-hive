@@ -938,9 +938,26 @@
             }
         }
 
+        /* 2 Buttons Mobile CTA styles */
+        .hero-mobile-cta-group {
+            display: none;
+        }
+
+        @keyframes pulse-button-glow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(63, 168, 152, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(63, 168, 152, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(63, 168, 152, 0);
+            }
+        }
+
         /* ==========================================
            RESPONSIVE - TABLET (992px)
-        ========================================== */
+         ========================================== */
         @media (max-width: 992px) {
             .hero-grid {
                 display: flex;
@@ -962,20 +979,72 @@
 
             .hero-title {
                 order: 1;
-                font-size: 2.8rem;
+                font-size: 2.5rem;
                 text-align: center;
-                margin-bottom: 0.5rem;
+                margin-bottom: 0.4rem;
+            }
+
+            .hero-mobile-cta-group {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                width: 100%;
+                max-width: 100%;
+                margin: 1.2rem auto 1.5rem auto;
+                order: 2;
+                box-sizing: border-box;
+            }
+
+            .btn-mobile-quote {
+                background: linear-gradient(135deg, var(--color-accent) 0%, #2D9A8A 100%);
+                color: #FFFFFF !important;
+                padding: 1rem 1.2rem;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 800;
+                font-size: 1.1rem;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 8px 20px rgba(63, 168, 152, 0.4);
+                border: none;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                white-space: nowrap;
+                animation: pulse-button-glow 2s infinite;
+                box-sizing: border-box;
+            }
+
+            .btn-mobile-call {
+                background: rgba(255, 255, 255, 0.08);
+                border: 2px solid var(--color-accent);
+                color: #FFFFFF !important;
+                padding: 1rem 1.2rem;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 800;
+                font-size: 1.1rem;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                white-space: nowrap;
+                transition: all 0.3s ease;
+                box-sizing: border-box;
+            }
+
+            .btn-mobile-quote:hover, .btn-mobile-call:hover {
+                transform: translateY(-2px);
             }
 
             .hero-form-box {
-                order: 4;
-                width: 100%;
-                max-width: 500px;
-                margin: 0 auto;
+                display: none;
             }
 
             .hero-bullets {
-                order: 2;
+                order: 3;
                 align-items: flex-start;
                 margin: 0 auto 1.5rem auto;
                 gap: 10px;
@@ -984,11 +1053,7 @@
             }
 
             .hero-dial-wrapper {
-                order: 3;
-                text-align: center;
-                width: 100%;
-                margin-top: 0.5rem;
-                margin-bottom: 1.5rem;
+                display: none;
             }
 
             .hero-trust-badge {
@@ -1065,13 +1130,17 @@
             }
 
             .iso-hero {
-                padding: 2.5rem 15px 3rem;
+                padding: 1.2rem 0 2.2rem;
                 margin: 0;
                 border-radius: 0;
             }
 
+            .iso-hero .container {
+                padding: 0 20px;
+            }
+
             .hero-title {
-                font-size: 2.3rem;
+                font-size: 2.05rem;
                 letter-spacing: -0.5px;
             }
 
@@ -1320,8 +1389,10 @@
         ========================================== */
         @media (max-width: 480px) {
             .hero-title {
-                font-size: 2.0rem;
+                font-size: 1.8rem;
             }
+
+
 
             .section-title-iso {
                 font-size: 2.0rem;
@@ -1484,6 +1555,14 @@
                 <div class="hero-content">
                     <div class="hero-tagline">Privacy Hive - פרטיות חכמה לעסקים</div>
                     <h1 class="hero-title">סקר סיכוני אבטחת מידע <span style="color: var(--color-accent);">לעסקים וחברות</span></h1>
+
+                    <div class="hero-mobile-cta-group">
+                        <a href="#" class="btn-mobile-quote callback-btn">קבלו הצעת מחיר</a>
+                        <a href="tel:0545445429" class="btn-mobile-call">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>חייגו: 054-544-5429</span>
+                        </a>
+                    </div>
 
                     <ul class="hero-bullets">
                         <li><i class="fa-solid fa-check"></i> <span>מיפוי נכסים וזיהוי חולשות אבטחה קריטיות בארגון</span></li>
@@ -2095,26 +2174,27 @@
                     submitBtnModal.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>שולח...</span>';
 
                     const utms = getUTMParams();
-                    const formData = new FormData();
-                    formData.append('fname', document.getElementById('fname-modal').value);
-                    formData.append('phone', document.getElementById('phone-modal').value);
-                    formData.append('email', '');
-                    formData.append('company', '');
-                    formData.append('message', '');
-                    formData.append('reason', 'information-security-risk-assessment-modal-lead');
-                    formData.append('landing_page_url', window.location.href);
-                    formData.append('source_page', '/information-security-risk-assessment-modal/');
-                    formData.append('created_at', new Date().toISOString());
+                    const payload = {
+                        fname: document.getElementById('fname-modal').value,
+                        phone: document.getElementById('phone-modal').value,
+                        email: '',
+                        company: '',
+                        message: '',
+                        reason: 'information-security-risk-assessment-modal-lead',
+                        landing_page_url: window.location.href,
+                        source_page: '/information-security-risk-assessment-modal/',
+                        created_at: new Date().toISOString(),
+                        ...utms
+                    };
 
-                    Object.keys(utms).forEach(key => {
-                        formData.append(key, utms[key]);
-                    });
-
-                    const webhookUrl = 'https://hook.eu2.make.com/wrk781ymtplke4lopluidshmxbyjpwyd';
+                    const webhookUrl = 'https://hook.eu2.make.com/wh2lk7yndr8ucxc33hw9d8pxciwcb57a';
                     
                     fetch(webhookUrl, {
                         method: 'POST',
-                        body: formData
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
                     })
                     .then(response => response.text())
                     .then(data => {
@@ -2235,26 +2315,27 @@
                     submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>שולח...</span>';
 
                     const utms = getUTMParams();
-                    const formData = new FormData();
-                    formData.append('fname', document.getElementById('fname').value);
-                    formData.append('phone', document.getElementById('phone').value);
-                    formData.append('email', '');
-                    formData.append('company', '');
-                    formData.append('message', '');
-                    formData.append('reason', 'information-security-risk-assessment-lead');
-                    formData.append('landing_page_url', window.location.href);
-                    formData.append('source_page', '/information-security-risk-assessment/');
-                    formData.append('created_at', new Date().toISOString());
+                    const payload = {
+                        fname: document.getElementById('fname').value,
+                        phone: document.getElementById('phone').value,
+                        email: '',
+                        company: '',
+                        message: '',
+                        reason: 'information-security-risk-assessment-lead',
+                        landing_page_url: window.location.href,
+                        source_page: '/information-security-risk-assessment/',
+                        created_at: new Date().toISOString(),
+                        ...utms
+                    };
 
-                    Object.keys(utms).forEach(key => {
-                        formData.append(key, utms[key]);
-                    });
-
-                    const webhookUrl = 'https://hook.eu2.make.com/wrk781ymtplke4lopluidshmxbyjpwyd';
+                    const webhookUrl = 'https://hook.eu2.make.com/wh2lk7yndr8ucxc33hw9d8pxciwcb57a';
                     
                     fetch(webhookUrl, {
                         method: 'POST',
-                        body: formData
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
                     })
                     .then(response => response.text())
                     .then(data => {
@@ -2300,26 +2381,27 @@
                     submitBtnBottom.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>שולח...</span>';
 
                     const utms = getUTMParams();
-                    const formData = new FormData();
-                    formData.append('fname', document.getElementById('fname-bottom').value);
-                    formData.append('phone', document.getElementById('phone-bottom').value);
-                    formData.append('email', '');
-                    formData.append('company', '');
-                    formData.append('message', '');
-                    formData.append('reason', 'information-security-risk-assessment-lead-bottom');
-                    formData.append('landing_page_url', window.location.href);
-                    formData.append('source_page', '/information-security-risk-assessment-bottom/');
-                    formData.append('created_at', new Date().toISOString());
+                    const payload = {
+                        fname: document.getElementById('fname-bottom').value,
+                        phone: document.getElementById('phone-bottom').value,
+                        email: '',
+                        company: '',
+                        message: '',
+                        reason: 'information-security-risk-assessment-lead-bottom',
+                        landing_page_url: window.location.href,
+                        source_page: '/information-security-risk-assessment-bottom/',
+                        created_at: new Date().toISOString(),
+                        ...utms
+                    };
 
-                    Object.keys(utms).forEach(key => {
-                        formData.append(key, utms[key]);
-                    });
-
-                    const webhookUrl = 'https://hook.eu2.make.com/wrk781ymtplke4lopluidshmxbyjpwyd';
+                    const webhookUrl = 'https://hook.eu2.make.com/wh2lk7yndr8ucxc33hw9d8pxciwcb57a';
                     
                     fetch(webhookUrl, {
                         method: 'POST',
-                        body: formData
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
                     })
                     .then(response => response.text())
                     .then(data => {
