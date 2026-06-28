@@ -54,9 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     dataObj[key] = value;
                 });
 
-                // Send to Make.com Webhook (excluding tikun-13 which has its own webhook)
+                // Send to Make.com Webhook (excluding tikun-13-check which has its own webhook)
                 let webhookUrl = 'https://hook.eu2.make.com/wh2lk7yndr8ucxc33hw9d8pxciwcb57a';
-                if (window.location.pathname.includes('tikun-13')) {
+                if (window.location.pathname.includes('tikun-13-check')) {
                     webhookUrl = 'https://hook.eu2.make.com/wrk781ymtplke4lopluidshmxbyjpwyd';
                 }
 
