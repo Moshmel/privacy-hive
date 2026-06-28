@@ -2206,7 +2206,10 @@
 
                         modalForm.style.display = 'none';
                         successStateModal.style.display = 'block';
-                        setTimeout(closeModal, 2500);
+                        
+                        setTimeout(() => {
+                            window.location.href = '../thank-you.html';
+                        }, 500);
                     })
                     .catch(error => {
                         console.error('Error submitting form:', error);
@@ -2347,6 +2350,10 @@
 
                         topForm.style.display = 'none';
                         successState.style.display = 'block';
+
+                        setTimeout(() => {
+                            window.location.href = '../thank-you.html';
+                        }, 500);
                     })
                     .catch(error => {
                         console.error('Error submitting form:', error);
@@ -2413,6 +2420,10 @@
 
                         bottomForm.style.display = 'none';
                         successStateBottom.style.display = 'block';
+
+                        setTimeout(() => {
+                            window.location.href = '../thank-you.html';
+                        }, 500);
                     })
                     .catch(error => {
                         console.error('Error submitting form:', error);

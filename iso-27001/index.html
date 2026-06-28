@@ -2669,8 +2669,9 @@
                         modalForm.style.display = 'none';
                         successStateModal.style.display = 'block';
                         
-                        // Auto-close modal after 2.5s
-                        setTimeout(closeModal, 2500);
+                        setTimeout(() => {
+                            window.location.href = '../thank-you.html';
+                        }, 500);
                     })
                     .catch(error => {
                         console.error('Error submitting form:', error);
@@ -2821,6 +2822,10 @@
                         // Show Success State
                         topForm.style.display = 'none';
                         successState.style.display = 'block';
+
+                        setTimeout(() => {
+                            window.location.href = '../thank-you.html';
+                        }, 500);
                     })
                     .catch(error => {
                         console.error('Error submitting form:', error);
@@ -2893,6 +2898,10 @@
                         // Show Success State
                         bottomForm.style.display = 'none';
                         successStateBottom.style.display = 'block';
+
+                        setTimeout(() => {
+                            window.location.href = '../thank-you.html';
+                        }, 500);
                     })
                     .catch(error => {
                         console.error('Error submitting form:', error);
