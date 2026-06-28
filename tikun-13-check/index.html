@@ -965,9 +965,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     
                     // Show Success
                     step2.classList.add('hidden');
+                    stepSuccess.classList.remove('hidden');
+                    
+                    // Redirect to Thank You Page with delay to allow GTM to fire
                     setTimeout(() => {
-                        stepSuccess.classList.remove('hidden');
-                    }, 100);
+                        window.location.href = '../thank-you.html';
+                    }, 500);
                 })
                 .catch(error => {
                     console.error('Error submitting check:', error);
