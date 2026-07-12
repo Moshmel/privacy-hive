@@ -1533,6 +1533,16 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTXKVMJ9"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Sitelinks Anchors (All landing at the top of the page) -->
+    <div style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; overflow: hidden; visibility: hidden;">
+        <span id="work-process"></span>
+        <span id="standards-regulation"></span>
+        <span id="360"></span>
+        <span id="free-check"></span>
+        <span id="risk-managment"></span>
+    </div>
+
     <!-- Navigation Header -->
     <header class="iso-header">
         <div class="container">
@@ -2107,6 +2117,14 @@
             const submitBtn = document.getElementById('submit-btn');
             const successState = document.getElementById('form-success-state');
 
+            // Clear custom validity on input to prevent HTML5 validation lock
+            document.querySelectorAll('input[type="tel"]').forEach(input => {
+                input.addEventListener('input', function() {
+                    input.setCustomValidity('');
+                    input.style.borderColor = '#E2E8F0';
+                });
+            });
+
             // Modal Elements
             const modal = document.getElementById('contact-modal');
             const closeModalBtn = document.getElementById('close-modal-btn');
@@ -2187,7 +2205,7 @@
                         ...utms
                     };
 
-                    const webhookUrl = 'https://hook.eu2.make.com/wh2lk7yndr8ucxc33hw9d8pxciwcb57a';
+                    const webhookUrl = 'https://hook.eu2.make.com/22305yqwq949g8x3u7djzjv4861q1yyz';
                     
                     fetch(webhookUrl, {
                         method: 'POST',
@@ -2331,7 +2349,7 @@
                         ...utms
                     };
 
-                    const webhookUrl = 'https://hook.eu2.make.com/wh2lk7yndr8ucxc33hw9d8pxciwcb57a';
+                    const webhookUrl = 'https://hook.eu2.make.com/22305yqwq949g8x3u7djzjv4861q1yyz';
                     
                     fetch(webhookUrl, {
                         method: 'POST',
@@ -2401,7 +2419,7 @@
                         ...utms
                     };
 
-                    const webhookUrl = 'https://hook.eu2.make.com/wh2lk7yndr8ucxc33hw9d8pxciwcb57a';
+                    const webhookUrl = 'https://hook.eu2.make.com/22305yqwq949g8x3u7djzjv4861q1yyz';
                     
                     fetch(webhookUrl, {
                         method: 'POST',
@@ -2432,6 +2450,29 @@
                     });
                 });
             }
+
+            // Track Phone Calls Clicks
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'click_phone',
+                        'phoneNumber': this.getAttribute('href').replace('tel:', ''),
+                        'pagePath': window.location.pathname
+                    });
+                });
+            });
+
+            // Track WhatsApp Clicks
+            document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'click_whatsapp',
+                        'pagePath': window.location.pathname
+                    });
+                });
+            });
         });
     </script>
 </body>

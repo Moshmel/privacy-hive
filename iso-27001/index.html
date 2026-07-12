@@ -117,6 +117,18 @@
             box-shadow: var(--shadow-sm);
         }
 
+        /* Sitelink Anchors Styling */
+        .top-sitelink-anchors {
+            height: 0;
+            overflow: visible;
+        }
+
+        .top-sitelink-anchors span {
+            display: block;
+            height: 0;
+            scroll-margin-top: 100px;
+        }
+
         .iso-header .container {
             display: flex;
             justify-content: space-between;
@@ -1870,6 +1882,16 @@
         </div>
     </header>
 
+    <!-- Sitelinks Anchors (All landing at the top of the page) -->
+    <div class="top-sitelink-anchors" aria-hidden="true">
+        <span id="iso-ready"></span>
+        <span id="enterprise"></span>
+        <span id="free-check"></span>
+        <span id="fast-iso"></span>
+        <span id="full-support"></span>
+        <span id="proven-success"></span>
+    </div>
+
     <!-- Section 1: Hero Section (Dark Background) -->
     <section id="top-form-section" class="iso-hero" style="position: relative; overflow: hidden;">
         <!-- YouTube Background Video Container -->
@@ -2563,6 +2585,14 @@
             const submitBtn = document.getElementById('submit-btn');
             const successState = document.getElementById('form-success-state');
 
+            // Clear custom validity on input to prevent HTML5 validation lock
+            document.querySelectorAll('input[type="tel"]').forEach(input => {
+                input.addEventListener('input', function() {
+                    input.setCustomValidity('');
+                    input.style.borderColor = '#E2E8F0';
+                });
+            });
+
             // Modal Elements
             const modal = document.getElementById('contact-modal');
             const closeModalBtn = document.getElementById('close-modal-btn');
@@ -2647,7 +2677,7 @@
                     };
 
                     // Send to Make.com Webhook
-                    const webhookUrl = 'https://hook.eu2.make.com/wh2lk7yndr8ucxc33hw9d8pxciwcb57a';
+                    const webhookUrl = 'https://hook.eu2.make.com/22305yqwq949g8x3u7djzjv4861q1yyz';
                     
                     fetch(webhookUrl, {
                         method: 'POST',
@@ -2801,7 +2831,7 @@
                     };
 
                     // Send to Make.com Webhook
-                    const webhookUrl = 'https://hook.eu2.make.com/wh2lk7yndr8ucxc33hw9d8pxciwcb57a';
+                    const webhookUrl = 'https://hook.eu2.make.com/22305yqwq949g8x3u7djzjv4861q1yyz';
                     
                     fetch(webhookUrl, {
                         method: 'POST',
@@ -2877,7 +2907,7 @@
                     };
 
                     // Send to Make.com Webhook
-                    const webhookUrl = 'https://hook.eu2.make.com/wh2lk7yndr8ucxc33hw9d8pxciwcb57a';
+                    const webhookUrl = 'https://hook.eu2.make.com/22305yqwq949g8x3u7djzjv4861q1yyz';
                     
                     fetch(webhookUrl, {
                         method: 'POST',

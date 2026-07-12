@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 // Send to Make.com Webhook (excluding tikun-13-check which has its own webhook)
-                let webhookUrl = 'https://hook.eu2.make.com/wh2lk7yndr8ucxc33hw9d8pxciwcb57a';
+                let webhookUrl = 'https://hook.eu2.make.com/22305yqwq949g8x3u7djzjv4861q1yyz';
                 if (window.location.pathname.includes('tikun-13-check')) {
                     webhookUrl = 'https://hook.eu2.make.com/wrk781ymtplke4lopluidshmxbyjpwyd';
                 }
