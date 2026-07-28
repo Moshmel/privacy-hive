@@ -1,0 +1,28 @@
+{
+  "fines": {
+    "privacy_policy": {
+      "medium": 0,
+      "high": 0
+    },
+    "database_definition": {
+      "medium": 40000,
+      "high": 160000
+    },
+    "security_procedure": {
+      "medium": 40000,
+      "high": 160000
+    },
+    "supplier_addendum": {
+      "medium": 80000,
+      "high": 320000
+    },
+    "employee_training": {
+      "medium": 20000,
+      "high": 80000
+    },
+    "access_permissions": {
+      "medium": 20000,
+      "high": 80000
+    }
+  }
+}
