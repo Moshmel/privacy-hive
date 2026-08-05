@@ -69,14 +69,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
                 .then(response => response.text())
                 .then(data => {
-                    // Fire GTM Event
+                    // Fire GTM DataLayer Event
                     window.dataLayer = window.dataLayer || [];
                     window.dataLayer.push({
                         'event': 'lead_form_submit',
                         'formLocation': window.location.pathname
                     });
+
+                    // Fire Direct Google Ads Conversion Event
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'conversion', {
+                            'send_to': 'AW-18176010346/9mFVCL38_7IcEOrQ_9pD',
+                            'value': 1.0,
+                            'currency': 'ILS'
+                        });
+                    }
                     
-                    // Redirect to Thank You Page with delay to allow GTM to fire
+                    // Redirect to Thank You Page with delay to allow tracking to fire
                     const thankYouUrl = window.location.pathname.includes('/') && window.location.pathname.split('/').length > 2 
                                        ? '../thank-you.html' 
                                        : 'thank-you.html';

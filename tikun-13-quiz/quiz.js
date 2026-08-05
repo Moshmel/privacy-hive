@@ -685,7 +685,16 @@
       })
       .then(data => {
         if (data && data.success) {
-          trackEvent('lead_submitted');
+          trackEvent('lead_form_submit', { formLocation: 'tikun-13-quiz' });
+
+          if (typeof gtag === 'function') {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-18176010346/9mFVCL38_7IcEOrQ_9pD',
+              'value': 1.0,
+              'currency': 'ILS'
+            });
+          }
+
           clearSessionState();
           goToStep(11); // Thank you screen
         } else {

@@ -1832,6 +1832,14 @@
                             'formLocation': '/{{FORM_LOCATION_GTM}}-modal/'
                         });
 
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'conversion', {
+                                'send_to': 'AW-18176010346/9mFVCL38_7IcEOrQ_9pD',
+                                'value': 1.0,
+                                'currency': 'ILS'
+                            });
+                        }
+
                         modalForm.style.display = 'none';
                         successStateModal.style.display = 'block';
                         setTimeout(closeModal, 2500);
@@ -1972,6 +1980,14 @@
                             'formLocation': '/{{FORM_LOCATION_GTM}}/'
                         });
 
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'conversion', {
+                                'send_to': 'AW-18176010346/9mFVCL38_7IcEOrQ_9pD',
+                                'value': 1.0,
+                                'currency': 'ILS'
+                            });
+                        }
+
                         topForm.style.display = 'none';
                         successState.style.display = 'block';
                     })
@@ -2036,6 +2052,14 @@
                             'event': 'lead_form_submit',
                             'formLocation': '/{{FORM_LOCATION_GTM}}-bottom/'
                         });
+
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'conversion', {
+                                'send_to': 'AW-18176010346/9mFVCL38_7IcEOrQ_9pD',
+                                'value': 1.0,
+                                'currency': 'ILS'
+                            });
+                        }
 
                         bottomForm.style.display = 'none';
                         successStateBottom.style.display = 'block';

@@ -2231,6 +2231,15 @@
                             'formLocation': '/information-security-risk-assessment-modal/'
                         });
 
+                        // Fire Direct Google Ads Conversion Event
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'conversion', {
+                                'send_to': 'AW-18176010346/9mFVCL38_7IcEOrQ_9pD',
+                                'value': 1.0,
+                                'currency': 'ILS'
+                            });
+                        }
+
                         modalForm.style.display = 'none';
                         successStateModal.style.display = 'block';
                         
@@ -2375,6 +2384,15 @@
                             'formLocation': '/information-security-risk-assessment/'
                         });
 
+                        // Fire Direct Google Ads Conversion Event
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'conversion', {
+                                'send_to': 'AW-18176010346/9mFVCL38_7IcEOrQ_9pD',
+                                'value': 1.0,
+                                'currency': 'ILS'
+                            });
+                        }
+
                         topForm.style.display = 'none';
                         successState.style.display = 'block';
 
@@ -2444,6 +2462,15 @@
                             'event': 'lead_form_submit',
                             'formLocation': '/information-security-risk-assessment-bottom/'
                         });
+
+                        // Fire Direct Google Ads Conversion Event
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'conversion', {
+                                'send_to': 'AW-18176010346/9mFVCL38_7IcEOrQ_9pD',
+                                'value': 1.0,
+                                'currency': 'ILS'
+                            });
+                        }
 
                         bottomForm.style.display = 'none';
                         successStateBottom.style.display = 'block';
