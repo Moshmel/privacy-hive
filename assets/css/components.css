@@ -426,3 +426,11 @@
         padding: 2rem 1.5rem;
     }
 }
+
+/* Global Modal Overlay */
+.global-modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 9999; justify-content: center; align-items: center; padding: 1rem; backdrop-filter: blur(4px); opacity: 0; transition: opacity 0.3s ease; }
+.global-modal-overlay.active { display: flex; opacity: 1; }
+.global-modal-card { background: white; border-radius: 20px; padding: 2.5rem; max-width: 450px; width: 100%; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.2); transform: translateY(20px); transition: transform 0.3s ease; }
+.global-modal-overlay.active .global-modal-card { transform: translateY(0); }
+.global-modal-close { position: absolute; top: 1rem; right: 1.5rem; background: none; border: none; font-size: 2rem; cursor: pointer; color: #64748B; transition: color 0.3s; }
+.global-modal-close:hover { color: var(--color-primary); }

@@ -140,3 +140,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Global Modal Logic
+window.openGlobalModal = function() {
+    const modal = document.getElementById('globalLeadModal') || document.getElementById('contact-modal') || document.getElementById('leadModal');
+    if(modal) {
+        modal.style.display = 'flex';
+        // Small delay to allow display:flex to apply before adding active class for transition
+        setTimeout(() => modal.classList.add('active'), 10);
+    }
+};
+window.closeGlobalModal = function() {
+    const modal = document.getElementById('globalLeadModal') || document.getElementById('contact-modal') || document.getElementById('leadModal');
+    if(modal) {
+        modal.classList.remove('active');
+        setTimeout(() => {
+            if(!modal.classList.contains('active')) modal.style.display = 'none';
+        }, 300);
+    }
+};
+// Close modal when clicking outside
+document.addEventListener('click', function(e) {
+    const modal = document.getElementById('globalLeadModal') || document.getElementById('contact-modal') || document.getElementById('leadModal');
+    if(modal && modal.classList.contains('active') && (e.target === modal || e.target.classList.contains('iso-modal-overlay'))) {
+        closeGlobalModal();
+    }
+});

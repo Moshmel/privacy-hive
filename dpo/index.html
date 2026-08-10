@@ -201,7 +201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="../dpo/index.html" style="color: var(--color-accent); font-weight: 700;">שירותי DPO</a></li>
                 </ul>
             </nav>
-            <a href="#hero-form" class="btn btn-primary nav-btn header-phone-btn" style="padding: 0.6rem 1.5rem; font-weight: bold;"><i class="fa-solid fa-envelope" style="margin-left: 0.5rem;"></i> ליצירת קשר</a>
+            <button onclick="openGlobalModal()" class="btn btn-primary nav-btn header-phone-btn" style="padding: 0.6rem 1.5rem; font-weight: bold; cursor: pointer; border: none;"><i class="fa-solid fa-envelope" style="margin-left: 0.5rem;"></i> ליצירת קשר</button>
         </div>
     </header>
 
@@ -651,34 +651,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     <!-- Lead Modal Popup -->
-    <div id="leadModal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 9999; justify-content: center; align-items: center; padding: 1rem; backdrop-filter: blur(4px);">
-        <div class="modal-content" style="background: white; border-radius: 20px; padding: 2.5rem; max-width: 450px; width: 100%; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.2); animation: fadeInUp 0.4s ease forwards;">
-            <button onclick="closeLeadModal()" style="position: absolute; top: 1rem; right: 1.5rem; background: none; border: none; font-size: 2rem; cursor: pointer; color: #64748B;">&times;</button>
-            <h3 style="margin-bottom: 0.4rem; text-align: center; color: var(--color-primary); font-size: 1.4rem; font-weight: 800;">בדיקת התאמה לשירותי DPO</h3>
-            <p style="text-align: center; color: #64748B; margin-bottom: 1.5rem; font-weight: 500; font-size: 0.9rem;">קבלו הצעה למינוי ממונה הגנת פרטיות חיצוני לארגון</p>
-            <form id="modal-form" class="lead-form" style="box-shadow: none; padding: 0;">
-                <div class="form-group" style="margin-bottom: 0.8rem;">
-                    <input type="text" id="modal-fname" name="fname" class="form-control" placeholder="שם מלא" required style="width: 100%; border: none; background: #F1F5F9; border-radius: 10px; text-align: right; padding: 0.8rem 1rem; font-size: 0.95rem; font-family: 'Heebo', sans-serif;">
-                </div>
-                <div class="form-group" style="margin-bottom: 0.8rem;">
-                    <input type="tel" id="modal-phone" name="phone" class="form-control" placeholder="מספר טלפון" required style="width: 100%; border: none; background: #F1F5F9; border-radius: 10px; text-align: right; direction: rtl; padding: 0.8rem 1rem; font-size: 0.95rem; font-family: 'Heebo', sans-serif;">
-                </div>
-                <div class="form-group" style="margin-bottom: 1.2rem;">
-                    <input type="text" id="modal-company" name="company" class="form-control" placeholder="שם הארגון (אופציונלי)" style="width: 100%; border: none; background: #F1F5F9; border-radius: 10px; text-align: right; padding: 0.8rem 1rem; font-size: 0.95rem; font-family: 'Heebo', sans-serif;">
-                </div>
-                <input type="hidden" name="reason" value="dpo-modal">
-                <div class="form-group" style="font-size: 0.85rem; color: #64748B; margin-bottom: 1.2rem; text-align: right;">
-                    <label style="display: flex; gap: 0.5rem; align-items: flex-start; cursor: pointer;">
-                        <input type="checkbox" required style="margin-top: 0.2rem;">
-                        <span>אני מאשר/ת לקבל שיחת ייעוץ מהמומחים</span>
-                    </label>
-                </div>
-                <button type="submit" class="btn" style="width: 100%; font-size: 1.1rem; font-weight: bold; padding: 0.9rem; background: var(--color-primary); color: white; border: none; border-radius: 10px; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.4);">
-                    <span>קביעת ייעוץ ראשוני חינם</span> <i class="fa-solid fa-arrow-left"></i>
-                </button>
-            </form>
-        </div>
-    </div>
+    
 
     <script>
         function openLeadModal() {
@@ -699,6 +672,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 
     <script src="../assets/js/main.js?v=1.1"></script>
+
+<div id="globalLeadModal" class="global-modal-overlay">
+    <div class="global-modal-card">
+        <button onclick="closeGlobalModal()" class="global-modal-close">&times;</button>
+        <h3 style="text-align: center; color: var(--color-primary); font-size: 1.4rem; font-weight: 800; margin-bottom: 0.4rem;">ליצירת קשר</h3>
+        <p style="text-align: center; color: #64748B; margin-bottom: 1.5rem; font-weight: 500; font-size: 0.9rem;">השאירו פרטים ונחזור אליכם בהקדם</p>
+        <form id="global-modal-form" class="lead-form" style="box-shadow: none; padding: 0;">
+            
+                        <div class="form-group" style="margin-bottom: 0.8rem;">
+                            <input type="text" id="modal-h-fname" name="fname" class="form-control" placeholder="שם מלא" required style="border: none; background: #F1F5F9; border-radius: 10px; text-align: right; padding: 0.8rem 1rem; font-size: 0.95rem;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0.8rem;">
+                            <input type="tel" id="modal-h-phone" name="phone" class="form-control" placeholder="מספר טלפון" required style="border: none; background: #F1F5F9; border-radius: 10px; text-align: right; direction: rtl; padding: 0.8rem 1rem; font-size: 0.95rem;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.2rem;">
+                            <input type="text" id="modal-h-company" name="company" class="form-control" placeholder="שם הארגון (אופציונלי)" style="border: none; background: #F1F5F9; border-radius: 10px; text-align: right; padding: 0.8rem 1rem; font-size: 0.95rem;">
+                        </div>
+                        <input type="hidden" name="reason" value="dpo-hero">
+                        <div class="form-group" style="font-size: 0.85rem; color: #64748B; margin-bottom: 1.2rem; text-align: right;">
+                            <label style="display: flex; gap: 0.5rem; align-items: flex-start; cursor: pointer;">
+                                <input type="checkbox" required style="margin-top: 0.2rem;">
+                                <span>אני מאשר/ת לקבל שיחת ייעוץ מהמומחים</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%; font-size: 1.1rem; font-weight: bold; padding: 0.9rem; background: var(--color-primary); color: white; border: none; border-radius: 10px; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.4);">
+                            <span>קביעת ייעוץ ראשוני חינם</span> <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    
+        </form>
+    </div>
+</div>
+
 </body>
 </html>
 

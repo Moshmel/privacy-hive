@@ -55,7 +55,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="dpo/index.html">שירותי DPO</a></li>
                 </ul>
             </nav>
-            <a href="#contact" class="btn btn-primary nav-btn">שיחת התאמה (ללא עלות)</a>
+            <button onclick="openGlobalModal()" class="btn btn-primary nav-btn" style="cursor: pointer; border: none;">שיחת התאמה (ללא עלות)</button>
         </div>
     </header>
 
@@ -291,6 +291,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         });
     </script>
+
+
+
+
+<div id="globalLeadModal" class="global-modal-overlay">
+    <div class="global-modal-card">
+        <button onclick="closeGlobalModal()" class="global-modal-close">&times;</button>
+        <h3 style="text-align: center; color: var(--color-primary); font-size: 1.4rem; font-weight: 800; margin-bottom: 0.4rem;">ליצירת קשר</h3>
+        <p style="text-align: center; color: #64748B; margin-bottom: 1.5rem; font-weight: 500; font-size: 0.9rem;">השאירו פרטים ונחזור אליכם בהקדם</p>
+        <form id="global-modal-form" class="lead-form" style="box-shadow: none; padding: 0;">
+            
+                        <div class="form-group">
+                            <input type="text" id="modal-h-fname" name="fname" class="form-control" placeholder="שם מלא *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="modal-h-phone" name="phone" class="form-control" placeholder="מספר טלפון *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="modal-h-email" name="email" class="form-control" placeholder="כתובת אימייל *" required>
+                        </div>
+                        <input type="hidden" name="reason" value="homepage-hero">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">לבדיקת התאמה עכשיו</button>
+                    
+        </form>
+    </div>
+</div>
+
 </body>
 </html>
 

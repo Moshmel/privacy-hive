@@ -55,7 +55,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="#contact">צור קשר</a></li>
                 </ul>
             </nav>
-            <a href="#contact" class="btn btn-primary nav-btn">בדקו התאמה לשירות</a>
+            <button onclick="openGlobalModal()" class="btn btn-primary nav-btn" style="cursor: pointer; border: none;">בדקו התאמה לשירות</button>
         </div>
     </header>
 
@@ -173,6 +173,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     <script src="../assets/js/main.js?v=1.1"></script>
+
+
+
+
+<div id="globalLeadModal" class="global-modal-overlay">
+    <div class="global-modal-card">
+        <button onclick="closeGlobalModal()" class="global-modal-close">&times;</button>
+        <h3 style="text-align: center; color: var(--color-primary); font-size: 1.4rem; font-weight: 800; margin-bottom: 0.4rem;">ליצירת קשר</h3>
+        <p style="text-align: center; color: #64748B; margin-bottom: 1.5rem; font-weight: 500; font-size: 0.9rem;">השאירו פרטים ונחזור אליכם בהקדם</p>
+        <form id="global-modal-form" class="lead-form" style="box-shadow: none; padding: 0;">
+            
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label for="modal-fname">שם פרטי *</label>
+                            <input type="text" id="modal-fname" name="fname" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-lname">שם משפחה *</label>
+                            <input type="text" id="modal-lname" name="lname" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-phone">טלפון *</label>
+                        <input type="tel" id="modal-phone" name="phone" class="form-control" required>
+                    </div>
+                    <!-- Hidden field -->
+                    <input type="hidden" name="reason" value="data-protection-officer">
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">לשיחת אבחון (ללא התחייבות)</button>
+                
+        </form>
+    </div>
+</div>
+
 </body>
 </html>
 

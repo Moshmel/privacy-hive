@@ -298,7 +298,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="../dpo/">שירותי DPO</a></li>
                 </ul>
             </nav>
-            <a href="#hero-form" class="btn btn-primary nav-btn header-phone-btn" style="padding: 0.6rem 1.5rem; font-weight: bold;"><i class="fa-solid fa-envelope" style="margin-left: 0.5rem;"></i> ליצירת קשר</a>
+            <button onclick="openGlobalModal()" class="btn btn-primary nav-btn header-phone-btn" style="padding: 0.6rem 1.5rem; font-weight: bold; cursor: pointer; border: none;"><i class="fa-solid fa-envelope" style="margin-left: 0.5rem;"></i> ליצירת קשר</button>
         </div>
     </header>
 
@@ -1051,6 +1051,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         });
     </script>
+
+
+
+
+<div id="globalLeadModal" class="global-modal-overlay">
+    <div class="global-modal-card">
+        <button onclick="closeGlobalModal()" class="global-modal-close">&times;</button>
+        <h3 style="text-align: center; color: var(--color-primary); font-size: 1.4rem; font-weight: 800; margin-bottom: 0.4rem;">ליצירת קשר</h3>
+        <p style="text-align: center; color: #64748B; margin-bottom: 1.5rem; font-weight: 500; font-size: 0.9rem;">השאירו פרטים ונחזור אליכם בהקדם</p>
+        <form id="global-modal-form" class="lead-form" style="box-shadow: none; padding: 0;">
+            
+                        <div class="form-group" style="margin-bottom: 0.6rem;">
+                            <input type="text" id="modal-h-fname" name="fname" class="form-control" placeholder="שם מלא" required style="border: none; background: #F1F5F9; border-radius: 10px; text-align: right; padding: 0.8rem 1rem; font-size: 0.95rem;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0.6rem;">
+                            <input type="tel" id="modal-h-phone" name="phone" class="form-control" placeholder="טלפון" dir="rtl" required style="border: none; background: #F1F5F9; border-radius: 10px; text-align: right; padding: 0.8rem 1rem; font-size: 0.95rem;">
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: 0.8rem;">
+                            <input type="text" id="modal-h-company" name="company" class="form-control" placeholder="שם העסק" style="border: none; background: #F1F5F9; border-radius: 10px; text-align: right; padding: 0.8rem 1rem; font-size: 0.95rem;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 0.5rem; text-align: right;">
+                            <input type="checkbox" id="modal-h-privacy" name="privacy" required style="margin-top: 0.25rem;">
+                            <label for="modal-h-privacy" style="font-size: 0.85rem; color: #64748B; margin: 0; line-height: 1.4; cursor: pointer;">
+                                אני מאשר שיחזרו אלי ומסכים ל<a href="/privacy-policy" target="_blank" style="color: var(--color-accent); text-decoration: underline;">מדיניות הפרטיות</a>
+                            </label>
+                        </div>
+                        <input type="hidden" name="reason" value="tikun-13-hero">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; font-weight: bold; padding: 1rem; background: var(--color-primary); color: white; border: none; border-radius: 10px; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.4);">
+                            קבעו לי שיחה חינמית
+                        </button>
+                    
+        </form>
+    </div>
+</div>
+
 </body>
 </html>
 
