@@ -407,9 +407,52 @@
     .btn-group {
         justify-content: center;
     }
-    
+}
+
+/* --- Global Footer Layout --- */
+.footer-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem; /* Reduced gap to prevent wrapping */
+    margin-bottom: 3rem;
+}
+
+/* Reduce text size in footer to prevent breaking */
+.footer-col h4 {
+    font-size: 1.1rem !important;
+}
+.footer-links li a {
+    font-size: 0.95rem;
+}
+.footer-col p {
+    font-size: 0.95rem !important;
+}
+
+/* Tablet Layout (2 columns) */
+@media (max-width: 992px) {
+    .footer-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+/* Mobile Layout (1 column) */
+@media (max-width: 768px) {
     .footer-inner {
         grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2.5rem;
+    }
+    
+    .footer-inner .footer-col img {
+        margin: 0 auto 1.5rem auto;
+        display: block;
+    }
+    
+    .footer-inner .footer-col h4 span {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
     }
 }
 
