@@ -168,6 +168,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             font-size: 1.5rem;
             flex-shrink: 0;
         }
+        
+        /* GSAP FOUC Prevention */
+        .hero-badge-container, 
+        .hero-content h1, 
+        .hero-content p, 
+        .hero-btn-group, 
+        .hero-floating-form,
+        .compare-card,
+        .service-item,
+        .faq-item {
+            visibility: hidden;
+        }
     </style>
 
 <!-- Google tag (gtag.js) -->
@@ -733,6 +745,88 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
+
+<!-- GSAP & ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 1. Hero Entrance Timeline
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        
+        // Make FOUC elements visible before animation
+        gsap.set([".hero-badge-container", ".hero-content h1", ".hero-content p", ".hero-btn-group", ".hero-floating-form"], { visibility: "visible" });
+
+        tl.from(".hero-badge-container", { y: -20, opacity: 0, duration: 0.6 })
+          .from(".hero-content h1 .white-title-span", { y: 30, opacity: 0, duration: 0.7 }, "-=0.3")
+          .from(".hero-content h1 .green-subtitle-span", { y: 20, opacity: 0, duration: 0.6 }, "-=0.4")
+          .from(".hero-content p", { opacity: 0, duration: 0.8 }, "-=0.2")
+          .from(".hero-btn-group", { scale: 0.9, opacity: 0, duration: 0.5 }, "-=0.3")
+          .from(".hero-floating-form", { y: 50, opacity: 0, duration: 0.8, ease: "back.out(1.2)" }, "-=0.5");
+
+        // 2. Comparison Cards ScrollTrigger (Staggered Entrance)
+        gsap.set(".compare-card", { visibility: "visible" });
+        gsap.from(".compare-card", {
+            scrollTrigger: {
+                trigger: ".comparison-grid",
+                start: "top 85%",
+                toggleActions: "play none none none"
+            },
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: "back.out(1.1)"
+        });
+
+        // 3. Service Items ScrollTrigger
+        gsap.set(".service-item", { visibility: "visible" });
+        gsap.from(".service-item", {
+            scrollTrigger: {
+                trigger: ".services-grid",
+                start: "top 85%",
+            },
+            y: 40,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power2.out"
+        });
+
+        // 4. FAQ Items ScrollTrigger
+        gsap.set(".faq-item", { visibility: "visible" });
+        gsap.from(".faq-item", {
+            scrollTrigger: {
+                trigger: ".faq-list",
+                start: "top 85%",
+            },
+            x: 30,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.1,
+            ease: "power2.out"
+        });
+        
+        // 5. Floating Panel (if exists)
+        if(document.querySelector('.floating-panel')) {
+            gsap.set(".floating-panel", { visibility: "visible" });
+            gsap.from(".floating-panel", {
+                scrollTrigger: {
+                    trigger: ".floating-panel",
+                    start: "top 90%"
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                ease: "back.out(1.2)"
+            });
+        }
+    });
+</script>
+
 <!-- Apple Design: Motion Physics -->
 <script type="module">
     import { animate } from "https://cdn.jsdelivr.net/npm/motion@11.11.13/+esm";
@@ -766,24 +860,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         });
         
-        // Initial Scroll Entrance Animations for floating panels
-        const floatingElements = document.querySelectorAll('.floating-panel, .hero-floating-form');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animate(
-                        entry.target, 
-                        { opacity: [0, 1], y: [40, 0] }, 
-                        { type: "spring", bounce: 0.15, duration: 0.8, delay: 0.1 }
-                    );
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        floatingElements.forEach(el => observer.observe(el));
-    });
+        });
 </script>
 
 </body>
