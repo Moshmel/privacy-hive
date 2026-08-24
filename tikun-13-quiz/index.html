@@ -50,17 +50,17 @@
     <style>
         /* Mobile adjustments */
         @media (max-width: 768px) {
-            .welcome-text-col { flex: 1 1 100% !important; padding: 1rem 1.5rem 0 !important; text-align: center; }
+            .welcome-text-col { flex: 1 1 100% !important; padding: 0 1.5rem 0 !important; text-align: center; }
             .welcome-text-col h1 { font-size: 2.2rem !important; }
             .welcome-text-col h2 { font-size: 1.3rem !important; }
             .welcome-text-col div[style*="display: inline-block"] { align-self: center !important; }
             .welcome-text-col p { font-size: 1.05rem !important; margin-left: auto; margin-right: auto; }
             .welcome-text-col button { margin: 0 auto; }
-            .welcome-img-wrapper { flex: 1 1 100% !important; align-items: center !important; padding-top: 1rem; }
-            .welcome-img-wrapper img { margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; max-width: 90% !important; width: 100% !important; border-radius: 16px; }
-            .quiz-card { padding: 1.5rem 1rem !important; }
+            .welcome-img-wrapper { flex: 1 1 100% !important; align-items: center !important; padding-top: 1rem; overflow: hidden; }
+            .welcome-img-wrapper img { margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; max-width: 100% !important; width: 100% !important; border-radius: 16px; object-position: bottom center !important; }
+            .quiz-card { padding: 1.5rem 1rem 0 1rem !important; }
             .q-title { font-size: 1.3rem !important; }
-            .welcome-layout { margin: 0 !important; } /* Fix negative margin breakout on mobile */
+            .welcome-layout { margin: 0 -1rem 0 -1rem !important; }
             #quiz-logo-container { text-align: center !important; }
         }
     </style>
@@ -81,10 +81,10 @@
 
                 <!-- 0. Welcome Screen -->
                 <div class="quiz-screen active" id="screen-0">
-                    <div class="welcome-layout" style="display: flex; flex-wrap: wrap; align-items: stretch; margin: 0 -2rem -2.5rem -2rem; min-height: 520px;">
+                    <div class="welcome-layout" style="display: flex; flex-wrap: wrap; align-items: stretch; margin: -2.5rem -2rem -2.5rem -2rem; min-height: 520px;">
                         
                         <!-- Text Content -->
-                        <div class="welcome-text-col" style="flex: 0 0 55%; padding: 3rem 2rem 2rem 2rem; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 10;">
+                        <div class="welcome-text-col" style="flex: 0 0 55%; padding: 2.5rem 2rem 2rem 2rem; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 10;">
                             
                             <!-- Logo inside text column -->
                             <div style="margin-bottom: 2rem;">
