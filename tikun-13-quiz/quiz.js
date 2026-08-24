@@ -96,16 +96,13 @@
         document.querySelectorAll('.quiz-screen').forEach(s => s.classList.remove('active'));
         document.getElementById(id).classList.add('active');
         
-        const topControls = document.getElementById('quiz-top-controls');
         const bottomControls = document.getElementById('quiz-bottom-controls');
         const progContainer = document.getElementById('quiz-progress-container');
         
         if(id === 'screen-0' || id === 'screen-results') {
-            topControls.style.display = 'none';
             bottomControls.style.display = 'none';
             progContainer.style.display = 'none';
         } else {
-            topControls.style.display = 'flex';
             bottomControls.style.display = 'block';
             progContainer.style.display = 'block';
             

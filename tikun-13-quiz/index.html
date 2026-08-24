@@ -47,21 +47,31 @@
         .gap-card .fine { font-weight: 800; color: #1E293B; background: #F1F5F9; padding: 0.5rem 1rem; border-radius: 6px; display: inline-block; font-size: 0.95rem;}
         .fine.lawsuit { color: #EA580C; background: #FFF7ED; }
     </style>
+    <style>
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .welcome-text-col { padding: 2rem 1.5rem 0 !important; text-align: center; }
+            .welcome-text-col h1 { font-size: 2.2rem !important; }
+            .welcome-text-col h2 { font-size: 1.3rem !important; }
+            .welcome-text-col div[style*="display: inline-block"] { align-self: center !important; }
+            .welcome-text-col p { font-size: 1.05rem !important; margin-left: auto; margin-right: auto; }
+            .welcome-text-col button { margin: 0 auto; }
+            .welcome-img-wrapper { align-items: center !important; padding-top: 1rem; }
+            .welcome-img-wrapper img { margin-bottom: 0 !important; max-width: 90% !important; border-radius: 16px; }
+            .quiz-card { padding: 1.5rem 1rem !important; }
+            .q-title { font-size: 1.3rem !important; }
+            #screen-0 > div { margin: 0 !important; } /* Fix negative margin breakout on mobile */
+        }
+    </style>
 </head>
 
 <body>
-    <header class="quiz-header">
-        <div class="container" style="display:flex; justify-content:center;">
-            <a href="../index.html" class="logo"><img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive"></a>
-        </div>
-    </header>
-
     <main class="quiz-hero">
         <div class="quiz-container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <a href="../index.html"><img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive" style="height: 55px;"></a>
+            </div>
             <div class="quiz-card">
-                <div class="quiz-top-controls" id="quiz-top-controls" style="display: none; justify-content: center;">
-                    <img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive" style="height: 35px;">
-                </div>
                 <div class="quiz-progress-wrapper" id="quiz-progress-container">
                     <div class="quiz-progress-fill" id="quiz-progress-bar"></div>
                 </div>
@@ -71,7 +81,7 @@
                     <div style="display: flex; flex-wrap: wrap; align-items: stretch; margin: -2.5rem -2rem;">
                         
                         <!-- Text Content -->
-                        <div style="flex: 1; min-width: 300px; padding: 4rem 3rem 4rem 2rem; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="welcome-text-col" style="flex: 1; min-width: 300px; padding: 4rem 3rem 4rem 2rem; display: flex; flex-direction: column; justify-content: center;">
                             <h1 style="font-size: 2.8rem; font-weight: 900; color: var(--color-primary-dark); margin-bottom: 0.2rem; line-height: 1.1;">נעים להכיר, אנחנו<br>Privacy Hive</h1>
                             <div style="margin-bottom: 2rem; display: inline-block; align-self: flex-start;">
                                 <h2 style="font-size: 1.6rem; color: var(--color-accent); font-weight: 800; margin: 0;">מומחים לפרטיות ואבטחת מידע.</h2>
