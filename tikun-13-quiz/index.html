@@ -61,8 +61,18 @@
             .welcome-img-wrapper img { margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; max-width: 100% !important; width: 100% !important; border-radius: 16px; object-position: bottom center !important; }
             .quiz-card { padding: 16px !important; }
             .q-title { font-size: 20px !important; }
+            .q-helper { font-size: 14px !important; }
             .welcome-layout { margin: 0 -16px -16px -16px !important; }
             .welcome-logo-container { text-align: center !important; margin-bottom: 16px !important; }
+            
+            #screen-results h1 { font-size: 24px !important; margin-bottom: 1rem !important; }
+            #screen-results h2 { font-size: 16px !important; }
+            #screen-results > div > p { font-size: 14px !important; }
+            #results-admin-fine { font-size: 3rem !important; }
+            #screen-results button { font-size: 16px !important; padding: 14px !important; }
+            .breakdown-title { margin-top: 70px !important; }
+            .gap-card h3 { font-size: 16px !important; }
+            .gap-card p { font-size: 14px !important; }
         }
     </style>
 </head>
@@ -123,27 +133,27 @@
                 <!-- 1. Employee Count -->
                 <div class="quiz-screen" id="screen-1">
                     <h2 class="q-title">כמה אנשים עובדים בעסק?</h2>
-                    <p class="q-helper">ככל שליותר אנשים יש גישה למידע, דרישות אבטחת המידע עשויות להיות מחמירות יותר.</p>
+                    <p class="q-helper">למשל עובדים במשרד, אנשי מכירות, שירות לקוחות או כל מי שיכול לראות מידע על לקוחות.</p>
                     <button class="quiz-option-btn" data-q="q1" data-val="1-3">1 עד 3</button>
                     <button class="quiz-option-btn" data-q="q1" data-val="4-10">4 עד 10</button>
                     <button class="quiz-option-btn" data-q="q1" data-val="11-100">11 עד 100</button>
-                    <button class="quiz-option-btn" data-q="q1" data-val="100+">יותר מ-100</button>
+                    <button class="quiz-option-btn" data-q="q1" data-val="100+">יותר מ־100</button>
                 </div>
 
                 <!-- 2. Customer Count -->
                 <div class="quiz-screen" id="screen-2">
                     <h2 class="q-title">בערך על כמה אנשים יש לכם מידע שמור?</h2>
-                    <p class="q-helper">כמות האנשים שעליהם נשמר מידע משפיעה על רמת האבטחה והדרישות שחלות על העסק.</p>
+                    <p class="q-helper">חשבו על כל הלקוחות, הלידים ואנשי הקשר ששמורים אצלכם ב־CRM, באקסל, ברשימת דיוור או במערכות אחרות.</p>
                     <button class="quiz-option-btn" data-q="q2" data-val="under_10k">עד 10,000</button>
                     <button class="quiz-option-btn" data-q="q2" data-val="10k_100k">10,000 עד 100,000</button>
-                    <button class="quiz-option-btn" data-q="q2" data-val="over_100k">יותר מ-100,000</button>
+                    <button class="quiz-option-btn" data-q="q2" data-val="over_100k">יותר מ־100,000</button>
                     <button class="quiz-option-btn" data-q="q2" data-val="not_sure">לא יודעים</button>
                 </div>
 
                 <!-- 3. Customer Data Types -->
                 <div class="quiz-screen" id="screen-3">
-                    <h2 class="q-title">איזה מידע אתם שומרים על הלקוחות שלכם?</h2>
-                    <p class="q-helper">מידע רגיש כמו מידע פיננסי או רפואי עשוי לחייב רמת הגנה גבוהה יותר. (סמנו את המחמיר ביותר)</p>
+                    <h2 class="q-title">מה המידע הכי רגיש שאתם שומרים על לקוחות?</h2>
+                    <p class="q-helper">בחרו את האפשרות הכי מתאימה. לדוגמה: אם יש לכם גם טלפון וגם פרטי אשראי, בחרו "מידע פיננסי".</p>
                     <button class="quiz-option-btn" data-q="q3" data-val="basic">רק שם, טלפון או אימייל</button>
                     <button class="quiz-option-btn" data-q="q3" data-val="financial">מידע פיננסי</button>
                     <button class="quiz-option-btn" data-q="q3" data-val="medical">מידע רפואי</button>
@@ -153,8 +163,8 @@
 
                 <!-- 4. Employee Data Types -->
                 <div class="quiz-screen" id="screen-4">
-                    <h2 class="q-title">איזה מידע אתם שומרים על העובדים שלכם?</h2>
-                    <p class="q-helper">מידע על שכר, בריאות או מידע אישי רגיש אחר עשוי להשפיע על דרישות אבטחת המידע.</p>
+                    <h2 class="q-title">מה המידע הכי רגיש שאתם שומרים על העובדים?</h2>
+                    <p class="q-helper">למשל פרטי שכר, חשבון בנק, פנסיה, מסמכים רפואיים או מידע אישי אחר.</p>
                     <button class="quiz-option-btn" data-q="q4" data-val="basic">רק פרטים בסיסיים</button>
                     <button class="quiz-option-btn" data-q="q4" data-val="financial">מידע על שכר, בנק או פנסיה</button>
                     <button class="quiz-option-btn" data-q="q4" data-val="medical">מידע רפואי</button>
@@ -166,15 +176,15 @@
                 <!-- 5. Website -->
                 <div class="quiz-screen" id="screen-5">
                     <h2 class="q-title">האם יש לעסק אתר אינטרנט?</h2>
-                    <p class="q-helper">אם יש לכם אתר, נבדוק גם איך אתם אוספים מידע מהגולשים.</p>
+                    <p class="q-helper">כולל אתר תדמית, חנות אונליין, דף נחיתה או אתר שמאפשר להשאיר פרטים.</p>
                     <button class="quiz-option-btn" data-q="q5" data-val="yes">כן</button>
                     <button class="quiz-option-btn" data-q="q5" data-val="no">לא</button>
                 </div>
 
                 <!-- 5a. Collect Data -->
                 <div class="quiz-screen" id="screen-5a">
-                    <h2 class="q-title">האם אתם אוספים מידע דרך האתר?</h2>
-                    <p class="q-helper">למשל דרך טופס יצירת קשר, השארת ליד, הרשמה או רכישה.</p>
+                    <h2 class="q-title">האם אנשים משאירים אצלכם פרטים דרך האתר?</h2>
+                    <p class="q-helper">למשל בטופס יצירת קשר, טופס ליד, הרשמה, הזמנה או רכישה.</p>
                     <button class="quiz-option-btn" data-q="q5a" data-val="yes">כן</button>
                     <button class="quiz-option-btn" data-q="q5a" data-val="no">לא</button>
                     <button class="quiz-option-btn" data-q="q5a" data-val="not_sure">לא בטוח</button>
@@ -183,7 +193,7 @@
                 <!-- 5b. Privacy Policy -->
                 <div class="quiz-screen" id="screen-5b">
                     <h2 class="q-title">האם יש באתר מדיניות פרטיות מעודכנת?</h2>
-                    <p class="q-helper">מדיניות שמסבירה איזה מידע אתם אוספים, למה משתמשים בו ומה הזכויות של המשתמשים.</p>
+                    <p class="q-helper">עמוד שמסביר לגולש איזה מידע אתם אוספים עליו, למה אתם משתמשים בו ומה הזכויות שלו.</p>
                     <button class="quiz-option-btn" data-q="q5b" data-val="yes">כן</button>
                     <button class="quiz-option-btn" data-q="q5b" data-val="no">לא</button>
                     <button class="quiz-option-btn" data-q="q5b" data-val="not_sure">לא בטוח</button>
@@ -191,16 +201,16 @@
 
                 <!-- 6. Marketing -->
                 <div class="quiz-screen" id="screen-6">
-                    <h2 class="q-title">האם אתם שולחים הודעות פרסומיות ב SMS, מייל או WhatsApp?</h2>
-                    <p class="q-helper">למשל מבצעים, הצעות או פרסום של מוצרים ושירותים.</p>
+                    <h2 class="q-title">האם אתם שולחים פרסומות ב־SMS, מייל או WhatsApp?</h2>
+                    <p class="q-helper">למשל מבצעים, הנחות, הצעות מיוחדות או הודעות שמנסות למכור מוצר או שירות.</p>
                     <button class="quiz-option-btn" data-q="q6" data-val="yes">כן</button>
                     <button class="quiz-option-btn" data-q="q6" data-val="no">לא</button>
                 </div>
 
                 <!-- 6a. Marketing Legal -->
                 <div class="quiz-screen" id="screen-6a">
-                    <h2 class="q-title">האם אתם שולחים הודעות פרסומיות רק למי שאישר קבלת דיוור?</h2>
-                    <p class="q-helper">כלומר רק לאנשים שאישרו בצורה מפורשת קבלת דיוור ותוכן שיווקי.</p>
+                    <h2 class="q-title">האם אתם יודעים שמותר לכם לשלוח להם את הפרסום?</h2>
+                    <p class="q-helper">למשל כי הם נרשמו לדיוור, סימנו שהם מסכימים לקבל פרסום או נתנו לכם אישור בצורה אחרת.</p>
                     <button class="quiz-option-btn" data-q="q6a" data-val="yes">כן</button>
                     <button class="quiz-option-btn" data-q="q6a" data-val="no">לא</button>
                     <button class="quiz-option-btn" data-q="q6a" data-val="not_sure">לא בטוח</button>
@@ -208,8 +218,8 @@
 
                 <!-- 7. Suppliers -->
                 <div class="quiz-screen" id="screen-7">
-                    <h2 class="q-title">האם לספקים חיצוניים יש גישה למידע שלכם?</h2>
-                    <p class="q-helper">למשל CRM, חברת מחשוב, הנהלת חשבונות, מערכת דיוור או ספק ענן.</p>
+                    <h2 class="q-title">האם יש חברות או ספקים חיצוניים שיכולים לראות מידע שלכם?</h2>
+                    <p class="q-helper">למשל חברת מחשוב, חברת פרסום, הנהלת חשבונות, מערכת CRM, מערכת דיוור או שירות ענן.</p>
                     <button class="quiz-option-btn" data-q="q7" data-val="yes">כן</button>
                     <button class="quiz-option-btn" data-q="q7" data-val="no">לא</button>
                     <button class="quiz-option-btn" data-q="q7" data-val="not_sure">לא בטוח</button>
@@ -217,8 +227,8 @@
 
                 <!-- 7a. Supplier Addendum -->
                 <div class="quiz-screen" id="screen-7a">
-                    <h2 class="q-title">האם הגישה של הספקים למידע מוסדרת בכתב?</h2>
-                    <p class="q-helper">הסכם או נספח שמגדיר מה מותר לספק לעשות עם המידע ואיך עליו להגן עליו.</p>
+                    <h2 class="q-title">האם יש לכם הסכם שמסדיר מה מותר להם לעשות עם המידע?</h2>
+                    <p class="q-helper">למשל מסמך שמגדיר איזה מידע הספק יכול לראות, למה מותר לו להשתמש בו ואיך הוא צריך לשמור עליו.</p>
                     <button class="quiz-option-btn" data-q="q7a" data-val="yes">כן</button>
                     <button class="quiz-option-btn" data-q="q7a" data-val="no">לא</button>
                     <button class="quiz-option-btn" data-q="q7a" data-val="not_sure">לא בטוח</button>
@@ -227,25 +237,25 @@
                 <!-- 8. Database Def -->
                 <div class="quiz-screen" id="screen-8">
                     <h2 class="q-title">האם יש לכם מסמך הגדרות מאגר?</h2>
-                    <p class="q-helper">מסמך פנימי שמפרט איזה מידע אתם שומרים, למה אתם משתמשים בו ומי ניגש אליו.</p>
+                    <p class="q-helper">מסמך פנימי שמרכז איזה מידע אתם שומרים, איפה הוא נמצא, למה אתם צריכים אותו ומי יכול לגשת אליו.</p>
                     <button class="quiz-option-btn" data-q="q8" data-val="yes">כן</button>
                     <button class="quiz-option-btn" data-q="q8" data-val="no">לא</button>
-                    <button class="quiz-option-btn" data-q="q8" data-val="not_sure">לא בטוח</button>
+                    <button class="quiz-option-btn" data-q="q8" data-val="not_sure">לא בטוח מה זה</button>
                 </div>
 
                 <!-- 9. Security Procedure -->
                 <div class="quiz-screen" id="screen-9">
                     <h2 class="q-title">האם יש לכם נוהל אבטחת מידע?</h2>
-                    <p class="q-helper">מסמך שמגדיר איך שומרים על המידע ומה עושים במקרה של אירוע אבטחה.</p>
+                    <p class="q-helper">מסמך שמגדיר למשל איך בוחרים סיסמאות, מי מקבל גישה למידע ומה עושים אם מידע נגנב, נחשף או נשלח בטעות.</p>
                     <button class="quiz-option-btn" data-q="q9" data-val="yes">כן</button>
                     <button class="quiz-option-btn" data-q="q9" data-val="no">לא</button>
-                    <button class="quiz-option-btn" data-q="q9" data-val="not_sure">לא בטוח</button>
+                    <button class="quiz-option-btn" data-q="q9" data-val="not_sure">לא בטוח מה זה</button>
                 </div>
 
                 <!-- 10. Training -->
                 <div class="quiz-screen" id="screen-10">
-                    <h2 class="q-title">האם העובדים שלכם עברו הדרכה בנושא אבטחת מידע?</h2>
-                    <p class="q-helper">הדרכה שמסבירה לעובדים איך לעבוד נכון ובטוח עם מידע אישי.</p>
+                    <h2 class="q-title">האם העובדים שלכם עברו הדרכה על שמירת מידע?</h2>
+                    <p class="q-helper">למשל איך לשמור על סיסמאות, לזהות מייל חשוד, לא לשלוח מידע לכתובת הלא נכונה ולא לחשוף מידע של לקוחות.</p>
                     <button class="quiz-option-btn" data-q="q10" data-val="yes">כן</button>
                     <button class="quiz-option-btn" data-q="q10" data-val="no">לא</button>
                     <button class="quiz-option-btn" data-q="q10" data-val="not_sure">לא בטוח</button>
@@ -253,8 +263,8 @@
 
                 <!-- 11. Permissions -->
                 <div class="quiz-screen" id="screen-11">
-                    <h2 class="q-title">האם יש לכם רשימה מסודרת של הרשאות הגישה?</h2>
-                    <p class="q-helper">רשימה שמגדירה מי רשאי לגשת למידע ולאילו מערכות.</p>
+                    <h2 class="q-title">האם יש לכם רשימה מסודרת של מי יכול לגשת למידע?</h2>
+                    <p class="q-helper">למשל מי יכול להיכנס ל־CRM, לראות פרטי לקוחות, להוריד קבצים או להיכנס למערכות של העסק.</p>
                     <button class="quiz-option-btn" data-q="q11" data-val="yes">כן</button>
                     <button class="quiz-option-btn" data-q="q11" data-val="no">לא</button>
                     <button class="quiz-option-btn" data-q="q11" data-val="not_sure">לא בטוח</button>
@@ -263,37 +273,56 @@
                 <!-- Results Screen -->
                 <div class="quiz-screen" id="screen-results" style="padding-top: 1rem;">
                     <!-- Above the fold -->
-                    <h1 id="results-issues-count" style="font-size: 1.8rem; font-weight: 900; margin-bottom: 1.5rem; text-align: center; color: var(--color-primary-dark);">מצאנו X ליקויים שדורשים טיפול</h1>
+                    <div style="text-align: center; margin-bottom: 1.5rem; position: relative;">
+                        <h1 id="results-issues-count" style="font-size: 2.2rem; font-weight: 900; margin-bottom: 1rem; color: #0F172A; line-height: 1.1;">מצאנו X ליקויים שדורשים טיפול</h1>
+                        <div style="width: 50px; height: 2px; background-color: var(--color-accent); margin: 0 auto;"></div>
+                    </div>
                     
-                    <div style="text-align: center; margin-bottom: 1.5rem;">
-                        <p style="font-size: 1rem; color: #64748B; font-weight: 700; margin-bottom: 0.3rem;">החשיפה הפוטנציאלית שלכם</p>
-                        <div id="results-admin-fine" style="font-size: 3.2rem; font-weight: 900; color: #DC2626; line-height: 1;">עד 0 ₪</div>
+                    <div style="text-align: center; margin-bottom: 2.5rem;">
+                        <p style="font-size: 1.1rem; color: #64748B; font-weight: 600; margin-bottom: 0.5rem;">החשיפה הפוטנציאלית שלכם</p>
+                        <div id="results-admin-fine" style="font-size: 4rem; font-weight: 900; color: #DC2626; line-height: 1; display: flex; align-items: baseline; justify-content: center; gap: 0.5rem; direction: rtl;">
+                            <!-- Populated by JS -->
+                        </div>
                     </div>
 
-                    <div style="text-align: center; margin-bottom: 1.5rem;">
-                        <h2 style="font-size: 1.2rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 0.3rem;">רוצים שנעזור לכם להסדיר את הליקויים?</h2>
-                        <p style="font-size: 1rem; color: #475569; margin-bottom: 1rem;">קבעו שיחת ייעוץ ראשונית ללא עלות עם מומחי Privacy Hive.</p>
-                        <button onclick="document.getElementById('quiz-lead-form-section').scrollIntoView({behavior: 'smooth'})" style="background: var(--color-accent); color: white; padding: 1rem 2rem; border-radius: 50px; font-weight: 800; font-size: 1.1rem; border: none; cursor: pointer; width: 100%; max-width: 350px; box-shadow: 0 10px 20px -5px rgba(63,168,152,0.4);">לקביעת שיחת ייעוץ ללא עלות</button>
+                    <!-- Lead Form directly at the top -->
+                    <div id="quiz-lead-form-section" style="background: #F8FAFC; padding: 2rem 1.5rem; border-radius: 16px; border: 1px solid #E2E8F0; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+                        <h2 style="font-size: 1.3rem; font-weight: 800; color: #0F172A; margin-bottom: 0.4rem; text-align: center;">רוצים להבין מה צריך לתקן?</h2>
+                        <p style="font-size: 1.05rem; color: #475569; margin-bottom: 1.5rem; text-align: center;">קבעו שיחת ייעוץ ראשונית ללא עלות עם מומחי Privacy Hive.</p>
+                        
+                        <form id="quiz-lead-form" style="display: flex; flex-direction: column; gap: 1rem; max-width: 480px; margin: 0 auto;">
+                            <input type="text" name="full_name" id="quiz_full_name" placeholder="שם מלא" required style="padding: 1rem; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 1rem;">
+                            <input type="tel" name="phone" id="quiz_phone" placeholder="טלפון" required style="padding: 1rem; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 1rem; direction: rtl;">
+                            <input type="email" name="email" id="quiz_email" placeholder="אימייל" required style="padding: 1rem; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 1rem;">
+                            
+                            <div style="display: flex; align-items: flex-start; gap: 0.5rem; margin-top: 0.2rem;">
+                                <input type="checkbox" id="quiz_consent" name="consent_checkbox" required style="margin-top: 0.3rem; accent-color: var(--color-accent); width: 16px; height: 16px;">
+                                <label for="quiz_consent" style="font-size: 0.9rem; color: #475569; line-height: 1.4;">אני מאשר/ת את <a href="../privacy-policy.html" target="_blank" style="text-decoration: underline; color: inherit;">מדיניות הפרטיות</a> ומאשר/ת שיחזרו אליי.</label>
+                            </div>
+
+                            <button type="submit" id="btn-quiz-submit" style="background: var(--color-accent); color: white; padding: 1.1rem 2rem; border-radius: 50px; font-weight: 800; font-size: 1.2rem; border: none; cursor: pointer; margin-top: 0.5rem; box-shadow: 0 10px 20px -5px rgba(23,116,105,0.4); display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
+                                <span>לקביעת שיחת ייעוץ ללא עלות</span>
+                                <i class="fa-solid fa-chevron-left" style="font-size: 1rem;"></i>
+                            </button>
+                        </form>
                     </div>
                     
-                    <p style="text-align: center; font-size: 0.75rem; color: #94A3B8; margin-bottom: 2.5rem; max-width: 400px; margin-left: auto; margin-right: auto;">*הסכום מבוסס על התשובות שלכם ועל החשיפות האפשריות לפי החוק ואינו קנס שנקבע בפועל.</p>
+                    <p style="text-align: center; font-size: 0.75rem; color: #94A3B8; margin-bottom: 2rem; max-width: 400px; margin-left: auto; margin-right: auto;">*הסכום מבוסס על התשובות שלכם ועל החשיפות האפשריות לפי החוק ואינו קנס שנקבע בפועל.</p>
+
+                    <div class="restart-wrapper" style="text-align: center; margin-bottom: 1.5rem;">
+                        <button onclick="sessionStorage.removeItem('privacy_hive_quiz_state'); window.location.reload();" style="background: none; border: none; color: #64748B; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 700;">
+                            <i class="fa-solid fa-rotate-right"></i> להתחלה מחדש
+                        </button>
+                    </div>
 
                     <!-- Breakdown -->
-                    <h2 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem; color: var(--color-primary-dark); text-align: right; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.5rem;">איך הגענו לסכום הזה?</h2>
+                    <h2 class="breakdown-title" style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem; color: var(--color-primary-dark); text-align: right; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.5rem;">איך הגענו לסכום הזה?</h2>
                     
-                    <div id="gaps-list" style="margin-bottom: 3rem;"></div>
+                    <div id="gaps-list" style="margin-bottom: 2.5rem;"></div>
 
-                    <!-- Lead Form -->
-                    <div id="quiz-lead-form-section" style="background: #F8FAFC; padding: 2rem 1.5rem; border-radius: 12px; border: 1px solid #E2E8F0;">
-                        <h2 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-primary-dark); text-align: center;">רוצים שנעזור לכם להסדיר את הליקויים?</h2>
-                        <p style="color: #475569; font-size: 1rem; margin-bottom: 1.5rem; text-align: center;">קבעו שיחת ייעוץ ראשונית ללא עלות עם מומחי Privacy Hive.</p>
-                        
-                        <form id="quiz-lead-form" style="display: flex; flex-direction: column; gap: 1rem;">
-                            <input type="text" placeholder="שם מלא" required style="padding: 1rem; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 1rem;">
-                            <input type="tel" placeholder="טלפון" required style="padding: 1rem; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 1rem; direction: rtl;">
-                            <input type="email" placeholder="אימייל" required style="padding: 1rem; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 1rem;">
-                            <button type="submit" style="background: var(--color-primary); color: white; padding: 1rem; border-radius: 8px; font-weight: 800; font-size: 1.1rem; border: none; cursor: pointer; margin-top: 0.5rem;">לקביעת שיחת ייעוץ ללא עלות</button>
-                        </form>
+                    <!-- Founders Image -->
+                    <div style="text-align: center; border-radius: 12px; overflow: hidden; display: flex; justify-content: center; background: white;">
+                        <img src="../assets/quiz-welcome.jpg" alt="מומחי Privacy Hive" style="max-width: 100%; height: auto; display: block;">
                     </div>
                 </div>
                 
@@ -302,6 +331,13 @@
                 </div>
 
             </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="../privacy-policy.html" target="_blank" style="color: white; font-size: 0.9rem; text-decoration: none; margin: 0 0.5rem;">מדיניות פרטיות</a>
+                <span style="color: rgba(255,255,255,0.3);">|</span>
+                <a href="../accessibility.html" target="_blank" style="color: white; font-size: 0.9rem; text-decoration: none; margin: 0 0.5rem;">הצהרת נגישות</a>
+            </div>
+            
         </div>
     </main>
 
