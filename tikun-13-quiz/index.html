@@ -21,7 +21,7 @@
         .quiz-header { background-color: rgba(255, 255, 255, 0.96); padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
         .quiz-header .logo img { height: 44px; }
         .quiz-hero { flex: 1; padding: 2.5rem 1rem 4rem; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .quiz-container { width: 100%; max-width: 850px; margin: 0 auto; transition: max-width 0.4s ease; }
+        .quiz-container { width: 100%; max-width: 950px; margin: 0 auto; transition: max-width 0.4s ease; }
         .quiz-card { background: #FFFFFF; border-radius: var(--radius-lg); padding: 2.5rem 2rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4); overflow: hidden; }
         .quiz-top-controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
         .quiz-back-btn { background: none; border: none; color: var(--color-muted); font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem; }
@@ -68,32 +68,33 @@
 
                 <!-- 0. Welcome Screen -->
                 <div class="quiz-screen active" id="screen-0">
-                    <div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 2rem;">
+                    <div style="display: flex; flex-wrap: wrap; align-items: stretch; margin: -2.5rem -2rem;">
                         
                         <!-- Text Content -->
-                        <div style="flex: 1; min-width: 300px; padding: 1rem; display: flex; flex-direction: column; justify-content: center;">
-                            <h1 style="font-size: 2.2rem; font-weight: 900; color: var(--color-primary-dark); margin-bottom: 0.2rem; line-height: 1.2;">נעים להכיר, אנחנו Privacy Hive</h1>
-                            <div style="margin-bottom: 1.5rem; display: inline-block;">
-                                <h2 style="font-size: 1.4rem; color: var(--color-accent); font-weight: 800; margin: 0;">מומחים לפרטיות ואבטחת מידע.</h2>
-                                <div style="height: 3px; background: var(--color-accent); width: 100%; margin-top: 5px; border-radius: 2px; opacity: 0.5;"></div>
+                        <div style="flex: 1; min-width: 300px; padding: 4rem 3rem 4rem 2rem; display: flex; flex-direction: column; justify-content: center;">
+                            <h1 style="font-size: 2.8rem; font-weight: 900; color: var(--color-primary-dark); margin-bottom: 0.2rem; line-height: 1.1;">נעים להכיר, אנחנו<br>Privacy Hive</h1>
+                            <div style="margin-bottom: 2rem; display: inline-block; align-self: flex-start;">
+                                <h2 style="font-size: 1.6rem; color: var(--color-accent); font-weight: 800; margin: 0;">מומחים לפרטיות ואבטחת מידע.</h2>
+                                <div style="height: 3px; background: var(--color-accent); width: 100%; margin-top: 5px; border-radius: 2px; opacity: 0.6;"></div>
                             </div>
                             
-                            <p style="font-size: 1.1rem; color: #475569; line-height: 1.6; margin-bottom: 1.5rem;">
+                            <p style="font-size: 1.2rem; color: #475569; line-height: 1.6; margin-bottom: 1.5rem; max-width: 90%;">
                                 יצרנו שאלון קצר שיעזור לכם להבין <strong>עד כמה העסק שלכם חשוף משפטית</strong> לפי חוק הגנת הפרטיות וחוק הספאם.
                             </p>
-                            <p style="font-size: 1rem; color: #475569; line-height: 1.5; margin-bottom: 2.5rem;">
+                            <p style="font-size: 1.1rem; color: #475569; line-height: 1.5; margin-bottom: 2.5rem; max-width: 90%;">
                                 בסיום השאלון תדעו אילו דרישות חלות עליכם, אילו ליקויים קיימים ומה החשיפה האפשרית שלכם לעיצומים ותביעות.
                             </p>
                             
-                            <button id="btn-start-quiz" style="width: 100%; max-width: 320px; background: var(--color-accent); color: white; padding: 1.1rem; border-radius: 50px; font-weight: 800; font-size: 1.2rem; border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 10px 20px -5px rgba(63,168,152,0.4); transition: transform 0.2s;">
+                            <button id="btn-start-quiz" style="width: 100%; max-width: 280px; background: var(--color-accent); color: white; padding: 1.2rem; border-radius: 50px; font-weight: 800; font-size: 1.3rem; border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 10px 25px -5px rgba(63,168,152,0.4); transition: transform 0.2s;">
+                                <i class="fa-solid fa-chevron-right" style="opacity: 0;"></i>
                                 <span>בואו נתחיל</span>
                                 <i class="fa-solid fa-chevron-left"></i>
                             </button>
                         </div>
                         
                         <!-- Image Content -->
-                        <div style="flex: 1; min-width: 250px; display: flex; justify-content: center; align-items: flex-end; order: 2;" class="welcome-img-wrapper">
-                            <img src="../assets/quiz-welcome.jpg" alt="מומחי Privacy Hive - עו״ד מוטי כהן ומאיה ויסמן" style="max-width: 100%; height: auto; display: block; margin-bottom: -2.5rem;">
+                        <div style="flex: 1; min-width: 300px; display: flex; justify-content: flex-end; align-items: flex-end; order: 2; background: linear-gradient(to right, rgba(63,168,152,0.05), transparent);" class="welcome-img-wrapper">
+                            <img src="../assets/quiz-welcome.jpg" alt="מומחי Privacy Hive" style="max-width: 100%; width: 100%; height: auto; display: block; object-fit: contain; object-position: bottom left;">
                         </div>
                         
                     </div>
