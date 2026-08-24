@@ -29,6 +29,9 @@
 
     document.querySelectorAll('.quiz-option-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
+            if(state.isTransitioning) return;
+            state.isTransitioning = true;
+            
             const button = e.target;
             const q = button.getAttribute('data-q');
             const val = button.getAttribute('data-val');
@@ -42,6 +45,7 @@
             // Delay before moving next
             setTimeout(() => {
                 handleNext(q, val);
+                state.isTransitioning = false;
             }, 400); // 400ms delay
         });
     });
