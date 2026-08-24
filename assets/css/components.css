@@ -9,9 +9,14 @@
     font-size: 1.125rem;
     text-align: center;
     cursor: pointer;
-    transition: all var(--transition-smooth);
+    transition: all var(--transition-fast); /* Faster base transition */
     border: none;
     outline: none;
+}
+
+.btn:active {
+    opacity: 0.8 !important;
+    transition: opacity 50ms ease-out !important; /* Apple Design: Instant feedback on press, without breaking hit target */
 }
 
 .btn-primary {
@@ -178,19 +183,23 @@
     padding: 2.5rem 2rem;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
-    transition: all var(--transition-smooth);
     border: 1px solid rgba(226, 232, 240, 0.5); /* Ultra subtle border */
     position: relative;
     overflow: hidden;
     text-decoration: none; /* In case card is a link */
     display: block;
     color: var(--color-text);
+    /* transition: all var(--transition-smooth); Removed to allow JS Spring animations */
 }
 
+/* Base Hover properties to be managed by JS for full fluid physics */
 .card:hover {
-    transform: translateY(-8px);
     box-shadow: var(--shadow-floating);
     border-color: rgba(63, 168, 152, 0.3);
+}
+
+.card:active {
+    transform: scale(0.98) !important; /* Instant response fallback */
 }
 
 /* Pill Icon inside card */
