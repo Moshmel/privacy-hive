@@ -57,7 +57,7 @@
             .welcome-text-col p { font-size: 1.05rem !important; margin-left: auto; margin-right: auto; }
             .welcome-text-col button { margin: 0 auto; }
             .welcome-img-wrapper { flex: 1 1 100% !important; align-items: center !important; padding-top: 1rem; }
-            .welcome-img-wrapper img { margin-bottom: 0 !important; margin-left: 0 !important; max-width: 90% !important; width: 100% !important; border-radius: 16px; }
+            .welcome-img-wrapper img { margin-bottom: 0 !important; margin-left: 0 !important; margin-right: 0 !important; max-width: 90% !important; width: 100% !important; border-radius: 16px; }
             .quiz-card { padding: 1.5rem 1rem !important; }
             .q-title { font-size: 1.3rem !important; }
             .welcome-layout { margin: 0 !important; } /* Fix negative margin breakout on mobile */
@@ -70,8 +70,9 @@
     <main class="quiz-hero">
         <div class="quiz-container">
             <div class="quiz-card">
-                <div style="text-align: right; margin-bottom: 0.5rem; position: relative; z-index: 10;" id="quiz-logo-container">
-                    <a href="../index.html"><img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive" style="height: 40px;"></a>
+                
+                <div class="quiz-top-controls" id="quiz-top-controls" style="display: none; justify-content: center; margin-bottom: 1.5rem;">
+                    <img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive" style="height: 35px;">
                 </div>
                 
                 <div class="quiz-progress-wrapper" id="quiz-progress-container" style="display: none;">
@@ -83,7 +84,13 @@
                     <div class="welcome-layout" style="display: flex; flex-wrap: wrap; align-items: stretch; margin: 0 -2rem -2.5rem -2rem; min-height: 520px;">
                         
                         <!-- Text Content -->
-                        <div class="welcome-text-col" style="flex: 0 0 55%; padding: 0 2rem 2rem 2rem; display: flex; flex-direction: column; justify-content: center;">
+                        <div class="welcome-text-col" style="flex: 0 0 55%; padding: 3rem 2rem 2rem 2rem; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 10;">
+                            
+                            <!-- Logo inside text column -->
+                            <div style="margin-bottom: 2rem;">
+                                <img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive" style="height: 45px;">
+                            </div>
+
                             <h1 style="font-size: 2.8rem; font-weight: 900; color: var(--color-primary-dark); margin-bottom: 10px; line-height: 1.1;">נעים להכיר, אנחנו<br>Privacy Hive</h1>
                             <div style="margin-bottom: 30px; display: inline-block; align-self: flex-start;">
                                 <h2 style="font-size: 1.5rem; color: var(--color-accent); font-weight: 800; margin: 0;">מומחים לפרטיות ואבטחת מידע.</h2>
@@ -105,8 +112,8 @@
                         </div>
                         
                         <!-- Image Content -->
-                        <div class="welcome-img-wrapper" style="flex: 0 0 45%; display: flex; justify-content: flex-end; align-items: flex-end; position: relative; overflow: hidden;">
-                            <img src="../assets/quiz-welcome.jpg" alt="מומחי Privacy Hive" style="width: 145%; max-width: none; height: auto; display: block; object-fit: contain; object-position: bottom left; margin-left: -15%;">
+                        <div class="welcome-img-wrapper" style="flex: 0 0 45%; display: flex; justify-content: flex-end; align-items: flex-end; position: relative; z-index: 1;">
+                            <img src="../assets/quiz-welcome.jpg" alt="מומחי Privacy Hive" style="width: 120%; max-width: none; height: auto; display: block; object-fit: contain; object-position: bottom left; margin-left: -20%;">
                         </div>
                         
                     </div>
