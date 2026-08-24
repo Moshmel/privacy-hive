@@ -2,1028 +2,249 @@
 <html lang="he" dir="rtl">
 
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-W3L9PDVP');</script>
-    <!-- End Google Tag Manager -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>שאלון חשיפה לקנסות ותביעות לפי תיקון 13 | Privacy Hive</title>
-    <meta name="description" content="שאלון אינטראקטיבי קצר ומהיר לבדיקת החשיפה של העסק לקנסות ותביעות לפי תיקון 13 לחוק הגנת הפרטיות.">
+    <title>שאלון חשיפה לקנסות ותביעות לפי חוק הגנת הפרטיות | Privacy Hive</title>
+    <meta name="description" content="שאלון אינטראקטיבי לבדיקת החשיפה של העסק לקנסות ותביעות לפי תיקון 13 לחוק הגנת הפרטיות וחוק הספאם.">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Privacy Hive CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <link rel="stylesheet" href="../assets/css/variables.css">
     <link rel="stylesheet" href="../assets/css/global.css?v=1.2">
     <link rel="stylesheet" href="../assets/css/components.css?v=1.2">
 
     <style>
-        /* Quiz Specific Scoped Styles */
-        body {
-            background-color: var(--color-primary-dark);
-            background-image: radial-gradient(circle at 100% 0%, rgba(52, 120, 154, 0.25) 0%, transparent 55%),
-                              radial-gradient(circle at 0% 100%, rgba(63, 168, 152, 0.18) 0%, transparent 55%);
-            background-attachment: fixed;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .quiz-header {
-            background-color: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(226, 232, 240, 0.2);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .quiz-header-inner {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .quiz-header .logo img {
-            height: 44px;
-        }
-
-        .quiz-hero {
-            flex: 1;
-            padding: 2.5rem 1rem 4rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .quiz-container {
-            width: 100%;
-            max-width: 580px;
-            margin: 0 auto;
-        }
-
-        .quiz-card {
-            background: #FFFFFF;
-            border-radius: var(--radius-lg);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
-            padding: 2.5rem 2rem;
-            position: relative;
-            overflow: hidden;
-            transition: all var(--transition-smooth);
-        }
-
-        /* Top Progress Bar & Header controls */
-        .quiz-top-controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .quiz-back-btn {
-            background: none;
-            border: none;
-            color: var(--color-muted);
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            transition: color var(--transition-fast);
-            padding: 0.4rem 0.6rem;
-            border-radius: 6px;
-        }
-
-        .quiz-back-btn:hover {
-            color: var(--color-primary);
-            background-color: var(--color-bg-soft);
-        }
-
-        .quiz-badge-step {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--color-accent);
-            background: rgba(63, 168, 152, 0.1);
-            padding: 0.35rem 0.85rem;
-            border-radius: var(--radius-pill);
-        }
-
-        .quiz-progress-wrapper {
-            width: 100%;
-            height: 6px;
-            background-color: #E2E8F0;
-            border-radius: 999px;
-            overflow: hidden;
-            margin-bottom: 2rem;
-            display: none;
-        }
-
-        .quiz-progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-accent) 100%);
-            width: 0%;
-            transition: width 0.35s ease-in-out;
-            border-radius: 999px;
-        }
-
-        /* Screen Animations */
-        .quiz-screen {
-            opacity: 1;
-            transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
-        }
-
-        .quiz-screen.hidden {
-            display: none;
-            opacity: 0;
-            transform: translateY(8px);
-        }
-
-        .quiz-screen.active {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Welcome Screen */
-        .welcome-badge {
-            display: inline-block;
-            padding: 0.4rem 1.1rem;
-            background: rgba(63, 168, 152, 0.12);
-            color: var(--color-accent);
-            font-weight: 800;
-            font-size: 0.95rem;
-            border-radius: var(--radius-pill);
-            margin-bottom: 1.2rem;
-        }
-
-        .welcome-title {
-            font-size: 2.1rem;
-            font-weight: 900;
-            color: var(--color-heading);
-            line-height: 1.3;
-            margin-bottom: 1rem;
-        }
-
-        .welcome-text {
-            font-size: 1.15rem;
-            color: var(--color-muted);
-            margin-bottom: 2.2rem;
-        }
-
-        .btn-start {
-            width: 100%;
-            background-color: var(--color-accent);
-            color: white;
-            padding: 1.1rem 2rem;
-            border-radius: var(--radius-pill);
-            font-size: 1.25rem;
-            font-weight: 800;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 10px 20px -5px rgba(63, 168, 152, 0.4);
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.6rem;
-        }
-
-        .btn-start:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 25px -5px rgba(63, 168, 152, 0.5);
-            background-color: var(--color-accent-dark);
-        }
-
-        .subtext-timer {
-            font-size: 0.9rem;
-            color: #94A3B8;
-            margin-top: 1rem;
-            text-align: center;
-            font-weight: 500;
-        }
-
-        /* Question Screens */
-        .q-title {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--color-heading);
-            margin-bottom: 0.6rem;
-            line-height: 1.35;
-        }
-
-        .q-helper {
-            font-size: 1rem;
-            color: var(--color-muted);
-            margin-bottom: 1.8rem;
-            line-height: 1.5;
-        }
-
-        .quiz-options-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.9rem;
-        }
-
-        .quiz-option-btn {
-            width: 100%;
-            text-align: right;
-            padding: 1.1rem 1.3rem;
-            background: #F8FAFC;
-            border: 2px solid #E2E8F0;
-            border-radius: var(--radius-md);
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--color-heading);
-            cursor: pointer;
-            transition: all var(--transition-fast);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            outline: none;
-        }
-
-        .quiz-option-btn:hover {
-            border-color: var(--color-accent);
-            background-color: white;
-            box-shadow: 0 4px 12px rgba(63, 168, 152, 0.12);
-            transform: translateY(-1px);
-        }
-
-        .quiz-option-btn.selected {
-            border-color: var(--color-accent);
-            background-color: rgba(63, 168, 152, 0.08);
-            color: var(--color-primary);
-        }
-
-        .quiz-option-btn .opt-arrow {
-            color: #94A3B8;
-            font-size: 0.9rem;
-            transition: transform var(--transition-fast), color var(--transition-fast);
-        }
-
-        .quiz-option-btn:hover .opt-arrow {
-            color: var(--color-accent);
-            transform: translateX(-4px);
-        }
-
-        /* Results Screen */
-        .results-header {
-            text-align: center;
-            margin-bottom: 1.8rem;
-        }
-
-        .risk-badge {
-            display: inline-block;
-            padding: 0.3rem 0.9rem;
-            border-radius: var(--radius-pill);
-            font-weight: 800;
-            font-size: 1.2rem;
-            margin-right: 0.4rem;
-        }
-
-        .risk-high { background-color: #FEE2E2; color: #DC2626; }
-        .risk-medium { background-color: #FEF3C7; color: #D97706; }
-        .risk-low { background-color: #D1FAE5; color: #059669; }
-
-        .results-amount-card {
-            background: linear-gradient(135deg, var(--color-primary) 0%, #1E293B 100%);
-            color: white;
-            padding: 1.8rem 1.5rem;
-            border-radius: var(--radius-md);
-            text-align: center;
-            margin-bottom: 1.5rem;
-            box-shadow: var(--shadow-md);
-        }
-
-        .results-amount-card .amount-text {
-            font-size: 1.25rem;
-            color: #F8FAFC;
-            margin: 0;
-            line-height: 1.5;
-        }
-
-        .results-amount-card strong {
-            color: #5EEAD4;
-            font-size: 1.7rem;
-            font-weight: 900;
-            display: inline-block;
-            margin: 0 0.2rem;
-        }
-
-        .gaps-summary-text {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--color-heading);
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .btn-cta-main {
-            width: 100%;
-            background-color: var(--color-accent);
-            color: white;
-            padding: 1.15rem 1.8rem;
-            border-radius: var(--radius-pill);
-            font-size: 1.2rem;
-            font-weight: 800;
-            border: none;
-            cursor: pointer;
-            box-shadow: var(--shadow-accent);
-            transition: all var(--transition-smooth);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.6rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .btn-cta-main:hover {
-            background-color: var(--color-accent-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 15px 25px -5px rgba(63, 168, 152, 0.5);
-        }
-
-        .btn-toggle-gaps {
-            background: none;
-            border: none;
-            color: var(--color-secondary);
-            font-size: 0.95rem;
-            font-weight: 700;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            margin: 0 auto;
-            padding: 0.4rem 0.8rem;
-            transition: color var(--transition-fast);
-        }
-
-        .btn-toggle-gaps:hover {
-            color: var(--color-accent);
-        }
-
-        .gaps-list-box {
-            background-color: var(--color-bg-soft);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-md);
-            padding: 1.2rem 1.5rem;
-            margin-top: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .gaps-list-box ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .gaps-list-box li {
-            position: relative;
-            padding-right: 1.5rem;
-            font-size: 1rem;
-            color: var(--color-text);
-            font-weight: 600;
-            margin-bottom: 0.6rem;
-        }
-
-        .gaps-list-box li:last-child {
-            margin-bottom: 0;
-        }
-
-        .gaps-list-box li::before {
-            content: "\f00d";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            color: #EF4444;
-            position: absolute;
-            right: 0;
-            top: 2px;
-            font-size: 0.85rem;
-        }
-
-        .quiz-disclaimer {
-            font-size: 0.82rem;
-            color: #94A3B8;
-            text-align: center;
-            margin-top: 1.8rem;
-            margin-bottom: 0;
-            line-height: 1.4;
-        }
-
-        .btn-restart-quiz {
-            background: none;
-            border: none;
-            color: var(--color-muted);
-            font-size: 0.88rem;
-            font-weight: 600;
-            cursor: pointer;
-            display: block;
-            margin: 1.2rem auto 0;
-            text-decoration: underline;
-        }
-
-        .btn-restart-quiz:hover {
-            color: var(--color-primary);
-        }
-
-        /* Lead Form Screen */
-        .form-title {
-            font-size: 1.7rem;
-            font-weight: 800;
-            color: var(--color-heading);
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-
-        .form-subtitle {
-            font-size: 1rem;
-            color: var(--color-muted);
-            text-align: center;
-            margin-bottom: 1.8rem;
-        }
-
-        .form-error-alert {
-            background-color: #FEE2E2;
-            color: #991B1B;
-            border: 1px solid #FCA5A5;
-            padding: 0.8rem 1rem;
-            border-radius: var(--radius-md);
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-bottom: 1.2rem;
-            text-align: center;
-            display: none;
-        }
-
-        .form-control {
-            text-align: right !important;
-            direction: rtl !important;
-        }
-
-        .form-control::placeholder {
-            text-align: right !important;
-            direction: rtl !important;
-        }
-
-        .quiz-consent-group {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.6rem;
-            text-align: right;
-            margin-top: 0.5rem;
-            margin-bottom: 1.2rem;
-            font-size: 0.9rem;
-            color: var(--color-text);
-        }
-
-        .quiz-consent-group input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            margin-top: 0.15rem;
-            accent-color: var(--color-accent);
-            cursor: pointer;
-            flex-shrink: 0;
-        }
-
-        .quiz-consent-group label {
-            cursor: pointer;
-            line-height: 1.4;
-        }
-
-        .honeypot-field {
-            display: none !important;
-            visibility: hidden !important;
-        }
-
-        /* Thank You Screen */
-        .thank-you-box {
-            text-align: center;
-            padding: 1rem 0;
-        }
-
-        .success-icon-wrap {
-            width: 72px;
-            height: 72px;
-            background: rgba(63, 168, 152, 0.12);
-            color: var(--color-accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.2rem;
-            margin: 0 auto 1.5rem;
-        }
-
-        .thank-you-title {
-            font-size: 2rem;
-            font-weight: 900;
-            color: var(--color-primary);
-            margin-bottom: 0.6rem;
-        }
-
-        .thank-you-text {
-            font-size: 1.15rem;
-            color: var(--color-muted);
-            margin-bottom: 2rem;
-        }
-
-        .thank-you-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        /* Extra Responsive adjustments down to 320px */
-        @media (max-width: 480px) {
-            .quiz-hero {
-                padding: 1.2rem 0.5rem 2.5rem;
-            }
-            .quiz-card {
-                padding: 1.8rem 1.2rem;
-                border-radius: var(--radius-md);
-            }
-            .welcome-title {
-                font-size: 1.65rem;
-            }
-            .q-title {
-                font-size: 1.3rem;
-            }
-            .quiz-option-btn {
-                padding: 0.95rem 1rem;
-                font-size: 1rem;
-            }
-            .results-amount-card strong {
-                font-size: 1.45rem;
-            }
-            .results-amount-card .amount-text {
-                font-size: 1.1rem;
-            }
-        }
-
-        @media (max-width: 340px) {
-            .quiz-card {
-                padding: 1.4rem 0.9rem;
-            }
-            .welcome-title {
-                font-size: 1.45rem;
-            }
-            .btn-start, .btn-cta-main {
-                font-size: 1.05rem;
-                padding: 1rem;
-            }
-        }
+        body { background-color: var(--color-primary-dark); min-height: 100vh; display: flex; flex-direction: column; }
+        .quiz-header { background-color: rgba(255, 255, 255, 0.96); padding: 1rem 0; position: sticky; top: 0; z-index: 1000; }
+        .quiz-header .logo img { height: 44px; }
+        .quiz-hero { flex: 1; padding: 2.5rem 1rem 4rem; display: flex; align-items: center; justify-content: center; }
+        .quiz-container { width: 100%; max-width: 580px; margin: 0 auto; }
+        .quiz-card { background: #FFFFFF; border-radius: var(--radius-lg); padding: 2.5rem 2rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4); }
+        .quiz-top-controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+        .quiz-back-btn { background: none; border: none; color: var(--color-muted); font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem; }
+        .quiz-progress-wrapper { width: 100%; height: 6px; background-color: #E2E8F0; border-radius: 999px; margin-bottom: 2rem; display: none; }
+        .quiz-progress-fill { height: 100%; background: var(--color-accent); width: 0%; transition: width 0.35s; border-radius: 999px; }
+        
+        @keyframes fadeInScreen {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .quiz-screen { display: none; }
+        .quiz-screen.active { display: block; animation: fadeInScreen 0.4s ease forwards; }
+        .quiz-option-btn { width: 100%; text-align: right; padding: 1.1rem; background: #F8FAFC; border: 2px solid #E2E8F0; border-radius: var(--radius-md); font-weight: 700; margin-bottom: 0.9rem; cursor: pointer; transition: all 0.2s; }
+        .quiz-option-btn:hover { border-color: var(--color-accent); background: #F0FDFA; }
+        .quiz-option-btn.selected { border-color: var(--color-accent); background: #CCFBF1; transform: scale(0.98); }
+        .q-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.6rem; }
+        .q-helper { font-size: 1rem; color: var(--color-muted); margin-bottom: 1.8rem; }
+        
+        .gap-card { background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
+        .gap-card h3 { color: #DC2626; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .gap-card p { color: #475569; font-size: 0.95rem; margin-bottom: 0.8rem; }
+        .gap-card .fine { font-weight: 800; color: #1E293B; background: #F1F5F9; padding: 0.5rem 1rem; border-radius: 6px; display: inline-block; font-size: 0.95rem;}
+        .fine.lawsuit { color: #EA580C; background: #FFF7ED; }
     </style>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18176010346"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-18176010346');
-    </script>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3L9PDVP"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <!-- Header (Logo Only) -->
     <header class="quiz-header">
-        <div class="container quiz-header-inner">
-            <div class="logo">
-                <a href="../"><img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive Logo"></a>
-            </div>
+        <div class="container" style="display:flex; justify-content:center;">
+            <a href="../index.html" class="logo"><img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive"></a>
         </div>
     </header>
 
-    <!-- Main Quiz Section -->
-    <section class="quiz-hero">
-        <div class="container quiz-container">
-            <div class="quiz-card" id="quiz-main-card">
-                
-                <!-- Top Progress Controls -->
-                <div class="quiz-top-controls">
-                    <button type="button" class="quiz-back-btn" id="quiz-back-btn" style="display: none;">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <span>חזרה</span>
-                    </button>
-                    <div class="quiz-badge-step" id="step-badge-container" style="display: none;">
-                        שאלה <span id="current-question-num">1</span> מתוך <span id="total-questions-num">8</span>
-                    </div>
+    <main class="quiz-hero">
+        <div class="quiz-container">
+            <div class="quiz-card">
+                <div class="quiz-top-controls" id="quiz-top-controls" style="display: none; justify-content: center;">
+                    <img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive" style="height: 35px;">
                 </div>
-
-                <!-- Progress Bar -->
                 <div class="quiz-progress-wrapper" id="quiz-progress-container">
                     <div class="quiz-progress-fill" id="quiz-progress-bar"></div>
                 </div>
 
-                <!-- SCREEN 0: Welcome Screen -->
-                <div class="quiz-screen active" id="screen-welcome">
-                    <div style="text-align: center;">
-                        <div class="welcome-badge">בחנו את עצמכם</div>
-                        <h1 class="welcome-title">האם אתם חשופים לקנסות ותביעות לפי תיקון 13?</h1>
-                        <p class="welcome-text">ענו על כמה שאלות וקבלו תוצאה מיידית.</p>
-                        
-                        <button type="button" class="btn-start" id="btn-start-quiz">
-                            <span>התחילו את הבדיקה</span>
-                            <i class="fa-solid fa-arrow-left"></i>
-                        </button>
-                        
-                        <p class="subtext-timer">פחות מדקה</p>
-                    </div>
+                <!-- 0. Welcome Screen -->
+                <div class="quiz-screen active" id="screen-0">
+                    <h1 style="font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem;">נעים להכיר, אנחנו Privacy Hive</h1>
+                    <h2 style="font-size: 1.3rem; color: var(--color-accent); margin-bottom: 1rem;">מומחים לפרטיות ואבטחת מידע.</h2>
+                    <p style="font-size: 1.1rem; color: #475569; line-height: 1.6; margin-bottom: 2rem;">
+                        יצרנו שאלון קצר שיעזור לכם להבין <strong>עד כמה העסק שלכם חשוף משפטית</strong> לפי חוק הגנת הפרטיות וחוק הספאם.<br><br>
+                        בסיום השאלון תדעו אילו דרישות חלות עליכם, אילו ליקויים קיימים ומה החשיפה האפשרית שלכם לעיצומים ותביעות.
+                    </p>
+                    <button id="btn-start-quiz" style="width: 100%; background: var(--color-accent); color: white; padding: 1rem; border-radius: 50px; font-weight: 800; font-size: 1.2rem; border: none; cursor: pointer;">בואו נתחיל</button>
                 </div>
 
-                <!-- SCREEN 1: Q1 (has_website) -->
-                <div class="quiz-screen hidden" id="screen-q1">
-                    <h2 class="q-title">האם יש לכם אתר אינטרנט?</h2>
-                    <p class="q-helper">&nbsp;</p>
-                    <div class="quiz-options-group">
-                        <button type="button" class="quiz-option-btn" data-question="has_website" data-value="yes" data-qnum="1">
-                            <span>כן</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="has_website" data-value="no" data-qnum="1">
-                            <span>לא</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                    </div>
+                <!-- 1. Employee Count -->
+                <div class="quiz-screen" id="screen-1">
+                    <h2 class="q-title">כמה אנשים עובדים בעסק?</h2>
+                    <p class="q-helper">ככל שליותר אנשים יש גישה למידע, דרישות אבטחת המידע עשויות להיות מחמירות יותר.</p>
+                    <button class="quiz-option-btn" data-q="q1" data-val="1-3">1 עד 3</button>
+                    <button class="quiz-option-btn" data-q="q1" data-val="4-10">4 עד 10</button>
+                    <button class="quiz-option-btn" data-q="q1" data-val="11-100">11 עד 100</button>
+                    <button class="quiz-option-btn" data-q="q1" data-val="100+">יותר מ-100</button>
                 </div>
 
-                <!-- SCREEN 2: Q2 (has_crm) -->
-                <div class="quiz-screen hidden" id="screen-q2">
-                    <h2 class="q-title">האם יש לכם מערכת לניהול לקוחות, CRM?</h2>
-                    <p class="q-helper">&nbsp;</p>
-                    <div class="quiz-options-group">
-                        <button type="button" class="quiz-option-btn" data-question="has_crm" data-value="yes" data-qnum="2">
-                            <span>כן</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="has_crm" data-value="no" data-qnum="2">
-                            <span>לא</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="has_crm" data-value="not_sure" data-qnum="2">
-                            <span>לא בטוחים</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                    </div>
+                <!-- 2. Customer Count -->
+                <div class="quiz-screen" id="screen-2">
+                    <h2 class="q-title">בערך על כמה אנשים יש לכם מידע שמור?</h2>
+                    <p class="q-helper">כמות האנשים שעליהם נשמר מידע משפיעה על רמת האבטחה והדרישות שחלות על העסק.</p>
+                    <button class="quiz-option-btn" data-q="q2" data-val="under_10k">עד 10,000</button>
+                    <button class="quiz-option-btn" data-q="q2" data-val="10k_100k">10,000 עד 100,000</button>
+                    <button class="quiz-option-btn" data-q="q2" data-val="over_100k">יותר מ-100,000</button>
+                    <button class="quiz-option-btn" data-q="q2" data-val="not_sure">לא יודעים</button>
                 </div>
 
-                <!-- SCREEN 3: Q3 (privacy_policy) - Conditional -->
-                <div class="quiz-screen hidden" id="screen-q3">
-                    <h2 class="q-title">האם באתר יש מדיניות פרטיות תקינה ומעודכנת?</h2>
-                    <p class="q-helper">&nbsp;</p>
-                    <div class="quiz-options-group">
-                        <button type="button" class="quiz-option-btn" data-question="privacy_policy" data-value="yes" data-qnum="3">
-                            <span>כן</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="privacy_policy" data-value="no" data-qnum="3">
-                            <span>לא</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="privacy_policy" data-value="not_sure" data-qnum="3">
-                            <span>לא בטוחים</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                    </div>
+                <!-- 3. Customer Data Types -->
+                <div class="quiz-screen" id="screen-3">
+                    <h2 class="q-title">איזה מידע אתם שומרים על הלקוחות שלכם?</h2>
+                    <p class="q-helper">מידע רגיש כמו מידע פיננסי או רפואי עשוי לחייב רמת הגנה גבוהה יותר. (סמנו את המחמיר ביותר)</p>
+                    <button class="quiz-option-btn" data-q="q3" data-val="basic">רק שם, טלפון או אימייל</button>
+                    <button class="quiz-option-btn" data-q="q3" data-val="financial">מידע פיננסי</button>
+                    <button class="quiz-option-btn" data-q="q3" data-val="medical">מידע רפואי</button>
+                    <button class="quiz-option-btn" data-q="q3" data-val="biometric">מידע פלילי או ביומטרי</button>
+                    <button class="quiz-option-btn" data-q="q3" data-val="other_sensitive">מידע אישי רגיש אחר</button>
                 </div>
 
-                <!-- SCREEN 4: Q4 (database_definition) -->
-                <div class="quiz-screen hidden" id="screen-q4">
+                <!-- 4. Employee Data Types -->
+                <div class="quiz-screen" id="screen-4">
+                    <h2 class="q-title">איזה מידע אתם שומרים על העובדים שלכם?</h2>
+                    <p class="q-helper">מידע על שכר, בריאות או מידע אישי רגיש אחר עשוי להשפיע על דרישות אבטחת המידע.</p>
+                    <button class="quiz-option-btn" data-q="q4" data-val="basic">רק פרטים בסיסיים</button>
+                    <button class="quiz-option-btn" data-q="q4" data-val="financial">מידע על שכר, בנק או פנסיה</button>
+                    <button class="quiz-option-btn" data-q="q4" data-val="medical">מידע רפואי</button>
+                    <button class="quiz-option-btn" data-q="q4" data-val="biometric">מידע פלילי או ביומטרי</button>
+                    <button class="quiz-option-btn" data-q="q4" data-val="other_sensitive">מידע אישי רגיש אחר</button>
+                    <button class="quiz-option-btn" data-q="q4" data-val="none">אין לנו עובדים</button>
+                </div>
+
+                <!-- 5. Website -->
+                <div class="quiz-screen" id="screen-5">
+                    <h2 class="q-title">האם יש לעסק אתר אינטרנט?</h2>
+                    <p class="q-helper">אם יש לכם אתר, נבדוק גם איך אתם אוספים מידע מהגולשים.</p>
+                    <button class="quiz-option-btn" data-q="q5" data-val="yes">כן</button>
+                    <button class="quiz-option-btn" data-q="q5" data-val="no">לא</button>
+                </div>
+
+                <!-- 5a. Collect Data -->
+                <div class="quiz-screen" id="screen-5a">
+                    <h2 class="q-title">האם אתם אוספים מידע דרך האתר?</h2>
+                    <p class="q-helper">למשל דרך טופס יצירת קשר, השארת ליד, הרשמה או רכישה.</p>
+                    <button class="quiz-option-btn" data-q="q5a" data-val="yes">כן</button>
+                    <button class="quiz-option-btn" data-q="q5a" data-val="no">לא</button>
+                    <button class="quiz-option-btn" data-q="q5a" data-val="not_sure">לא בטוח</button>
+                </div>
+
+                <!-- 5b. Privacy Policy -->
+                <div class="quiz-screen" id="screen-5b">
+                    <h2 class="q-title">האם יש באתר מדיניות פרטיות מעודכנת?</h2>
+                    <p class="q-helper">מדיניות שמסבירה איזה מידע אתם אוספים, למה משתמשים בו ומה הזכויות של המשתמשים.</p>
+                    <button class="quiz-option-btn" data-q="q5b" data-val="yes">כן</button>
+                    <button class="quiz-option-btn" data-q="q5b" data-val="no">לא</button>
+                    <button class="quiz-option-btn" data-q="q5b" data-val="not_sure">לא בטוח</button>
+                </div>
+
+                <!-- 6. Marketing -->
+                <div class="quiz-screen" id="screen-6">
+                    <h2 class="q-title">האם אתם שולחים הודעות פרסומיות ב SMS, מייל או WhatsApp?</h2>
+                    <p class="q-helper">למשל מבצעים, הצעות או פרסום של מוצרים ושירותים.</p>
+                    <button class="quiz-option-btn" data-q="q6" data-val="yes">כן</button>
+                    <button class="quiz-option-btn" data-q="q6" data-val="no">לא</button>
+                </div>
+
+                <!-- 6a. Marketing Legal -->
+                <div class="quiz-screen" id="screen-6a">
+                    <h2 class="q-title">האם אתם שולחים הודעות פרסומיות רק למי שאישר קבלת דיוור?</h2>
+                    <p class="q-helper">כלומר רק לאנשים שאישרו בצורה מפורשת קבלת דיוור ותוכן שיווקי.</p>
+                    <button class="quiz-option-btn" data-q="q6a" data-val="yes">כן</button>
+                    <button class="quiz-option-btn" data-q="q6a" data-val="no">לא</button>
+                    <button class="quiz-option-btn" data-q="q6a" data-val="not_sure">לא בטוח</button>
+                </div>
+
+                <!-- 7. Suppliers -->
+                <div class="quiz-screen" id="screen-7">
+                    <h2 class="q-title">האם לספקים חיצוניים יש גישה למידע שלכם?</h2>
+                    <p class="q-helper">למשל CRM, חברת מחשוב, הנהלת חשבונות, מערכת דיוור או ספק ענן.</p>
+                    <button class="quiz-option-btn" data-q="q7" data-val="yes">כן</button>
+                    <button class="quiz-option-btn" data-q="q7" data-val="no">לא</button>
+                    <button class="quiz-option-btn" data-q="q7" data-val="not_sure">לא בטוח</button>
+                </div>
+
+                <!-- 7a. Supplier Addendum -->
+                <div class="quiz-screen" id="screen-7a">
+                    <h2 class="q-title">האם הגישה של הספקים למידע מוסדרת בכתב?</h2>
+                    <p class="q-helper">הסכם או נספח שמגדיר מה מותר לספק לעשות עם המידע ואיך עליו להגן עליו.</p>
+                    <button class="quiz-option-btn" data-q="q7a" data-val="yes">כן</button>
+                    <button class="quiz-option-btn" data-q="q7a" data-val="no">לא</button>
+                    <button class="quiz-option-btn" data-q="q7a" data-val="not_sure">לא בטוח</button>
+                </div>
+
+                <!-- 8. Database Def -->
+                <div class="quiz-screen" id="screen-8">
                     <h2 class="q-title">האם יש לכם מסמך הגדרות מאגר?</h2>
-                    <p class="q-helper">מסמך שמפרט איזה מידע אתם שומרים ולמה.</p>
-                    <div class="quiz-options-group">
-                        <button type="button" class="quiz-option-btn" data-question="database_definition" data-value="yes" data-qnum="4">
-                            <span>כן</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="database_definition" data-value="no" data-qnum="4">
-                            <span>לא</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="database_definition" data-value="not_sure" data-qnum="4">
-                            <span>לא בטוחים</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                    </div>
+                    <p class="q-helper">מסמך פנימי שמפרט איזה מידע אתם שומרים, למה אתם משתמשים בו ומי ניגש אליו.</p>
+                    <button class="quiz-option-btn" data-q="q8" data-val="yes">כן</button>
+                    <button class="quiz-option-btn" data-q="q8" data-val="no">לא</button>
+                    <button class="quiz-option-btn" data-q="q8" data-val="not_sure">לא בטוח</button>
                 </div>
 
-                <!-- SCREEN 5: Q5 (security_procedure) -->
-                <div class="quiz-screen hidden" id="screen-q5">
+                <!-- 9. Security Procedure -->
+                <div class="quiz-screen" id="screen-9">
                     <h2 class="q-title">האם יש לכם נוהל אבטחת מידע?</h2>
-                    <p class="q-helper">&nbsp;</p>
-                    <div class="quiz-options-group">
-                        <button type="button" class="quiz-option-btn" data-question="security_procedure" data-value="yes" data-qnum="5">
-                            <span>כן</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="security_procedure" data-value="no" data-qnum="5">
-                            <span>לא</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="security_procedure" data-value="not_sure" data-qnum="5">
-                            <span>לא בטוחים</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                    </div>
+                    <p class="q-helper">מסמך שמגדיר איך שומרים על המידע ומה עושים במקרה של אירוע אבטחה.</p>
+                    <button class="quiz-option-btn" data-q="q9" data-val="yes">כן</button>
+                    <button class="quiz-option-btn" data-q="q9" data-val="no">לא</button>
+                    <button class="quiz-option-btn" data-q="q9" data-val="not_sure">לא בטוח</button>
                 </div>
 
-                <!-- SCREEN 6: Q6 (supplier_addendum) -->
-                <div class="quiz-screen hidden" id="screen-q6">
-                    <h2 class="q-title">האם הספקים שלכם חתומים על נספח אבטחת מידע?</h2>
-                    <p class="q-helper">לדוגמה: CRM, אחסון, הנהלת חשבונות או שיווק.</p>
-                    <div class="quiz-options-group">
-                        <button type="button" class="quiz-option-btn" data-question="supplier_addendum" data-value="yes_all" data-qnum="6">
-                            <span>כן, כולם</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="supplier_addendum" data-value="partial" data-qnum="6">
-                            <span>רק חלק</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="supplier_addendum" data-value="no" data-qnum="6">
-                            <span>לא</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="supplier_addendum" data-value="not_sure" data-qnum="6">
-                            <span>לא בטוחים</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                    </div>
+                <!-- 10. Training -->
+                <div class="quiz-screen" id="screen-10">
+                    <h2 class="q-title">האם העובדים שלכם עברו הדרכה בנושא אבטחת מידע?</h2>
+                    <p class="q-helper">הדרכה שמסבירה לעובדים איך לעבוד נכון ובטוח עם מידע אישי.</p>
+                    <button class="quiz-option-btn" data-q="q10" data-val="yes">כן</button>
+                    <button class="quiz-option-btn" data-q="q10" data-val="no">לא</button>
+                    <button class="quiz-option-btn" data-q="q10" data-val="not_sure">לא בטוח</button>
                 </div>
 
-                <!-- SCREEN 7: Q7 (employee_training) -->
-                <div class="quiz-screen hidden" id="screen-q7">
-                    <h2 class="q-title">האם העובדים עברו הדרכת אבטחת מידע?</h2>
-                    <p class="q-helper">&nbsp;</p>
-                    <div class="quiz-options-group">
-                        <button type="button" class="quiz-option-btn" data-question="employee_training" data-value="yes" data-qnum="7">
-                            <span>כן</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="employee_training" data-value="no" data-qnum="7">
-                            <span>לא</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="employee_training" data-value="not_sure" data-qnum="7">
-                            <span>לא בטוחים</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                    </div>
+                <!-- 11. Permissions -->
+                <div class="quiz-screen" id="screen-11">
+                    <h2 class="q-title">האם יש לכם רשימה מסודרת של הרשאות הגישה?</h2>
+                    <p class="q-helper">רשימה שמגדירה מי רשאי לגשת למידע ולאילו מערכות.</p>
+                    <button class="quiz-option-btn" data-q="q11" data-val="yes">כן</button>
+                    <button class="quiz-option-btn" data-q="q11" data-val="no">לא</button>
+                    <button class="quiz-option-btn" data-q="q11" data-val="not_sure">לא בטוח</button>
                 </div>
 
-                <!-- SCREEN 8: Q8 (access_permissions) -->
-                <div class="quiz-screen hidden" id="screen-q8">
-                    <h2 class="q-title">האם הרשאות הגישה למידע מתועדות?</h2>
-                    <p class="q-helper">מי יכול לגשת לאיזה מידע.</p>
-                    <div class="quiz-options-group">
-                        <button type="button" class="quiz-option-btn" data-question="access_permissions" data-value="yes" data-qnum="8">
-                            <span>כן</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="access_permissions" data-value="partial" data-qnum="8">
-                            <span>חלקית</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="access_permissions" data-value="no" data-qnum="8">
-                            <span>לא</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                        <button type="button" class="quiz-option-btn" data-question="access_permissions" data-value="not_sure" data-qnum="8">
-                            <span>לא בטוחים</span>
-                            <i class="fa-solid fa-chevron-left opt-arrow"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- SCREEN 9: Results Screen -->
-                <div class="quiz-screen hidden" id="screen-results">
-                    <div class="results-header">
-                        <h2 class="q-title" id="results-risk-title">
-                            החשיפה שלכם לקנסות: <span class="risk-badge risk-high">גבוהה</span>
-                        </h2>
-                    </div>
-
-                    <div class="results-amount-card" id="results-amount-box">
-                        <p class="amount-text">לפי התשובות, אתם חשופים לקנסות של עד <strong>600,000 ₪</strong>.</p>
-                    </div>
-
-                    <p class="gaps-summary-text" id="results-gaps-count">נמצאו 4 פערים שדורשים טיפול.</p>
-
-                    <button type="button" class="btn-cta-main" id="btn-results-cta">
-                        <span>בדקו איך מצמצמים את החשיפה</span>
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </button>
-
-                    <div style="text-align: center;">
-                        <button type="button" class="btn-toggle-gaps" id="btn-toggle-gaps" style="display: inline-flex;">
-                            <span>הצגת הפערים שנמצאו</span>
-                            <i class="fa-solid fa-chevron-down toggle-icon"></i>
-                        </button>
-                    </div>
-
-                    <div class="gaps-list-box hidden" id="gaps-list-container">
-                        <ul id="gaps-ul-list">
-                            <!-- Populated dynamically by quiz.js -->
-                        </ul>
-                    </div>
-
-                    <p class="quiz-disclaimer">התוצאה היא הערכה ראשונית בלבד. החשיפה בפועל תלויה בסוג הארגון, במאגרי המידע ובנסיבות המקרה.</p>
-
-                    <button type="button" class="btn-restart-quiz">התחלה מחדש</button>
-                </div>
-
-                <!-- SCREEN 10: Lead Form Screen -->
-                <div class="quiz-screen hidden" id="screen-lead-form">
-                    <h2 class="form-title">אנו נעזור לכם לעמוד בתיקון 13</h2>
-                    <p class="form-subtitle">השאירו פרטים בטופס ונחזור בהקדם</p>
-
-                    <div class="form-error-alert" id="lead-form-error"></div>
-
-                    <form id="quiz-lead-form">
-                        <!-- Honeypot -->
-                        <input type="text" name="website_hp" id="lead_website_hp" class="honeypot-field" tabindex="-1" autocomplete="off">
-
-                        <div class="form-group">
-                            <input type="text" id="lead_fname" name="fname" class="form-control" placeholder="שם מלא *" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="lead_phone" name="phone" class="form-control" placeholder="טלפון *" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="lead_company" name="company" class="form-control" placeholder="שם העסק *" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="lead_email" name="email" class="form-control" placeholder="אימייל (אופציונלי)">
-                        </div>
-
-                        <div class="quiz-consent-group">
-                            <input type="checkbox" id="lead_consent" name="consent" required checked>
-                            <label for="lead_consent">אני מסכים/ה ל<a href="../privacy-policy.html" target="_blank" style="text-decoration: underline; color: inherit;">מדיניות הפרטיות</a> ומאשר/ת שיחזרו אליי.</label>
-                        </div>
-
-                        <button type="submit" class="btn-cta-main" id="btn-submit-lead" style="margin-bottom: 0;">
-                            <span class="btn-text">חזרו אליי</span>
-                            <i class="fa-solid fa-paper-plane"></i>
-                        </button>
-                    </form>
-
-                    <p class="quiz-disclaimer">התוצאה היא הערכה ראשונית בלבד. החשיפה בפועל תלויה בסוג הארגון, במאגרי המידע ובנסיבות המקרה.</p>
-                </div>
-
-                <!-- SCREEN 11: Thank You Screen -->
-                <div class="quiz-screen hidden" id="screen-thank-you">
-                    <div class="thank-you-box">
-                        <div class="success-icon-wrap">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                        <h2 class="thank-you-title">הפרטים התקבלו</h2>
-                        <p class="thank-you-text">נציג של Privacy Hive יחזור אליכם בהקדם.</p>
-
-                        <div class="thank-you-actions">
-                            <a href="tel:0545445429" class="btn btn-primary" style="gap: 0.5rem;">
-                                <i class="fa-solid fa-phone"></i>
-                                <span>חייגו אלינו: 054-5445429</span>
-                            </a>
-
-                            <a href="../" class="btn btn-secondary" style="font-size: 1rem; padding: 0.8rem 1.5rem;">
-                                <span>חזרה לאתר</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Quiz JS Engine -->
-    <script src="quiz.js?v=1.2"></script>
-
-
-
-
-<div id="globalLeadModal" class="global-modal-overlay">
-    <div class="global-modal-card">
-        <button onclick="closeGlobalModal()" class="global-modal-close">&times;</button>
-        <h3 style="text-align: center; color: var(--color-primary); font-size: 1.4rem; font-weight: 800; margin-bottom: 0.4rem;">ליצירת קשר</h3>
-        <p style="text-align: center; color: #64748B; margin-bottom: 1.5rem; font-weight: 500; font-size: 0.9rem;">השאירו פרטים ונחזור אליכם בהקדם</p>
-        <form id="global-modal-form" class="lead-form" style="box-shadow: none; padding: 0;">
-            
-                        <!-- Honeypot -->
-                        <input type="text" name="website_hp" id="modal-lead_website_hp" class="honeypot-field" tabindex="-1" autocomplete="off">
-
-                        <div class="form-group">
-                            <input type="text" id="modal-lead_fname" name="fname" class="form-control" placeholder="שם מלא *" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="modal-lead_phone" name="phone" class="form-control" placeholder="טלפון *" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="modal-lead_company" name="company" class="form-control" placeholder="שם העסק *" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="modal-lead_email" name="email" class="form-control" placeholder="אימייל (אופציונלי)">
-                        </div>
-
-                        <div class="quiz-consent-group">
-                            <input type="checkbox" id="modal-lead_consent" name="consent" required checked>
-                            <label for="modal-lead_consent">אני מסכים/ה ל<a href="../privacy-policy.html" target="_blank" style="text-decoration: underline; color: inherit;">מדיניות הפרטיות</a> ומאשר/ת שיחזרו אליי.</label>
-                        </div>
-
-                        <button type="submit" class="btn-cta-main" id="modal-btn-submit-lead" style="margin-bottom: 0;">
-                            <span class="btn-text">חזרו אליי</span>
-                            <i class="fa-solid fa-paper-plane"></i>
-                        </button>
+                <!-- Results Screen -->
+                <div class="quiz-screen" id="screen-results">
+                    <h1 style="font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem; text-align: center;">תוצאות הבדיקה שלכם</h1>
+                    <p id="results-issues-count" style="text-align: center; font-weight: 800; color: #DC2626; font-size: 1.2rem; margin-bottom: 0.5rem;"></p>
+                    <p id="results-security-level" style="text-align: center; color: #475569; font-size: 1rem; margin-bottom: 1.5rem; display: none;"></p>
                     
-        </form>
-    </div>
-</div>
+                    <div id="results-exposure-container" style="background: #FEF2F2; border: 1px solid #FECACA; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; text-align: center;">
+                        <h2 style="font-size: 1.2rem; color: #991B1B; margin-bottom: 0.5rem;">חשיפה פוטנציאלית לעיצומים מנהליים:</h2>
+                        <div id="results-admin-fine" style="font-size: 2.5rem; font-weight: 900; color: #DC2626;"></div>
+                        <p style="font-size: 0.8rem; color: #991B1B; margin-top: 0.5rem;">*הסכום מבוסס על הליקויים שעלו מהתשובות ואינו קנס שנקבע בפועל.</p>
+                    </div>
 
+                    <div id="gaps-list" style="margin-bottom: 2rem;"></div>
 
-    <!-- Global Footer -->
-    <footer class="site-footer" style="background-color: var(--color-primary-dark); color: #F8FAFC; padding: 5rem 0 2rem; font-size: 1.05rem;">
-        <div class="container">
-            <div class="footer-inner">
-                
-                <!-- Column 1: About -->
-                <div class="footer-col">
-                    <a href="../home-page.html">
-                        <img src="../assets/LOGO_FINAL.svg" alt="Privacy Hive" style="height: 48px; margin-bottom: 1.5rem; filter: brightness(0) invert(1);">
-                    </a>
-                    <p style="color: #CBD5E1; line-height: 1.7; max-width: 400px;">מעניקים כיפת ברזל חוקית לארגונים בעולם של דאטה ואבטחת מידע.</p>
+                    <div style="background: #F8FAFC; padding: 1.5rem; border-radius: 12px; text-align: center; border: 1px solid #E2E8F0;">
+                        <h2 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-primary-dark);">רוצים להבין מה צריך לתקן?</h2>
+                        <p style="color: #475569; font-size: 1rem; margin-bottom: 1.5rem;">נוכל לעבור אתכם על תוצאות הבדיקה, להסביר מה באמת רלוונטי לעסק שלכם ולעזור לכם להסדיר את הנקודות שחסרות.</p>
+                        <a href="../dpo/index.html" style="display: inline-block; background: var(--color-accent); color: white; padding: 1rem 2rem; border-radius: 50px; font-weight: 800; font-size: 1.1rem; text-decoration: none;">דברו עם מומחה</a>
+                    </div>
                 </div>
                 
-                <!-- Column 2: Privacy -->
-                <div class="footer-col">
-                    <h4 style="color: white; font-size: 1.2rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem;">פרטיות ותקינה
-                        <span style="content: ''; position: absolute; bottom: 0; right: 0; width: 40px; height: 2px; background-color: var(--color-accent);"></span>
-                    </h4>
-                    <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
-                        <li><a href="../home-page.html" style="color: #CBD5E1; text-decoration: none; transition: all 0.3s;">עמוד הבית</a></li>
-                        <li><a href="../tikun-13/index.html" style="color: #CBD5E1; text-decoration: none; transition: all 0.3s;">היערכות לתיקון 13</a></li>
-                        <li><a href="../tikun-13-check/index.html" style="color: #CBD5E1; text-decoration: none; transition: all 0.3s;">בדיקת חשיפה לתיקון 13</a></li>
-                        <li><a href="../tikun-13-quiz/index.html" style="color: #CBD5E1; text-decoration: none; transition: all 0.3s;">שאלון מוכנות לתיקון 13</a></li>
-                        <li><a href="../dpo/index.html" style="color: #CBD5E1; text-decoration: none; transition: all 0.3s;">שירותי DPO</a></li>
-                        <li><a href="../privacy-officer/index.html" style="color: #CBD5E1; text-decoration: none; transition: all 0.3s;">קצין ציות והגנת פרטיות</a></li>
-                        <li><a href="../iso-27001/index.html" style="color: #CBD5E1; text-decoration: none; transition: all 0.3s;">התאמה לתקן ISO 27001</a></li>
-                    </ul>
+                <div id="quiz-bottom-controls" style="display: none; text-align: center; margin-top: 2rem;">
+                    <button class="quiz-back-btn" id="quiz-back-btn" style="margin: 0 auto; color: #94A3B8; font-size: 1rem;"><i class="fa-solid fa-arrow-right"></i> שלב קודם</button>
                 </div>
-                
-                <!-- Column 3: Info Sec -->
-                <div class="footer-col">
-                    <h4 style="color: white; font-size: 1.2rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem;">אבטחת מידע
-                        <span style="content: ''; position: absolute; bottom: 0; right: 0; width: 40px; height: 2px; background-color: var(--color-accent);"></span>
-                    </h4>
-                    <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
-                        <li><a href="../information-security-for-organizations/index.html" style="color: #CBD5E1; text-decoration: none; transition: all 0.3s;">אבטחת מידע לארגונים</a></li>
-                        <li><a href="../information-security-for-businesses/index.html" style="color: #CBD5E1; text-decoration: none; transition: all 0.3s;">אבטחת מידע לעסקים</a></li>
-                        <li><a href="../information-security-risk-assessment/index.html" style="color: #CBD5E1; text-decoration: none; transition: all 0.3s;">סקר סיכוני אבטחת מידע</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Column 4: Legal & Contact -->
-                <div class="footer-col">
-                    <h4 style="color: white; font-size: 1.2rem; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem;">יצירת קשר ומשפטי
-                        <span style="content: ''; position: absolute; bottom: 0; right: 0; width: 40px; height: 2px; background-color: var(--color-accent);"></span>
-                    </h4>
-                    <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.8rem;">
-                        <li><a href="https://wa.me/972545445429" style="color: #CBD5E1; text-decoration: none; transition: all 0.3s;"><i class="fa-brands fa-whatsapp"></i> וואטסאפ (מוטי)</a></li>
-                        <li><span style="color: #CBD5E1;"><i class="fa-solid fa-phone"></i> טלפון: 054-5445429</span></li>
-                        <li><a href="../privacy-policy.html" style="color: #CBD5E1; text-decoration: none; transition: all 0.3s;">מדיניות פרטיות</a></li>
-                        <li><a href="../accessibility.html" style="color: #CBD5E1; text-decoration: none; transition: all 0.3s;">הצהרת נגישות</a></li>
-                    </ul>
-                </div>
-                
-            </div>
-            
-            <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #94A3B8; font-size: 0.95rem;">
-                <p style="margin: 0;">&copy; 2026 Privacy Hive. כל הזכויות שמורות.</p>
-                <div style="display: flex; gap: 1rem;">
-                    <a href="#" style="color: #94A3B8; font-size: 1.2rem; transition: color 0.3s;"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" style="color: #94A3B8; font-size: 1.2rem; transition: color 0.3s;"><i class="fa-brands fa-facebook"></i></a>
-                </div>
+
             </div>
         </div>
-    </footer>
+    </main>
 
+    <script src="quiz.js"></script>
 </body>
 </html>
