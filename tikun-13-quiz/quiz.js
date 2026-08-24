@@ -227,12 +227,8 @@
     }
     
     function renderResults(issues, totalAdminFine, secLevel) {
-        document.getElementById('results-issues-count').innerText = `מצאנו ${issues.length} נקודות שכדאי להסדיר`;
-        document.getElementById('results-admin-fine').innerText = `${totalAdminFine.toLocaleString()} ₪`;
-        
-        let map = { individual: 'יחיד', basic: 'בסיסית', medium: 'בינונית', high: 'גבוהה' };
-        document.getElementById('results-security-level').innerText = `רמת אבטחת המידע שלכם: ${map[secLevel]}`;
-        // document.getElementById('results-security-level').style.display = 'block'; // Hidden as requested by user spec
+        document.getElementById('results-issues-count').innerText = `מצאנו ${issues.length} ליקויים שדורשים טיפול`;
+        document.getElementById('results-admin-fine').innerText = `עד ${totalAdminFine.toLocaleString()} ₪`;
         
         const gapsContainer = document.getElementById('gaps-list');
         gapsContainer.innerHTML = '';

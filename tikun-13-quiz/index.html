@@ -217,23 +217,39 @@
                 </div>
 
                 <!-- Results Screen -->
-                <div class="quiz-screen" id="screen-results">
-                    <h1 style="font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem; text-align: center;">תוצאות הבדיקה שלכם</h1>
-                    <p id="results-issues-count" style="text-align: center; font-weight: 800; color: #DC2626; font-size: 1.2rem; margin-bottom: 0.5rem;"></p>
-                    <p id="results-security-level" style="text-align: center; color: #475569; font-size: 1rem; margin-bottom: 1.5rem; display: none;"></p>
+                <div class="quiz-screen" id="screen-results" style="padding-top: 1rem;">
+                    <!-- Above the fold -->
+                    <h1 id="results-issues-count" style="font-size: 1.8rem; font-weight: 900; margin-bottom: 1.5rem; text-align: center; color: var(--color-primary-dark);">מצאנו X ליקויים שדורשים טיפול</h1>
                     
-                    <div id="results-exposure-container" style="background: #FEF2F2; border: 1px solid #FECACA; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; text-align: center;">
-                        <h2 style="font-size: 1.2rem; color: #991B1B; margin-bottom: 0.5rem;">חשיפה פוטנציאלית לעיצומים מנהליים:</h2>
-                        <div id="results-admin-fine" style="font-size: 2.5rem; font-weight: 900; color: #DC2626;"></div>
-                        <p style="font-size: 0.8rem; color: #991B1B; margin-top: 0.5rem;">*הסכום מבוסס על הליקויים שעלו מהתשובות ואינו קנס שנקבע בפועל.</p>
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <p style="font-size: 1rem; color: #64748B; font-weight: 700; margin-bottom: 0.3rem;">החשיפה הפוטנציאלית שלכם</p>
+                        <div id="results-admin-fine" style="font-size: 3.2rem; font-weight: 900; color: #DC2626; line-height: 1;">עד 0 ₪</div>
                     </div>
 
-                    <div id="gaps-list" style="margin-bottom: 2rem;"></div>
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <h2 style="font-size: 1.2rem; font-weight: 800; color: var(--color-primary-dark); margin-bottom: 0.3rem;">רוצים שנעזור לכם להסדיר את הליקויים?</h2>
+                        <p style="font-size: 1rem; color: #475569; margin-bottom: 1rem;">קבעו שיחת ייעוץ ראשונית ללא עלות עם מומחי Privacy Hive.</p>
+                        <button onclick="document.getElementById('quiz-lead-form-section').scrollIntoView({behavior: 'smooth'})" style="background: var(--color-accent); color: white; padding: 1rem 2rem; border-radius: 50px; font-weight: 800; font-size: 1.1rem; border: none; cursor: pointer; width: 100%; max-width: 350px; box-shadow: 0 10px 20px -5px rgba(63,168,152,0.4);">לקביעת שיחת ייעוץ ללא עלות</button>
+                    </div>
+                    
+                    <p style="text-align: center; font-size: 0.75rem; color: #94A3B8; margin-bottom: 2.5rem; max-width: 400px; margin-left: auto; margin-right: auto;">*הסכום מבוסס על התשובות שלכם ועל החשיפות האפשריות לפי החוק ואינו קנס שנקבע בפועל.</p>
 
-                    <div style="background: #F8FAFC; padding: 1.5rem; border-radius: 12px; text-align: center; border: 1px solid #E2E8F0;">
-                        <h2 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-primary-dark);">רוצים להבין מה צריך לתקן?</h2>
-                        <p style="color: #475569; font-size: 1rem; margin-bottom: 1.5rem;">נוכל לעבור אתכם על תוצאות הבדיקה, להסביר מה באמת רלוונטי לעסק שלכם ולעזור לכם להסדיר את הנקודות שחסרות.</p>
-                        <a href="../dpo/index.html" style="display: inline-block; background: var(--color-accent); color: white; padding: 1rem 2rem; border-radius: 50px; font-weight: 800; font-size: 1.1rem; text-decoration: none;">דברו עם מומחה</a>
+                    <!-- Breakdown -->
+                    <h2 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem; color: var(--color-primary-dark); text-align: right; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.5rem;">איך הגענו לסכום הזה?</h2>
+                    
+                    <div id="gaps-list" style="margin-bottom: 3rem;"></div>
+
+                    <!-- Lead Form -->
+                    <div id="quiz-lead-form-section" style="background: #F8FAFC; padding: 2rem 1.5rem; border-radius: 12px; border: 1px solid #E2E8F0;">
+                        <h2 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-primary-dark); text-align: center;">רוצים שנעזור לכם להסדיר את הליקויים?</h2>
+                        <p style="color: #475569; font-size: 1rem; margin-bottom: 1.5rem; text-align: center;">קבעו שיחת ייעוץ ראשונית ללא עלות עם מומחי Privacy Hive.</p>
+                        
+                        <form id="quiz-lead-form" style="display: flex; flex-direction: column; gap: 1rem;">
+                            <input type="text" placeholder="שם מלא" required style="padding: 1rem; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 1rem;">
+                            <input type="tel" placeholder="טלפון" required style="padding: 1rem; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 1rem; direction: rtl;">
+                            <input type="email" placeholder="אימייל" required style="padding: 1rem; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 1rem;">
+                            <button type="submit" style="background: var(--color-primary); color: white; padding: 1rem; border-radius: 8px; font-weight: 800; font-size: 1.1rem; border: none; cursor: pointer; margin-top: 0.5rem;">לקביעת שיחת ייעוץ ללא עלות</button>
+                        </form>
                     </div>
                 </div>
                 
