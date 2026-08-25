@@ -37,9 +37,8 @@
 
     const screens = [
         'screen-0', 'screen-1', 'screen-2', 'screen-3', 'screen-4',
-        'screen-5', 'screen-5a', 'screen-5b', 'screen-6', 'screen-6a',
-        'screen-7', 'screen-7a', 'screen-8', 'screen-9', 'screen-10', 'screen-11',
-        'screen-results'
+        'screen-4a', 'screen-5', 'screen-5a', 'screen-6', 'screen-7',
+        'screen-8', 'screen-9', 'screen-10', 'screen-results'
     ];
 
     // Initialize UI on load
@@ -89,24 +88,15 @@
             case 'q1': next = 'screen-2'; break;
             case 'q2': next = 'screen-3'; break;
             case 'q3': next = 'screen-4'; break;
-            case 'q4': next = 'screen-5'; break;
+            case 'q4': next = (val === 'yes') ? 'screen-4a' : 'screen-5'; break;
+            case 'q4a': next = 'screen-5'; break;
             case 'q5': next = (val === 'yes') ? 'screen-5a' : 'screen-6'; break;
-            case 'q5a': next = 'screen-5b'; break;
-            case 'q5b': next = 'screen-6'; break;
-            case 'q6': next = (val === 'yes') ? 'screen-6a' : 'screen-7'; break;
-            case 'q6a': next = 'screen-7'; break;
-            case 'q7': next = (val === 'yes' || val === 'not_sure') ? 'screen-7a' : 'screen-8'; break;
-            case 'q7a': next = 'screen-8'; break;
+            case 'q5a': next = 'screen-6'; break;
+            case 'q6': next = 'screen-7'; break;
+            case 'q7': next = 'screen-8'; break;
             case 'q8': next = 'screen-9'; break;
-            case 'q9': 
-                if(state.answers.q4 === 'none') {
-                    next = 'screen-11';
-                } else {
-                    next = 'screen-10';
-                }
-                break;
-            case 'q10': next = 'screen-11'; break;
-            case 'q11': 
+            case 'q9': next = 'screen-10'; break;
+            case 'q10': 
                 calculateResults();
                 next = 'screen-results'; 
                 break;
@@ -122,7 +112,8 @@
         if (id === 'screen-results') calculateResults();
         
         document.querySelectorAll('.quiz-screen').forEach(s => s.classList.remove('active'));
-        document.getElementById(id).classList.add('active');
+        const activeScreenEl = document.getElementById(id);
+        if (activeScreenEl) activeScreenEl.classList.add('active');
         
         const topControls = document.getElementById('quiz-top-controls');
         const bottomControls = document.getElementById('quiz-bottom-controls');
@@ -137,18 +128,17 @@
             bottomControls.style.display = 'block';
             progContainer.style.display = 'block';
             
-            let total = 11;
-            if(state.answers.q5 === 'no') total -= 2;
-            if(state.answers.q6 === 'no') total -= 1;
-            if(state.answers.q7 === 'no') total -= 1;
-            if(state.answers.q4 === 'none') total -= 1;
+            let total = 10;
+            if(state.answers.q4 === 'no') total -= 1;
+            if(state.answers.q5 === 'no') total -= 1;
             
-            document.getElementById('quiz-progress-bar').style.width = ((state.path.length - 1) / total * 100) + '%';
+            const progressPercent = Math.min(100, Math.round(((state.path.length - 1) / total) * 100));
+            document.getElementById('quiz-progress-bar').style.width = progressPercent + '%';
         }
     }
 
     function calculateSecurityLevel() {
-        const isSensitive = (state.answers.q3 !== 'basic' || (state.answers.q4 !== 'basic' && state.answers.q4 !== 'none'));
+        const isSensitive = (state.answers.q3 && state.answers.q3 !== 'basic');
         
         // High level: Over 100k records with sensitive data, or large org with sensitive data
         if ((state.answers.q2 === 'over_100k' && isSensitive) || (state.answers.q1 === '100+' && isSensitive)) {
@@ -160,8 +150,8 @@
             return 'medium';
         }
         
-        // Individual level: 1-3 people, not sensitive, <= 10k records (or not sure)
-        if (state.answers.q1 === '1-3' && !isSensitive && (state.answers.q2 === 'under_10k' || state.answers.q2 === 'not_sure')) {
+        // Individual level: Solo or 2-3 people, not sensitive, <= 10k records (or not sure)
+        if ((state.answers.q1 === 'solo' || state.answers.q1 === '2-3') && !isSensitive && (state.answers.q2 === 'under_10k' || state.answers.q2 === 'not_sure')) {
             return 'individual';
         }
         
@@ -174,8 +164,8 @@
         let issues = [];
         let totalAdminFine = 0;
         
-        // 1. Website Privacy Policy (Applies to any business with a website collecting data)
-        if (state.answers.q5 === 'yes' && state.answers.q5a === 'yes' && (state.answers.q5b === 'no' || state.answers.q5b === 'not_sure')) {
+        // 1. Website Privacy Policy (Applies if has website collecting data and no privacy policy)
+        if (state.answers.q4 === 'yes' && (state.answers.q4a === 'no' || state.answers.q4a === 'not_sure')) {
             issues.push({
                 title: 'איסוף המידע באתר דורש הסדרה',
                 desc: 'כשאוספים מידע אישי דרך האתר יש חובה חוקית למסור הודעת פרטיות ויידוע לגולשים לגבי השימוש במידע.',
@@ -184,8 +174,8 @@
             });
         }
         
-        // 2. Marketing / Spam Messages (Applies to any business sending marketing messages)
-        if (state.answers.q6 === 'yes' && (state.answers.q6a === 'no' || state.answers.q6a === 'not_sure')) {
+        // 2. Marketing / Spam Messages (Applies if sending marketing without explicit consent)
+        if (state.answers.q5 === 'yes' && (state.answers.q5a === 'no' || state.answers.q5a === 'not_sure')) {
             issues.push({
                 title: 'הדיוור השיווקי שלכם דורש בדיקה',
                 desc: 'שליחת הודעות פרסומיות ללא הסכמה מפורשת ומתועדת מראש מהווה עבירה על חוק הספאם.',
@@ -195,7 +185,7 @@
         }
         
         // 3. Suppliers Agreement (Applies to non-individual databases)
-        if (secLevel !== 'individual' && (state.answers.q7 === 'yes' || state.answers.q7 === 'not_sure') && (state.answers.q7a === 'no' || state.answers.q7a === 'not_sure')) {
+        if (secLevel !== 'individual' && (state.answers.q6 === 'yes_no_agreement' || state.answers.q6 === 'not_sure')) {
             let fine = FINES_CONFIG.admin.supplier_addendum[secLevel] || 0;
             if (fine > 0) {
                 totalAdminFine += fine;
@@ -209,7 +199,7 @@
         }
         
         // 4. Database Definition Document (Applies to non-individual databases)
-        if (secLevel !== 'individual' && (state.answers.q8 === 'no' || state.answers.q8 === 'not_sure')) {
+        if (secLevel !== 'individual' && (state.answers.q7 === 'no' || state.answers.q7 === 'not_sure')) {
             let fine = FINES_CONFIG.admin.database_definition[secLevel] || 0;
             if (fine > 0) {
                 totalAdminFine += fine;
@@ -223,7 +213,7 @@
         }
         
         // 5. Security Procedure (Applies to non-individual databases)
-        if (secLevel !== 'individual' && (state.answers.q9 === 'no' || state.answers.q9 === 'not_sure')) {
+        if (secLevel !== 'individual' && (state.answers.q8 === 'no' || state.answers.q8 === 'not_sure')) {
             let fine = FINES_CONFIG.admin.security_procedure[secLevel] || 0;
             if (fine > 0) {
                 totalAdminFine += fine;
@@ -237,7 +227,7 @@
         }
         
         // 6. Employee Training (Applies if not individual and has employees)
-        if (secLevel !== 'individual' && state.answers.q4 !== 'none' && (state.answers.q10 === 'no' || state.answers.q10 === 'not_sure')) {
+        if (secLevel !== 'individual' && state.answers.q1 !== 'solo' && state.answers.q9 !== 'no_employees' && (state.answers.q9 === 'no' || state.answers.q9 === 'not_sure')) {
             let fine = FINES_CONFIG.admin.employee_training[secLevel] || 0;
             if (fine > 0) {
                 totalAdminFine += fine;
@@ -251,7 +241,7 @@
         }
         
         // 7. Access Permissions List (Applies to non-individual databases)
-        if (secLevel !== 'individual' && (state.answers.q11 === 'no' || state.answers.q11 === 'not_sure')) {
+        if (secLevel !== 'individual' && (state.answers.q10 === 'no' || state.answers.q10 === 'not_sure')) {
             let fine = FINES_CONFIG.admin.access_permissions[secLevel] || 0;
             if (fine > 0) {
                 totalAdminFine += fine;
