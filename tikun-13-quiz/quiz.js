@@ -293,6 +293,41 @@
                 gapsContainer.appendChild(card);
             });
         }
+
+        // Fire tracking events on reaching Results Screen
+        const empVal = state.answers.q1;
+        const is4PlusEmployees = ['4-10', '11-100', '100+'].includes(empVal);
+        
+        if (!state.resultsTracked) {
+            state.resultsTracked = true;
+            
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'quiz_completed',
+                'employee_range': empVal || 'unknown',
+                'security_level': secLevel,
+                'issues_count': issues.length,
+                'potential_fine': totalAdminFine
+            });
+
+            // Targeted event for businesses with 4+ employees
+            if (is4PlusEmployees) {
+                window.dataLayer.push({
+                    'event': 'quiz_completed_4plus_employees',
+                    'employee_range': empVal,
+                    'security_level': secLevel,
+                    'is_qualified_4plus': true
+                });
+
+                if (typeof fbq === 'function') {
+                    fbq('trackCustom', 'QuizResults_4PlusEmployees', {
+                        employee_range: empVal,
+                        security_level: secLevel,
+                        potential_fine: totalAdminFine
+                    });
+                }
+            }
+        }
     }
 
     // UTM Helper
@@ -385,6 +420,15 @@
                         'send_to': 'AW-18176010346/9mFVCL38_7IcEOrQ_9pD',
                         'value': 1.0,
                         'currency': 'ILS'
+                    });
+                }
+
+                // Fire Facebook Pixel Lead Event ONLY for businesses with 4+ employees
+                const is4PlusLead = ['4-10', '11-100', '100+'].includes(state.answers.q1);
+                if (is4PlusLead && typeof fbq === 'function') {
+                    fbq('track', 'Lead', {
+                        content_name: 'Tikun 13 Quiz Qualified Lead (4+)',
+                        employee_range: state.answers.q1
                     });
                 }
 
