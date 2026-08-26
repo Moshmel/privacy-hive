@@ -435,10 +435,11 @@
                 // Clear session storage on successful lead
                 sessionStorage.removeItem('privacy_hive_quiz_state');
 
-                // Redirect to Thank You Page
+                // Redirect to Thank You Page (passing qualification status for persistent tracking)
                 setTimeout(() => {
-                    window.location.href = '../thank-you.html';
-                }, 500);
+                    const redirectUrl = is4PlusLead ? '../thank-you.html?qualified=1' : '../thank-you.html';
+                    window.location.href = redirectUrl;
+                }, 400);
             })
             .catch(error => {
                 console.error('Error submitting quiz lead:', error);
